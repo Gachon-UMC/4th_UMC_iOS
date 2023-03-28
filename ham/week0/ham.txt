@@ -1,3 +1,5 @@
 Hello!
 I'm Ham, the second grade student in Gachon University, AI, Software department. And I'm in course of AI major. 
 Nice to meet you!
+
+2023. 03. 28 (Tue) -> New branch 'ham' added..
