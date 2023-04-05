@@ -19,3 +19,4 @@ if A > B { print(">") }
 else if A < B { print("<") }
 else { print("==") }
 
+https://www.acmicpc.net/problem/1330

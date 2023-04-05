@@ -41,4 +41,10 @@ for i in seq_arr {
     arr_num.swapAt(i[0]-1, i[1]-1)
 }
 
-print(arr_num)
+for i in arr_num{
+    print(i,terminator: " ")
+}
+
+
+
+//https://www.acmicpc.net/problem/10813

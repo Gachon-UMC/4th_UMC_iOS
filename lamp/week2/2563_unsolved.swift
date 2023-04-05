@@ -46,4 +46,4 @@ for i in seq_arr.startIndex..<seq_arr.endIndex{
 
 print(sub_area_arr)
 
-
+//https://www.acmicpc.net/problem/2563
