@@ -15,6 +15,59 @@ for i in 0..<count {
     seq_arr.append(input_arr)
 }
 
+//print(seq_arr) // >여기까지 xy좌표 어레이로 받은거
+
+var set_list: [[Set<Int>]] = []
+set_list.append([[0]])
+set_list.append([[0]])
+
+for i in 0..<count{
+    let x = seq_arr[i][0]
+    let y = seq_arr[i][1]
+    var x_Set = Set<Int>()
+    var y_Set = Set<Int>()
+    
+    for xval in x...x+10{
+        x_Set.insert(xval)
+    }
+    for yval in y...y+10{
+        y_Set.insert(yval)
+    }
+    
+    set_list[0].append(x_Set)
+    set_list[1].append(y_Set)
+}
+
+
+
+var area_sub: Int = 0
+
+for i in 1..<set_list[0].endIndex {
+    for u in i+1..<set_list[0].endIndex {
+        let inter_x = set_list[0][i].intersection(set_list[0][u]).sorted()
+        let inter_y = set_list[1][i].intersection(set_list[1][u]).sorted()
+        print("inter_x: ",inter_x)
+        print("Inter_y: ",inter_y)
+        
+        if inter_x.isEmpty || inter_y.isEmpty {
+            continue
+        } else{
+            let x = inter_x[inter_x.endIndex-1] - inter_x[0]
+            let y = inter_y[inter_y.endIndex-1] - inter_y[0]
+            print("x: ",x,"y: ",y)
+            area_sub += x*y
+        }
+    }
+}
+func area_cal([[Set<Int]]){
+    
+}
+area_sub = area_cal(set_list)
+//이 +-해주는 부분을 해결해야함 > 함수로 만들어 해결해보자
+print(10*10*count - area_sub)
+
+
+/* // 애매하게하다가 실패한 부분
 var sub_area_arr: [Int] = []
 
 for i in seq_arr.startIndex..<seq_arr.endIndex{
@@ -33,17 +86,11 @@ for i in seq_arr.startIndex..<seq_arr.endIndex{
                 } else {
                     
                 }
-                
             }
         }
-        
-        
-        
-        
     }
-    
 }
 
-print(sub_area_arr)
+print(sub_area_arr) */
 
 //https://www.acmicpc.net/problem/2563
