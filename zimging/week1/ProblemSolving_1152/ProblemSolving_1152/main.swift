@@ -17,6 +17,19 @@
 //}
 //print(count)
 
+import Foundation
 
-let toArr = readLine()!.split(separator: " ")
+let sentence = readLine()!
+var toArr = sentence.components(separatedBy: " ")
+let lastIndex = toArr.index(before: toArr.endIndex)
+
+for i in (0...lastIndex).reversed() {
+    if toArr[i] == "" {
+        toArr.remove(at: i)
+    }
+}
+
 print(toArr.count)
+
+//let toArr = readLine()!.split(separator: " ")
+//print(toArr.count)
