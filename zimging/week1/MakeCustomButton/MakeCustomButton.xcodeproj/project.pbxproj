@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DDC8959F29D8B68C0036CDE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC8959E29D8B68C0036CDE7 /* AppDelegate.swift */; };
+		DDC895A129D8B68C0036CDE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC895A029D8B68C0036CDE7 /* SceneDelegate.swift */; };
+		DDC895A329D8B68C0036CDE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC895A229D8B68C0036CDE7 /* ViewController.swift */; };
+		DDC895A629D8B68C0036CDE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC895A429D8B68C0036CDE7 /* Main.storyboard */; };
+		DDC895A829D8B68D0036CDE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDC895A729D8B68D0036CDE7 /* Assets.xcassets */; };
+		DDC895AB29D8B68D0036CDE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC895A929D8B68D0036CDE7 /* LaunchScreen.storyboard */; };
+		DDC895B629D8B68D0036CDE7 /* MakeCustomButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC895B529D8B68D0036CDE7 /* MakeCustomButtonTests.swift */; };
+		DDC895C029D8B68D0036CDE7 /* MakeCustomButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC895BF29D8B68D0036CDE7 /* MakeCustomButtonUITests.swift */; };
+		DDC895C229D8B68D0036CDE7 /* MakeCustomButtonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC895C129D8B68D0036CDE7 /* MakeCustomButtonUITestsLaunchTests.swift */; };
+		DDC895D029D8B83F0036CDE7 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC895CF29D8B83F0036CDE7 /* CustomView.swift */; };
+		DDC895D229D8B8D10036CDE7 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDC895D129D8B8D10036CDE7 /* CustomView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DDC895B229D8B68D0036CDE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDC8959329D8B68C0036CDE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDC8959A29D8B68C0036CDE7;
+			remoteInfo = MakeCustomButton;
+		};
+		DDC895BC29D8B68D0036CDE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDC8959329D8B68C0036CDE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDC8959A29D8B68C0036CDE7;
+			remoteInfo = MakeCustomButton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DDC8959B29D8B68C0036CDE7 /* MakeCustomButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeCustomButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDC8959E29D8B68C0036CDE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DDC895A029D8B68C0036CDE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DDC895A229D8B68C0036CDE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DDC895A529D8B68C0036CDE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DDC895A729D8B68D0036CDE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DDC895AA29D8B68D0036CDE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DDC895AC29D8B68D0036CDE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDC895B129D8B68D0036CDE7 /* MakeCustomButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeCustomButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDC895B529D8B68D0036CDE7 /* MakeCustomButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCustomButtonTests.swift; sourceTree = "<group>"; };
+		DDC895BB29D8B68D0036CDE7 /* MakeCustomButtonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeCustomButtonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDC895BF29D8B68D0036CDE7 /* MakeCustomButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCustomButtonUITests.swift; sourceTree = "<group>"; };
+		DDC895C129D8B68D0036CDE7 /* MakeCustomButtonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCustomButtonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DDC895CF29D8B83F0036CDE7 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		DDC895D129D8B8D10036CDE7 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DDC8959829D8B68C0036CDE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDC895AE29D8B68D0036CDE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDC895B829D8B68D0036CDE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DDC8959229D8B68C0036CDE7 = {
+			isa = PBXGroup;
+			children = (
+				DDC8959D29D8B68C0036CDE7 /* MakeCustomButton */,
+				DDC895B429D8B68D0036CDE7 /* MakeCustomButtonTests */,
+				DDC895BE29D8B68D0036CDE7 /* MakeCustomButtonUITests */,
+				DDC8959C29D8B68C0036CDE7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DDC8959C29D8B68C0036CDE7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDC8959B29D8B68C0036CDE7 /* MakeCustomButton.app */,
+				DDC895B129D8B68D0036CDE7 /* MakeCustomButtonTests.xctest */,
+				DDC895BB29D8B68D0036CDE7 /* MakeCustomButtonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDC8959D29D8B68C0036CDE7 /* MakeCustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				DDC895CE29D8B69F0036CDE7 /* CustomButton */,
+				DDC8959E29D8B68C0036CDE7 /* AppDelegate.swift */,
+				DDC895A029D8B68C0036CDE7 /* SceneDelegate.swift */,
+				DDC895A229D8B68C0036CDE7 /* ViewController.swift */,
+				DDC895A429D8B68C0036CDE7 /* Main.storyboard */,
+				DDC895A729D8B68D0036CDE7 /* Assets.xcassets */,
+				DDC895A929D8B68D0036CDE7 /* LaunchScreen.storyboard */,
+				DDC895AC29D8B68D0036CDE7 /* Info.plist */,
+			);
+			path = MakeCustomButton;
+			sourceTree = "<group>";
+		};
+		DDC895B429D8B68D0036CDE7 /* MakeCustomButtonTests */ = {
+			isa = PBXGroup;
+			children = (
+				DDC895B529D8B68D0036CDE7 /* MakeCustomButtonTests.swift */,
+			);
+			path = MakeCustomButtonTests;
+			sourceTree = "<group>";
+		};
+		DDC895BE29D8B68D0036CDE7 /* MakeCustomButtonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DDC895BF29D8B68D0036CDE7 /* MakeCustomButtonUITests.swift */,
+				DDC895C129D8B68D0036CDE7 /* MakeCustomButtonUITestsLaunchTests.swift */,
+			);
+			path = MakeCustomButtonUITests;
+			sourceTree = "<group>";
+		};
+		DDC895CE29D8B69F0036CDE7 /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				DDC895CF29D8B83F0036CDE7 /* CustomView.swift */,
+				DDC895D129D8B8D10036CDE7 /* CustomView.xib */,
+			);
+			path = CustomButton;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDC8959A29D8B68C0036CDE7 /* MakeCustomButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDC895C529D8B68D0036CDE7 /* Build configuration list for PBXNativeTarget "MakeCustomButton" */;
+			buildPhases = (
+				DDC8959729D8B68C0036CDE7 /* Sources */,
+				DDC8959829D8B68C0036CDE7 /* Frameworks */,
+				DDC8959929D8B68C0036CDE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MakeCustomButton;
+			productName = MakeCustomButton;
+			productReference = DDC8959B29D8B68C0036CDE7 /* MakeCustomButton.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DDC895B029D8B68D0036CDE7 /* MakeCustomButtonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDC895C829D8B68D0036CDE7 /* Build configuration list for PBXNativeTarget "MakeCustomButtonTests" */;
+			buildPhases = (
+				DDC895AD29D8B68D0036CDE7 /* Sources */,
+				DDC895AE29D8B68D0036CDE7 /* Frameworks */,
+				DDC895AF29D8B68D0036CDE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDC895B329D8B68D0036CDE7 /* PBXTargetDependency */,
+			);
+			name = MakeCustomButtonTests;
+			productName = MakeCustomButtonTests;
+			productReference = DDC895B129D8B68D0036CDE7 /* MakeCustomButtonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DDC895BA29D8B68D0036CDE7 /* MakeCustomButtonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDC895CB29D8B68D0036CDE7 /* Build configuration list for PBXNativeTarget "MakeCustomButtonUITests" */;
+			buildPhases = (
+				DDC895B729D8B68D0036CDE7 /* Sources */,
+				DDC895B829D8B68D0036CDE7 /* Frameworks */,
+				DDC895B929D8B68D0036CDE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDC895BD29D8B68D0036CDE7 /* PBXTargetDependency */,
+			);
+			name = MakeCustomButtonUITests;
+			productName = MakeCustomButtonUITests;
+			productReference = DDC895BB29D8B68D0036CDE7 /* MakeCustomButtonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDC8959329D8B68C0036CDE7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					DDC8959A29D8B68C0036CDE7 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					DDC895B029D8B68D0036CDE7 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = DDC8959A29D8B68C0036CDE7;
+					};
+					DDC895BA29D8B68D0036CDE7 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = DDC8959A29D8B68C0036CDE7;
+					};
+				};
+			};
+			buildConfigurationList = DDC8959629D8B68C0036CDE7 /* Build configuration list for PBXProject "MakeCustomButton" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DDC8959229D8B68C0036CDE7;
+			productRefGroup = DDC8959C29D8B68C0036CDE7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDC8959A29D8B68C0036CDE7 /* MakeCustomButton */,
+				DDC895B029D8B68D0036CDE7 /* MakeCustomButtonTests */,
+				DDC895BA29D8B68D0036CDE7 /* MakeCustomButtonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDC8959929D8B68C0036CDE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDC895AB29D8B68D0036CDE7 /* LaunchScreen.storyboard in Resources */,
+				DDC895D229D8B8D10036CDE7 /* CustomView.xib in Resources */,
+				DDC895A829D8B68D0036CDE7 /* Assets.xcassets in Resources */,
+				DDC895A629D8B68C0036CDE7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDC895AF29D8B68D0036CDE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDC895B929D8B68D0036CDE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDC8959729D8B68C0036CDE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDC895A329D8B68C0036CDE7 /* ViewController.swift in Sources */,
+				DDC895D029D8B83F0036CDE7 /* CustomView.swift in Sources */,
+				DDC8959F29D8B68C0036CDE7 /* AppDelegate.swift in Sources */,
+				DDC895A129D8B68C0036CDE7 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDC895AD29D8B68D0036CDE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDC895B629D8B68D0036CDE7 /* MakeCustomButtonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDC895B729D8B68D0036CDE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDC895C029D8B68D0036CDE7 /* MakeCustomButtonUITests.swift in Sources */,
+				DDC895C229D8B68D0036CDE7 /* MakeCustomButtonUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DDC895B329D8B68D0036CDE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDC8959A29D8B68C0036CDE7 /* MakeCustomButton */;
+			targetProxy = DDC895B229D8B68D0036CDE7 /* PBXContainerItemProxy */;
+		};
+		DDC895BD29D8B68D0036CDE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDC8959A29D8B68C0036CDE7 /* MakeCustomButton */;
+			targetProxy = DDC895BC29D8B68D0036CDE7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DDC895A429D8B68C0036CDE7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDC895A529D8B68C0036CDE7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DDC895A929D8B68D0036CDE7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDC895AA29D8B68D0036CDE7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DDC895C329D8B68D0036CDE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DDC895C429D8B68D0036CDE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DDC895C629D8B68D0036CDE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2DF5SKQK2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MakeCustomButton/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.MakeCustomButton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DDC895C729D8B68D0036CDE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2DF5SKQK2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MakeCustomButton/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.MakeCustomButton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DDC895C929D8B68D0036CDE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2DF5SKQK2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.MakeCustomButtonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MakeCustomButton.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MakeCustomButton";
+			};
+			name = Debug;
+		};
+		DDC895CA29D8B68D0036CDE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2DF5SKQK2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.MakeCustomButtonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MakeCustomButton.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MakeCustomButton";
+			};
+			name = Release;
+		};
+		DDC895CC29D8B68D0036CDE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2DF5SKQK2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.MakeCustomButtonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MakeCustomButton;
+			};
+			name = Debug;
+		};
+		DDC895CD29D8B68D0036CDE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2DF5SKQK2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.MakeCustomButtonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MakeCustomButton;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DDC8959629D8B68C0036CDE7 /* Build configuration list for PBXProject "MakeCustomButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDC895C329D8B68D0036CDE7 /* Debug */,
+				DDC895C429D8B68D0036CDE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDC895C529D8B68D0036CDE7 /* Build configuration list for PBXNativeTarget "MakeCustomButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDC895C629D8B68D0036CDE7 /* Debug */,
+				DDC895C729D8B68D0036CDE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDC895C829D8B68D0036CDE7 /* Build configuration list for PBXNativeTarget "MakeCustomButtonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDC895C929D8B68D0036CDE7 /* Debug */,
+				DDC895CA29D8B68D0036CDE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDC895CB29D8B68D0036CDE7 /* Build configuration list for PBXNativeTarget "MakeCustomButtonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDC895CC29D8B68D0036CDE7 /* Debug */,
+				DDC895CD29D8B68D0036CDE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DDC8959329D8B68C0036CDE7 /* Project object */;
+}
