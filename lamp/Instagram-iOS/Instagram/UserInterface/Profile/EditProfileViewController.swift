@@ -13,10 +13,7 @@ class EditProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bar1.layer.borderWidth = 1
-        bar1.layer.borderColor = UIColor.systemGray5.cgColor
         
-        // Do any additional setup after loading the view.
     }
     
 

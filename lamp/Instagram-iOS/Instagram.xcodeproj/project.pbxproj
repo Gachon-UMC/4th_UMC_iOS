@@ -44,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		886EEE7C29EBD919006DF910 /* Trouble_Shooting.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Trouble_Shooting.md; sourceTree = "<group>"; };
+		886EEE7E29EBD9AF006DF910 /* 검정화면 캡처.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "검정화면 캡처.png"; sourceTree = "<group>"; };
+		886EEE7F29EBDA6A006DF910 /* 라벨.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "라벨.png"; sourceTree = "<group>"; };
 		888A348D29EB1C4800E66A74 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		A23BDE2928CFBC3A00A30F40 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A242B66328CCB027006939D6 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,9 +89,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		886EEE7D29EBD990006DF910 /* Trouble_shooting */ = {
+			isa = PBXGroup;
+			children = (
+				886EEE7E29EBD9AF006DF910 /* 검정화면 캡처.png */,
+				886EEE7F29EBDA6A006DF910 /* 라벨.png */,
+				886EEE7C29EBD919006DF910 /* Trouble_Shooting.md */,
+			);
+			path = Trouble_shooting;
+			sourceTree = "<group>";
+		};
 		A242B65A28CCB027006939D6 = {
 			isa = PBXGroup;
 			children = (
+				886EEE7D29EBD990006DF910 /* Trouble_shooting */,
 				A242B66528CCB027006939D6 /* Instagram */,
 				A242B67C28CCB029006939D6 /* InstagramTests */,
 				A242B68628CCB029006939D6 /* InstagramUITests */,
