@@ -500,9 +500,9 @@
         <!--Profile Edit Controller-->
         <scene sceneID="M3A-Gk-ddy">
             <objects>
-                <viewController storyboardIdentifier="EditVC" id="RHI-UQ-Xao" customClass="ProfileEditController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditVC" modalPresentationStyle="fullScreen" id="RHI-UQ-Xao" customClass="ProfileEditController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PCC-Yt-7HO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fQ-h4-AJw">
@@ -623,9 +623,6 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="nameField:" destination="RHI-UQ-Xao" eventType="editingDidEnd" id="kcw-op-hkG"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -654,9 +651,6 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="userNameField:" destination="RHI-UQ-Xao" eventType="editingDidEnd" id="F9Q-Qd-3Ll"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -679,10 +673,6 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="introText:" destination="RHI-UQ-Xao" eventType="editingDidEnd" id="eMU-1B-cve"/>
-                                                    <action selector="introductionField:" destination="RHI-UQ-Xao" eventType="editingDidEnd" id="aTP-hb-Zr3"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -705,9 +695,6 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="linkField:" destination="RHI-UQ-Xao" eventType="editingDidEnd" id="OFq-op-mN1"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
