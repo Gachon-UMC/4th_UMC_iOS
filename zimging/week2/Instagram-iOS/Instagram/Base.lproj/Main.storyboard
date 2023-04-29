@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NYa-jx-zTS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oU0-cE-dsz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -26,6 +26,7 @@
                         <segue destination="JuE-o6-Gm7" kind="relationship" relationship="viewControllers" id="2Zj-1C-Z90"/>
                         <segue destination="2pa-MG-GRJ" kind="relationship" relationship="viewControllers" id="9WT-sZ-vou"/>
                         <segue destination="9ME-Hz-eEi" kind="relationship" relationship="viewControllers" id="ULH-s1-Ysl"/>
+                        <segue destination="NYa-jx-zTS" kind="relationship" relationship="viewControllers" id="i9x-pg-nQ5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ooh-vV-iSy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -80,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="1846" y="909"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--View Controller-->
         <scene sceneID="YNe-JM-hMv">
             <objects>
-                <viewController id="9ME-Hz-eEi" customClass="ProfileViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9ME-Hz-eEi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0qh-9U-Hkc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +100,7 @@
         <!--Profile View Controller-->
         <scene sceneID="v9V-jz-2Ub">
             <objects>
-                <viewController storyboardIdentifier="ProfileVC" id="NYa-jx-zTS" customClass="ProfileViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" modalPresentationStyle="fullScreen" id="NYa-jx-zTS" customClass="ProfileViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MfP-oi-fs6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -363,8 +364,8 @@
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="editBtn:" destination="NYa-jx-zTS" eventType="touchUpInside" id="amg-Zv-xrO"/>
-                                            <segue destination="RHI-UQ-Xao" kind="show" identifier="goToEdit" id="M5U-K4-tKI"/>
+                                            <action selector="editBtn:" destination="NYa-jx-zTS" eventType="touchUpInside" id="E30-wR-yeo"/>
+                                            <segue destination="RHI-UQ-Xao" kind="show" identifier="goToEdit" id="Knb-Cj-Lvn"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbZ-Ui-QRE">
@@ -409,7 +410,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mep-fh-ai3">
-                                <rect key="frame" x="0.0" y="332" width="414" height="530"/>
+                                <rect key="frame" x="0.0" y="332" width="414" height="481"/>
                                 <subviews>
                                     <tabBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="T7s-Jo-Je5">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -421,7 +422,7 @@
                                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tabBar>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8GW-9O-KUU">
-                                        <rect key="frame" x="0.0" y="49" width="414" height="481"/>
+                                        <rect key="frame" x="0.0" y="49" width="414" height="432"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VQs-a7-fFr">
                                             <size key="itemSize" width="128" height="128"/>
@@ -485,17 +486,18 @@
                             <constraint firstItem="Mep-fh-ai3" firstAttribute="top" secondItem="3cJ-77-Ek8" secondAttribute="bottom" constant="15.5" id="rTy-r2-Ab4"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="DefaultProfile" selectedImage="FilledDefaultProfile" id="89E-jR-31B"/>
                     <navigationItem key="navigationItem" id="EoS-af-Dcc"/>
                     <connections>
-                        <outlet property="id" destination="BOF-ye-Bax" id="DJQ-Lz-QMU"/>
-                        <outlet property="intro" destination="gmP-1I-fDB" id="BoF-hU-kZY"/>
-                        <outlet property="link" destination="05z-Ok-eBA" id="7ku-8R-0pY"/>
-                        <outlet property="name" destination="UeI-rs-GXu" id="VFE-t0-BIz"/>
+                        <outlet property="id" destination="BOF-ye-Bax" id="b9V-5C-CYA"/>
+                        <outlet property="intro" destination="gmP-1I-fDB" id="lMw-cf-Tcq"/>
+                        <outlet property="link" destination="05z-Ok-eBA" id="l63-WB-cgD"/>
+                        <outlet property="name" destination="UeI-rs-GXu" id="M34-OR-0o3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llN-lj-UH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4113.04347826087" y="908.70535714285711"/>
+            <point key="canvasLocation" x="3216" y="909"/>
         </scene>
         <!--Profile Edit Controller-->
         <scene sceneID="M3A-Gk-ddy">
@@ -532,8 +534,8 @@
                                             <color key="titleColor" systemColor="tintColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="doneBtn:" destination="RHI-UQ-Xao" eventType="touchUpInside" id="KDi-IP-K72"/>
-                                            <segue destination="nda-vl-JHs" kind="unwind" identifier="backProfile" unwindAction="backToPage:" id="e1E-9P-Yyh"/>
+                                            <action selector="doneBtn:" destination="RHI-UQ-Xao" eventType="touchUpInside" id="VsA-XA-OWk"/>
+                                            <segue destination="nda-vl-JHs" kind="unwind" unwindAction="unwind:" id="cXF-pe-ffh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -564,18 +566,26 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="174" height="110"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vh-3i-mm4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="87" height="110"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="79.5" height="110"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="Default_pfp (1)"/>
                                                     </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pgi-vc-KDw">
+                                                        <rect key="frame" x="79.5" y="0.0" width="15" height="110"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="15" id="ZP2-FZ-yuy"/>
+                                                        </constraints>
+                                                    </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6P0-5N-R31">
-                                                        <rect key="frame" x="87" y="0.0" width="87" height="110"/>
+                                                        <rect key="frame" x="94.5" y="0.0" width="79.5" height="110"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="Default_pfp (1)"/>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="6P0-5N-R31" firstAttribute="width" secondItem="8vh-3i-mm4" secondAttribute="width" id="9wq-Te-OzF"/>
+                                                    <constraint firstAttribute="width" constant="190" id="fzm-S8-Eqx"/>
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사진 또는 아바타 수정" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLC-FK-yPL">
@@ -762,20 +772,22 @@
                     </view>
                     <navigationItem key="navigationItem" id="pv8-n5-gKP"/>
                     <connections>
-                        <outlet property="introText" destination="rIN-AP-UlS" id="ABn-UY-tCk"/>
-                        <outlet property="linkText" destination="Tal-B0-lkt" id="DfK-4l-euz"/>
-                        <outlet property="nameText" destination="CUg-dm-7mf" id="hUA-oF-Drs"/>
-                        <outlet property="userNameText" destination="d8N-li-FXs" id="7QC-QW-0Jc"/>
+                        <outlet property="introText" destination="rIN-AP-UlS" id="iUw-CU-7C0"/>
+                        <outlet property="linkText" destination="Tal-B0-lkt" id="XTM-hg-GpT"/>
+                        <outlet property="nameText" destination="CUg-dm-7mf" id="hJr-nm-IH2"/>
+                        <outlet property="userNameText" destination="d8N-li-FXs" id="cgJ-Yo-vfq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0X-IN-cQb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="nda-vl-JHs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4813.04347826087" y="908.70535714285711"/>
+            <point key="canvasLocation" x="4023" y="909"/>
         </scene>
     </scenes>
     <resources>
+        <image name="DefaultProfile" width="28" height="28"/>
         <image name="Default_pfp (1)" width="340" height="340"/>
+        <image name="FilledDefaultProfile" width="22" height="22"/>
         <image name="FilledHome" width="29" height="29"/>
         <image name="FilledReels" width="28" height="28"/>
         <image name="FilledSearch" width="29" height="29"/>

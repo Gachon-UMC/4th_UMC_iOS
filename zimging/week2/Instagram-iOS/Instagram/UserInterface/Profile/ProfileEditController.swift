@@ -49,18 +49,6 @@ class ProfileEditController: UIViewController, SendDataToEdit {
         linkText.text = link
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "backProfile" {
-            let vc = segue.destination as! ProfileViewController
-            vc.name.text = nameText.text!
-            vc.id.text = userNameText.text!
-            vc.intro.text = introText.text!
-            vc.link.text = linkText.text!
-            vc.delegate = self //이건 왜 해주는거지?
-        }
-    }
-    
-    
     @IBAction func doneBtn(_ sender: UIButton) {
         guard let tempName = nameText.text else {return}
         guard let tempId = userNameText.text else {return}
@@ -68,7 +56,5 @@ class ProfileEditController: UIViewController, SendDataToEdit {
         guard let tempLink = linkText.text else {return}
         
         delegate?.sendDataToP(myName: tempName, myID: tempId, myIntro: tempIntro, myLink: tempLink)
-        
-        performSegue(withIdentifier: "backProfile", sender: sender)
     }
 }
