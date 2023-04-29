@@ -1,15 +1,7 @@
-//
-//  AppDelegate.swift
-//  Instagram
-//
-//  Created by 서은수 on 2022/09/10.
-//
-
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

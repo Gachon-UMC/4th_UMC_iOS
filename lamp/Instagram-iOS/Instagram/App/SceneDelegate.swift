@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  Instagram
-//
-//  Created by 서은수 on 2022/09/10.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="182" id="KGk-i7-Jjw" customClass="StoryTableViewCell" customModule="Instagram" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="182"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="182"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N64-5E-ZVQ">
+                        <rect key="frame" x="25" y="30" width="100" height="100"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9C8-88-eds">
+                        <rect key="frame" x="54" y="138" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0m-Pp-V0S">
+                        <rect key="frame" x="95" y="101" width="46" height="37"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="storyPlus" title=""/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="N64-5E-ZVQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="Jei-29-ZME"/>
+                    <constraint firstItem="9C8-88-eds" firstAttribute="leading" secondItem="N64-5E-ZVQ" secondAttribute="trailing" constant="-71" id="OT6-vP-q9G"/>
+                    <constraint firstItem="N64-5E-ZVQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="QHC-i1-GGF"/>
+                    <constraint firstAttribute="trailing" secondItem="N64-5E-ZVQ" secondAttribute="trailing" constant="25" id="XeA-56-fKW"/>
+                    <constraint firstItem="Y0m-Pp-V0S" firstAttribute="leading" secondItem="N64-5E-ZVQ" secondAttribute="trailing" constant="-30" id="Yed-8L-7VD"/>
+                    <constraint firstAttribute="bottom" secondItem="N64-5E-ZVQ" secondAttribute="bottom" constant="52" id="bFO-tk-gDU"/>
+                    <constraint firstItem="Y0m-Pp-V0S" firstAttribute="top" secondItem="N64-5E-ZVQ" secondAttribute="bottom" constant="-29" id="hHf-ZC-dVe"/>
+                    <constraint firstItem="9C8-88-eds" firstAttribute="top" secondItem="N64-5E-ZVQ" secondAttribute="bottom" constant="8" symbolic="YES" id="o4Q-9Y-g5O"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="StroyImage" destination="N64-5E-ZVQ" id="fu9-rz-uGE"/>
+                <outlet property="StroyPlus" destination="Y0m-Pp-V0S" id="AJ3-BB-tio"/>
+                <outlet property="Username" destination="9C8-88-eds" id="IpE-96-PlT"/>
+            </connections>
+            <point key="canvasLocation" x="-73.282442748091597" y="-25.35211267605634"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="storyPlus" width="22" height="23"/>
+    </resources>
+</document>
