@@ -21,6 +21,8 @@ class ProfileViewController: UIViewController, SendDataToProfile {
     
     var delegate: SendDataToEdit?
     
+    @IBAction func unwind(_ segue: UIStoryboardSegue) { }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -30,8 +32,8 @@ class ProfileViewController: UIViewController, SendDataToProfile {
     }
     
     @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var id: UILabel!
     @IBOutlet weak var intro: UILabel!
+    @IBOutlet weak var id: UILabel!
     @IBOutlet weak var link: UILabel!
     
     
@@ -42,7 +44,7 @@ class ProfileViewController: UIViewController, SendDataToProfile {
             vc.id = id.text!
             vc.intro = intro.text!
             vc.link = link.text!
-            vc.delegate = self //이건 왜 해주는거지? 중간끝나고 봐야지......
+            vc.delegate = self //이건 왜 해주는거지? 중간끝나고 봐야지 -> 위임자를 선택해주는 거라고 함
         }
     }
     
