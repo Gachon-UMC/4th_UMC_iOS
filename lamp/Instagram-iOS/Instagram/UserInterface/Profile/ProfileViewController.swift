@@ -6,12 +6,13 @@ class ProfileViewController: UIViewController,EditProfileDelegate {
     
     var arrImageName: [String] = ["Image1","Image2","Image3","Image4","Image5","Image6"]
     
+    @IBOutlet weak var subTab: SubTabBar!
+    
     @IBOutlet weak var umc_ios: UIBarButtonItem!
     @IBOutlet weak var name: UIBarButtonItem!
     @IBOutlet weak var user_name: UILabel!
     @IBOutlet weak var intro: UILabel!
     @IBOutlet weak var link: UIButton!
-    
     @IBOutlet weak var myCollectionView: UICollectionView!
     
     @IBAction func tap_EP(_ sender: Any) {
@@ -70,6 +71,7 @@ class ProfileViewController: UIViewController,EditProfileDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //SubTabBar = UITabBar()
         umc_ios.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22, weight: .bold)],for: .normal)
         nameDist()
     }
@@ -121,4 +123,15 @@ extension ProfileViewController: UICollectionViewDataSource, UICollectionViewDel
             return 1.0
         }
 }
+
+/*
+extension SubTabBar: UITabBarDelegate {
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+            if item.tag == 0 {
+                // Do something for Item 1
+            } else if item.tag == 1 {
+                // Do something for Item 2
+            }
+        }
+}*/
 

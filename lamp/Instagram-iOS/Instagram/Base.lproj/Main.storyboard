@@ -69,27 +69,35 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnX-bz-PGo">
-                                <rect key="frame" x="0.0" y="92" width="100" height="399"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8ha-d6-bKv">
+                                <rect key="frame" x="0.0" y="92" width="414" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jq4-OJ-JUp">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="399"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </tableView>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qba-JJ-UhX">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BEJ-f8-X00" customClass="StoryCollectionViewCell" customModule="Instagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FcM-mE-vvM">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tAh-8x-Tst"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Home" selectedImage="FilledHome" id="qRl-Ve-Gbk"/>
                     <connections>
-                        <outlet property="UserStoryTableView" destination="Jq4-OJ-JUp" id="NNP-Hp-Dc1"/>
+                        <outlet property="StoryCollectionView" destination="8ha-d6-bKv" id="DrP-es-1Xo"/>
                         <outlet property="nav_bar" destination="Ely-TO-DKt" id="Krm-pb-K0U"/>
-                        <outlet property="table_superView" destination="cnX-bz-PGo" id="8HH-Zq-SqQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AID-Rs-dlk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -165,7 +173,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="storyPlus"/>
                             </button>
-                            <tabBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="url-hb-5Of">
+                            <tabBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="url-hb-5Of" customClass="SubTabBar" customModule="Instagram" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="318.5" width="414" height="43"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -181,11 +189,11 @@
                                     </tabBarItem>
                                 </items>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedImageTintColor" systemColor="labelColor"/>
                                 <tabBarAppearance key="standardAppearance">
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="selectionIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </tabBarAppearance>
                             </tabBar>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="fBn-kB-PLN">
@@ -305,11 +313,11 @@
                                     <constraint firstAttribute="height" constant="31" id="cho-SD-Ok3"/>
                                 </constraints>
                             </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uEV-cX-xiM">
-                                <rect key="frame" x="0.0" y="362.5" width="414" height="443"/>
+                            <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uEV-cX-xiM">
+                                <rect key="frame" x="0.0" y="362.5" width="414" height="444"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="443" id="F9f-fk-apY"/>
+                                    <constraint firstAttribute="height" constant="444" id="F9f-fk-apY"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4FB-HY-d15">
                                     <size key="itemSize" width="128" height="128"/>
@@ -411,6 +419,7 @@
                         <outlet property="link" destination="XGv-ov-Kvv" id="XWQ-fk-kCI"/>
                         <outlet property="myCollectionView" destination="uEV-cX-xiM" id="v55-NR-Q9k"/>
                         <outlet property="name" destination="ERS-ra-kBf" id="1Ag-Wf-F0u"/>
+                        <outlet property="subTab" destination="url-hb-5Of" id="ciU-js-fGS"/>
                         <outlet property="umc_ios" destination="ERS-ra-kBf" id="sqd-s4-rtX"/>
                         <outlet property="user_name" destination="Wwj-lp-7Sg" id="9iV-kr-Iwm"/>
                         <segue destination="yUZ-gc-jy7" kind="show" identifier="goto_edit" id="HdX-hJ-SGh"/>
