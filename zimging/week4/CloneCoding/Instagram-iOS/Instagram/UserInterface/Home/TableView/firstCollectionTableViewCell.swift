@@ -23,18 +23,15 @@ class firstCollectionTableViewCell: UITableViewCell {
         setUpCollectionView()
     }
     
-    //MARK: - nib파일 등록과 delegate, dataSource 선언
     func setUpCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UINib(nibName: "firstCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "firstCollectionViewCell") //xib파일 등록
+        collectionView.register(UINib(nibName: "firstCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "firstCollectionViewCell")
         
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }
@@ -42,7 +39,7 @@ class firstCollectionTableViewCell: UITableViewCell {
 
 extension firstCollectionTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        models.count //model의 수 만큼 cell개수 설정
+        models.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -51,7 +48,7 @@ extension firstCollectionTableViewCell: UICollectionViewDelegate, UICollectionVi
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt: IndexPath) -> CGSize { //cell의 크기 설정
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt: IndexPath) -> CGSize { 
         return CGSize(width: 100, height: 120)
     }
     

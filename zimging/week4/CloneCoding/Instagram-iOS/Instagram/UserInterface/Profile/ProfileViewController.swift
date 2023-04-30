@@ -31,6 +31,26 @@ class ProfileViewController: UIViewController, SendDataToProfile {
         performSegue(withIdentifier: "goToEdit", sender: self)
     }
     
+    @IBOutlet weak var grid: UIButton!
+    @IBOutlet weak var tag: UIButton!
+    
+    @IBAction func grid(_ sender: Any) {
+        grid.tintColor = UIColor.black
+        tag.tintColor = UIColor.gray
+        gridView.backgroundColor = UIColor.black
+        tagView.backgroundColor = UIColor.clear
+    }
+    
+    @IBAction func tag(_ sender: Any) {
+        grid.tintColor = UIColor.gray
+        tag.setImage(UIImage(systemName: "postGrid"), for: .normal)
+        tag.tintColor = UIColor.black
+        gridView.backgroundColor = UIColor.clear
+        tagView.backgroundColor = UIColor.black
+    }
+    
+    @IBOutlet weak var tagView: UIView!
+    @IBOutlet weak var gridView: UIView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var intro: UILabel!
     @IBOutlet weak var id: UILabel!
