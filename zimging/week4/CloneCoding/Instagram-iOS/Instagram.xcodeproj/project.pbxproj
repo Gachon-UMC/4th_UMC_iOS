@@ -28,6 +28,7 @@
 		DD05CD4629FCAB31004B394D /* firstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD05CD4429FCAB31004B394D /* firstCollectionViewCell.swift */; };
 		DD05CD4729FCAB31004B394D /* firstCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD05CD4529FCAB31004B394D /* firstCollectionViewCell.xib */; };
 		DD3330FC29EB371600D00923 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3330FB29EB371600D00923 /* EditViewController.swift */; };
+		DD4CB48F29FE9BB700E850AB /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4CB48E29FE9BB700E850AB /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		DD05CD4429FCAB31004B394D /* firstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstCollectionViewCell.swift; sourceTree = "<group>"; };
 		DD05CD4529FCAB31004B394D /* firstCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = firstCollectionViewCell.xib; sourceTree = "<group>"; };
 		DD3330FB29EB371600D00923 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		DD4CB48E29FE9BB700E850AB /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			children = (
 				A2554A6128D7896300047C50 /* ProfileViewController.swift */,
 				DD3330FB29EB371600D00923 /* EditViewController.swift */,
+				DD4CB48E29FE9BB700E850AB /* TabBar.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				DD05CD3629FC5A39004B394D /* Model.swift in Sources */,
 				A23BDE2A28CFBC3A00A30F40 /* TabBarController.swift in Sources */,
 				DD05CD4629FCAB31004B394D /* firstCollectionViewCell.swift in Sources */,
+				DD4CB48F29FE9BB700E850AB /* TabBar.swift in Sources */,
 				DD05CD3829FC5AF8004B394D /* HomeViewController.swift in Sources */,
 				A242B66728CCB027006939D6 /* AppDelegate.swift in Sources */,
 				DD05CD4229FCAADA004B394D /* firstCollectionTableViewCell.swift in Sources */,
