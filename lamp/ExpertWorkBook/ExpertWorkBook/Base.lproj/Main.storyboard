@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KQ5-RY-TMc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XNM-ex-wMg">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="1022" y="-1375"/>
         </scene>
-        <!--View Controller-->
+        <!--Scroll_View-->
         <scene sceneID="1ly-6R-W3O">
             <objects>
-                <viewController id="Fp1-sH-vWa" sceneMemberID="viewController">
+                <viewController title="Scroll_View" id="Fp1-sH-vWa" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1oM-PS-hn2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -227,10 +227,25 @@ class FirstViewController: UIViewController {
             </objects>
             <point key="canvasLocation" x="-463.35877862595419" y="-1375.3521126760563"/>
         </scene>
-        <!--Third View Controller-->
+        <!--Lottie_view-->
+        <scene sceneID="Zyg-lD-ukj">
+            <objects>
+                <viewController title="Lottie_view" id="XNM-ex-wMg" customClass="Lottie_ViewController" customModule="ExpertWorkBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fqN-k6-LgL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="aCj-ov-FMn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5h5-CS-Zrw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-512" y="-661"/>
+        </scene>
+        <!--Table_View-->
         <scene sceneID="0MX-CD-9AO">
             <objects>
-                <viewController storyboardIdentifier="ThirdViewController" id="KQ5-RY-TMc" customClass="ThirdViewController" customModule="ExpertWorkBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThirdViewController" title="Table_View" id="KQ5-RY-TMc" customClass="ThirdViewController" customModule="ExpertWorkBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dgk-Db-ir2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,7 +270,7 @@ class FirstViewController: UIViewController {
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hls-N0-4Co" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="235.87786259541983" y="-661.26760563380287"/>
+            <point key="canvasLocation" x="236" y="-661"/>
         </scene>
     </scenes>
     <resources>

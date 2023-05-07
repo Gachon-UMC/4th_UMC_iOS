@@ -18,8 +18,6 @@ extension CALayer {
                                     border.frame = CGRect.init(x: 0, y: frame.height - width, width: frame.width, height: width)
                             } else if set == "textfield" {
                                 border.frame = CGRect.init(x: 0, y: frame.height - width + 10, width: self.bounds.width - 20, height: width)
-                                //print("조정된?",self.bounds.width)
-                                //print("원본",frame.width)
                             }
                             break
                         case UIRectEdge.left:
@@ -48,8 +46,6 @@ extension CALayer {
                                     border.frame = CGRect.init(x: 0, y: frame.height - width, width: frame.width/2, height: width)
                             } else if name == "secondBorder" {
                                 border.frame = CGRect.init(x: frame.width/2, y: frame.height - width, width: self.bounds.width - 20, height: width)
-                                //print("조정된?",self.bounds.width)
-                                //print("원본",frame.width)
                             }
                             break
                         case UIRectEdge.left:

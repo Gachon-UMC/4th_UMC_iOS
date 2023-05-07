@@ -10,9 +10,11 @@ class SubTabBar: UITabBar, UITabBarDelegate {
     
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         if item == items?.first {
+            //item.image?.withTintColor(UIColor.black)
             tabBar.layer.sublayers!.last?.removeFromSuperlayer()
             tabBar.layer.addBorder([.bottom], color: UIColor.black, width: 1.0, name: "firstBorder")
         } else {
+            //item.image?.withTintColor(UIColor.black)
             tabBar.layer.sublayers!.last?.removeFromSuperlayer()
             tabBar.layer.addBorder([.bottom], color: UIColor.black, width: 1.0, name: "secondBorder")
         }
