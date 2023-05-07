@@ -7,13 +7,15 @@
 
 import Foundation
 import UIKit
+import Lottie
 
 class ThirdViewController: UIViewController {
     
     
     @IBOutlet weak var myTableView: UITableView!
     
-    
+    let refreshControl = UIRefreshControl()
+    let animationView = LottieAnimationView(name:"cycling-in-the-park")
     
     let contentArr = [
         "test1", "test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2", "test3test3test3test3test3test3test3test3test3test3test3test3test3test3test3test3est3test3test3test3test3test3test3test3test3test3test3test3test3test3test3test3","test4","test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5"
@@ -21,14 +23,52 @@ class ThirdViewController: UIViewController {
     
     var tweet_list: [tweet] = []
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        addDummydata()
+        setCell_resource()
+        setDelegate()
+        
+        refreshControl.tintColor = .clear
+        refreshControl.addSubview(animationView)
+        
+ 
+        animationView.translatesAutoresizingMaskIntoConstraints = false
+        // add horizontal center constraint
+        animationView.centerXAnchor.constraint(equalTo: refreshControl.centerXAnchor).isActive = true
+        // add vertical center constraint
+        animationView.centerYAnchor.constraint(equalTo: refreshControl.centerYAnchor).isActive = true
+        // add width constraint
+        animationView.widthAnchor.constraint(equalToConstant: 100.0).isActive = true
+        // add height constraint
+        animationView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
+        
+        animationView.frame = refreshControl.bounds
+ 
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop
+        animationView.play()
+
+        myTableView.addSubview(refreshControl)
+        
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+    }
+    
+    @objc func refresh(_ sender: UIRefreshControl) {
+        sender.endRefreshing()
+    }
+    
+    func addDummydata(){
         tweet_list.append(tweet("ABC","student",contentArr[0]))
         tweet_list.append(tweet("DEF","teacher",contentArr[1]))
         tweet_list.append(tweet("GHI","children",contentArr[2]))
         tweet_list.append(tweet("JKL","lawyer",contentArr[3]))
         tweet_list.append(tweet("MNO","safeguard",contentArr[4]))
-        
+    }
+    
+    func setCell_resource(){
         //Cell 리소스 NIB파일 가져오기
         let myTableViewCellNib = UINib(nibName: String(describing: MyTableViewCell.self), bundle: nil)
         print(myTableViewCellNib)
@@ -39,15 +79,13 @@ class ThirdViewController: UIViewController {
         self.myTableView.rowHeight = UITableView.automaticDimension
         //예상하는 셀 높이 너비를 120으로
         self.myTableView.estimatedRowHeight = 120
-        
+    }
+    
+    func setDelegate(){
         // 아주 중요 결국 delegate패턴이기 때문에 delegate, Datasource를 나 자신으로 연결해줘야 한다.
         self.myTableView.delegate = self
         self.myTableView.dataSource = self
-        
-        print(contentArr.count)
     }
-    
-
     
 }
 

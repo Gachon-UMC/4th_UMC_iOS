@@ -11,6 +11,8 @@
 		8832A29B29FC4E8F001241B9 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8832A29429FC3A20001241B9 /* MyTableViewCell.xib */; };
 		8832A29C29FC4E93001241B9 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832A29829FC4585001241B9 /* MyTableViewCell.swift */; };
 		8832A29E29FC63E3001241B9 /* SNS_data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832A29D29FC63E3001241B9 /* SNS_data.swift */; };
+		8878D2552A038A5E0085C4E8 /* LottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8878D2542A038A5E0085C4E8 /* LottieViewController.swift */; };
+		8878D2572A038E5A0085C4E8 /* cycling-in-the-park.json in Resources */ = {isa = PBXBuildFile; fileRef = 8878D2562A038E5A0085C4E8 /* cycling-in-the-park.json */; };
 		888A348B29EA9F9400E66A74 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A348A29EA9F9400E66A74 /* SecondViewController.swift */; };
 		88E50CB629E874EB00B5F7D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E50CB529E874EB00B5F7D4 /* AppDelegate.swift */; };
 		88E50CB829E874EB00B5F7D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E50CB729E874EB00B5F7D4 /* SceneDelegate.swift */; };
@@ -21,6 +23,9 @@
 		88E50CCD29E874ED00B5F7D4 /* ExpertWorkBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E50CCC29E874ED00B5F7D4 /* ExpertWorkBookTests.swift */; };
 		88E50CD729E874ED00B5F7D4 /* ExpertWorkBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E50CD629E874ED00B5F7D4 /* ExpertWorkBookUITests.swift */; };
 		88E50CD929E874ED00B5F7D4 /* ExpertWorkBookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E50CD829E874ED00B5F7D4 /* ExpertWorkBookUITestsLaunchTests.swift */; };
+		9781F2AE140976AEB211DE59 /* Pods_ExpertWorkBook_ExpertWorkBookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1ED273683EC45C4478D1DB /* Pods_ExpertWorkBook_ExpertWorkBookUITests.framework */; };
+		C732016EBDBA6C80B5C71C6E /* Pods_ExpertWorkBookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D3125D1DA2ABB5D9162A9D /* Pods_ExpertWorkBookTests.framework */; };
+		FB3447679633B251F0058E74 /* Pods_ExpertWorkBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0931A8EA7B304E0071743D2 /* Pods_ExpertWorkBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +46,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		455195D353B280D54A9804B7 /* Pods-ExpertWorkBookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpertWorkBookTests.debug.xcconfig"; path = "Target Support Files/Pods-ExpertWorkBookTests/Pods-ExpertWorkBookTests.debug.xcconfig"; sourceTree = "<group>"; };
+		56D3125D1DA2ABB5D9162A9D /* Pods_ExpertWorkBookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpertWorkBookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		703DB5F485531CEFD92249D2 /* Pods-ExpertWorkBook-ExpertWorkBookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpertWorkBook-ExpertWorkBookUITests.debug.xcconfig"; path = "Target Support Files/Pods-ExpertWorkBook-ExpertWorkBookUITests/Pods-ExpertWorkBook-ExpertWorkBookUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E1ED273683EC45C4478D1DB /* Pods_ExpertWorkBook_ExpertWorkBookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpertWorkBook_ExpertWorkBookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F5204F06CDDEB4503D24361 /* Pods-ExpertWorkBook-ExpertWorkBookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpertWorkBook-ExpertWorkBookUITests.release.xcconfig"; path = "Target Support Files/Pods-ExpertWorkBook-ExpertWorkBookUITests/Pods-ExpertWorkBook-ExpertWorkBookUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8832A29429FC3A20001241B9 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		8832A29629FC4239001241B9 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		8832A29829FC4585001241B9 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		8832A29D29FC63E3001241B9 /* SNS_data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNS_data.swift; sourceTree = "<group>"; };
+		8878D2542A038A5E0085C4E8 /* LottieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewController.swift; sourceTree = "<group>"; };
+		8878D2562A038E5A0085C4E8 /* cycling-in-the-park.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "cycling-in-the-park.json"; sourceTree = "<group>"; };
 		888A348A29EA9F9400E66A74 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		88E50CB229E874EB00B5F7D4 /* ExpertWorkBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpertWorkBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E50CB529E874EB00B5F7D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +71,10 @@
 		88E50CD229E874ED00B5F7D4 /* ExpertWorkBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpertWorkBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E50CD629E874ED00B5F7D4 /* ExpertWorkBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpertWorkBookUITests.swift; sourceTree = "<group>"; };
 		88E50CD829E874ED00B5F7D4 /* ExpertWorkBookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpertWorkBookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C28C9D20A40C683EF1854E69 /* Pods-ExpertWorkBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpertWorkBook.debug.xcconfig"; path = "Target Support Files/Pods-ExpertWorkBook/Pods-ExpertWorkBook.debug.xcconfig"; sourceTree = "<group>"; };
+		C94C2C594083D2BA4E5DD3B1 /* Pods-ExpertWorkBookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpertWorkBookTests.release.xcconfig"; path = "Target Support Files/Pods-ExpertWorkBookTests/Pods-ExpertWorkBookTests.release.xcconfig"; sourceTree = "<group>"; };
+		E0931A8EA7B304E0071743D2 /* Pods_ExpertWorkBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpertWorkBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9F8BB7E6C5D729C9A018F18 /* Pods-ExpertWorkBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpertWorkBook.release.xcconfig"; path = "Target Support Files/Pods-ExpertWorkBook/Pods-ExpertWorkBook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB3447679633B251F0058E74 /* Pods_ExpertWorkBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C732016EBDBA6C80B5C71C6E /* Pods_ExpertWorkBookTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +98,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9781F2AE140976AEB211DE59 /* Pods_ExpertWorkBook_ExpertWorkBookUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DBD92D10AD7BFC92F1FB645 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0931A8EA7B304E0071743D2 /* Pods_ExpertWorkBook.framework */,
+				7E1ED273683EC45C4478D1DB /* Pods_ExpertWorkBook_ExpertWorkBookUITests.framework */,
+				56D3125D1DA2ABB5D9162A9D /* Pods_ExpertWorkBookTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7863AAA29EDA0502E49298A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C28C9D20A40C683EF1854E69 /* Pods-ExpertWorkBook.debug.xcconfig */,
+				F9F8BB7E6C5D729C9A018F18 /* Pods-ExpertWorkBook.release.xcconfig */,
+				703DB5F485531CEFD92249D2 /* Pods-ExpertWorkBook-ExpertWorkBookUITests.debug.xcconfig */,
+				7F5204F06CDDEB4503D24361 /* Pods-ExpertWorkBook-ExpertWorkBookUITests.release.xcconfig */,
+				455195D353B280D54A9804B7 /* Pods-ExpertWorkBookTests.debug.xcconfig */,
+				C94C2C594083D2BA4E5DD3B1 /* Pods-ExpertWorkBookTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		88E50CA929E874EB00B5F7D4 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +135,8 @@
 				88E50CCB29E874ED00B5F7D4 /* ExpertWorkBookTests */,
 				88E50CD529E874ED00B5F7D4 /* ExpertWorkBookUITests */,
 				88E50CB329E874EB00B5F7D4 /* Products */,
+				7863AAA29EDA0502E49298A6 /* Pods */,
+				2DBD92D10AD7BFC92F1FB645 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +153,7 @@
 		88E50CB429E874EB00B5F7D4 /* ExpertWorkBook */ = {
 			isa = PBXGroup;
 			children = (
+				8878D2562A038E5A0085C4E8 /* cycling-in-the-park.json */,
 				8832A29829FC4585001241B9 /* MyTableViewCell.swift */,
 				8832A29429FC3A20001241B9 /* MyTableViewCell.xib */,
 				88E50CB529E874EB00B5F7D4 /* AppDelegate.swift */,
@@ -121,6 +166,7 @@
 				88E50CC029E874ED00B5F7D4 /* LaunchScreen.storyboard */,
 				88E50CC329E874ED00B5F7D4 /* Info.plist */,
 				8832A29D29FC63E3001241B9 /* SNS_data.swift */,
+				8878D2542A038A5E0085C4E8 /* LottieViewController.swift */,
 			);
 			path = ExpertWorkBook;
 			sourceTree = "<group>";
@@ -149,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88E50CDC29E874ED00B5F7D4 /* Build configuration list for PBXNativeTarget "ExpertWorkBook" */;
 			buildPhases = (
+				1F3587B612AA235194DDB12C /* [CP] Check Pods Manifest.lock */,
 				88E50CAE29E874EB00B5F7D4 /* Sources */,
 				88E50CAF29E874EB00B5F7D4 /* Frameworks */,
 				88E50CB029E874EB00B5F7D4 /* Resources */,
+				1C2A5654BBD4DE3AB84B1FE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,6 +214,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88E50CDF29E874ED00B5F7D4 /* Build configuration list for PBXNativeTarget "ExpertWorkBookTests" */;
 			buildPhases = (
+				BD7D8D69F4A26BA3647878C6 /* [CP] Check Pods Manifest.lock */,
 				88E50CC429E874ED00B5F7D4 /* Sources */,
 				88E50CC529E874ED00B5F7D4 /* Frameworks */,
 				88E50CC629E874ED00B5F7D4 /* Resources */,
@@ -184,9 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88E50CE229E874ED00B5F7D4 /* Build configuration list for PBXNativeTarget "ExpertWorkBookUITests" */;
 			buildPhases = (
+				3C093B2CCE76C7818E40C51C /* [CP] Check Pods Manifest.lock */,
 				88E50CCE29E874ED00B5F7D4 /* Sources */,
 				88E50CCF29E874ED00B5F7D4 /* Frameworks */,
 				88E50CD029E874ED00B5F7D4 /* Resources */,
+				E78200E4722FE94CF730A903 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8878D2572A038E5A0085C4E8 /* cycling-in-the-park.json in Resources */,
 				88E50CC229E874ED00B5F7D4 /* LaunchScreen.storyboard in Resources */,
 				8832A29B29FC4E8F001241B9 /* MyTableViewCell.xib in Resources */,
 				88E50CBF29E874ED00B5F7D4 /* Assets.xcassets in Resources */,
@@ -269,6 +321,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C2A5654BBD4DE3AB84B1FE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExpertWorkBook/Pods-ExpertWorkBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExpertWorkBook/Pods-ExpertWorkBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExpertWorkBook/Pods-ExpertWorkBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1F3587B612AA235194DDB12C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExpertWorkBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C093B2CCE76C7818E40C51C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExpertWorkBook-ExpertWorkBookUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD7D8D69F4A26BA3647878C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExpertWorkBookTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E78200E4722FE94CF730A903 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExpertWorkBook-ExpertWorkBookUITests/Pods-ExpertWorkBook-ExpertWorkBookUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExpertWorkBook-ExpertWorkBookUITests/Pods-ExpertWorkBook-ExpertWorkBookUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExpertWorkBook-ExpertWorkBookUITests/Pods-ExpertWorkBook-ExpertWorkBookUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		88E50CAE29E874EB00B5F7D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -279,6 +434,7 @@
 				8832A29729FC4239001241B9 /* ThirdViewController.swift in Sources */,
 				88E50CB629E874EB00B5F7D4 /* AppDelegate.swift in Sources */,
 				8832A29E29FC63E3001241B9 /* SNS_data.swift in Sources */,
+				8878D2552A038A5E0085C4E8 /* LottieViewController.swift in Sources */,
 				88E50CB829E874EB00B5F7D4 /* SceneDelegate.swift in Sources */,
 				8832A29C29FC4E93001241B9 /* MyTableViewCell.swift in Sources */,
 			);
@@ -452,6 +608,7 @@
 		};
 		88E50CDD29E874ED00B5F7D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C28C9D20A40C683EF1854E69 /* Pods-ExpertWorkBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -479,6 +636,7 @@
 		};
 		88E50CDE29E874ED00B5F7D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9F8BB7E6C5D729C9A018F18 /* Pods-ExpertWorkBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -506,6 +664,7 @@
 		};
 		88E50CE029E874ED00B5F7D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 455195D353B280D54A9804B7 /* Pods-ExpertWorkBookTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -525,6 +684,7 @@
 		};
 		88E50CE129E874ED00B5F7D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C94C2C594083D2BA4E5DD3B1 /* Pods-ExpertWorkBookTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -544,6 +704,7 @@
 		};
 		88E50CE329E874ED00B5F7D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 703DB5F485531CEFD92249D2 /* Pods-ExpertWorkBook-ExpertWorkBookUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -561,6 +722,7 @@
 		};
 		88E50CE429E874ED00B5F7D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F5204F06CDDEB4503D24361 /* Pods-ExpertWorkBook-ExpertWorkBookUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

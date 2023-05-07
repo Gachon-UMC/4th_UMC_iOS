@@ -12,7 +12,6 @@ class StoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var White_View: UIView!
     @IBOutlet weak var UserImage: UIImageView!
     @IBOutlet weak var UserName: UILabel!
-    @IBOutlet weak var plusButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,15 +22,7 @@ class StoryCollectionViewCell: UICollectionViewCell {
         White_View.clipsToBounds = true
         UserImage.layer.cornerRadius = 0.5 * UserImage.bounds.size.width
         UserImage.clipsToBounds = true
-        plusButton.isHidden = true
         
     }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        UserImage.image = nil
-        UserName.text = nil
-        plusButton.isHidden = true
-        }
 
 }

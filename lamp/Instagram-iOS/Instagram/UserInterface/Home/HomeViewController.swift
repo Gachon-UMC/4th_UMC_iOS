@@ -11,77 +11,170 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var nav_bar: UINavigationBar!
     @IBOutlet weak var StoryCollectionView: UICollectionView!
+    @IBOutlet weak var PostCollectionView: UICollectionView!
+    
+    @IBOutlet weak var StoryTableView: UITableView!
     
     
-    var story_list: [story] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nav_bar.setBackgroundImage(UIImage(), for: .default)
+        addDummyStories()
+        addDummyPosts()
+        
+        self.StoryTableView.delegate = self
+        self.StoryTableView.dataSource = self
+        
+        let storyCell = UINib(nibName: "StoryTableViewCell", bundle: nil)
+            StoryTableView.register(storyCell, forCellReuseIdentifier: "StoryTableViewCell")
+        let postCell = UINib(nibName: "PostTableViewCell", bundle: nil)
+            StoryTableView.register(postCell, forCellReuseIdentifier: "PostTableViewCell")
+        
+        
+        /*
         
         self.StoryCollectionView.delegate = self
         self.StoryCollectionView.dataSource = self
-        let nibName = UINib(nibName: "StoryCollectionViewCell", bundle: nil)
-                StoryCollectionView.register(nibName, forCellWithReuseIdentifier: "StoryCollectionViewCell")
+        self.StoryCollectionView.layer.addBorder([.bottom], color: UIColor.systemGray5, width: 1.0)
         
-        story_list.append(story("Lamp","DefaultProfile"))
-        story_list.append(story("Name1","Image1"))
-        story_list.append(story("Name2","Image2"))
-        story_list.append(story("Name3","Image3"))
-        story_list.append(story("Name4","Image4"))
-        story_list.append(story("Name5","Image5"))
-        story_list.append(story("Name6","Image6"))
+        self.PostCollectionView.delegate = self
+        self.PostCollectionView.dataSource = self
         
-        nav_bar.setBackgroundImage(UIImage(), for: .default)
-        // Do any additional setup after loading the view.
+        let FirstStoryNib = UINib(nibName: "FirstCollectionViewCell", bundle: nil)
+        StoryCollectionView.register(FirstStoryNib, forCellWithReuseIdentifier: "FirstCollectionViewCell")
+        
+        let SeconStoryNib = UINib(nibName: "StoryCollectionViewCell", bundle: nil)
+        StoryCollectionView.register(SeconStoryNib, forCellWithReuseIdentifier: "StoryCollectionViewCell")
+        
+        let PostNib = UINib(nibName: "PostCollectionViewCell", bundle: nil)
+        PostCollectionView.register(PostNib, forCellWithReuseIdentifier: "PostCollectionViewCell")
+        */
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
 
 }
 
+
+/*
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    // CollectionView item 개수
+        // CollectionView item 개수
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return story_list.count
+            if collectionView == StoryCollectionView {
+                return story_list.count
+            } else /*if collectionView == PostCollectionView*/ {
+                return post_list.count
+            }
         }
         
         // CollectionView Cell의 Object
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCollectionViewCell", for: indexPath) as! StoryCollectionViewCell
             
-            cell.UserImage.image = UIImage(named: story_list[indexPath.row].image) ?? UIImage()
-            cell.UserName.text = story_list[indexPath.row].name
-            if story_list[indexPath.row].name == "Lamp" {
-                cell.plusButton.isHidden = false
+            if collectionView == StoryCollectionView {
+                if indexPath.item == 0 {
+                            // 첫 번째 셀에 대한 특별한 처리를 수행합니다.
+                            let firstCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FirstCollectionViewCell", for: indexPath) as! FirstCollectionViewCell
+                            firstCell.UserImage.image = UIImage(named: story_list[indexPath.row].image) ?? UIImage()
+                            firstCell.UserName.text = story_list[indexPath.row].name
+                            return firstCell
+                        }
+                else {
+                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCollectionViewCell", for: indexPath) as! StoryCollectionViewCell
+                    cell.UserImage.image = UIImage(named: story_list[indexPath.row].image) ?? UIImage()
+                    cell.UserName.text = story_list[indexPath.row].name
+                    return cell
+                }
+            } else /*if collectionView == PostCollectionView*/ {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCollectionViewCell", for: indexPath) as! PostCollectionViewCell
+                cell.UserID.text = post_list[indexPath.row].UserID
+                cell.UserName.text = post_list[indexPath.row].UserID
+                cell.UserImage.image = UIImage(named: post_list[indexPath.row].UserImage) ?? UIImage()
+                cell.PostImage.image = UIImage(named: post_list[indexPath.row].PostImage) ?? UIImage()
+                cell.PostLike.text = "좋아요 \(post_list[indexPath.row].PostLike)개"
+                cell.User_Text.text = post_list[indexPath.row].UserText
+                cell.CommentCount.text = "댓글 \(post_list[indexPath.row].CommentCount)개 모두 보기"
+                cell.PostDate.text = post_list[indexPath.row].PostDate
+                return cell
             }
-            return cell
         }
         
         
         // CollectionView Cell의 Size
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let width: CGFloat = collectionView.frame.width/4
-            let height: CGFloat = collectionView.frame.height
-            return CGSize(width: width, height: height)
+            if collectionView == StoryCollectionView {
+                let width: CGFloat = collectionView.frame.width/4 - 5
+                let height: CGFloat = collectionView.frame.height
+                return CGSize(width: width, height: height)
+            } else /*if collectionView == PostCollectionView*/ {
+                let width: CGFloat = collectionView.frame.width
+                let height: CGFloat = collectionView.frame.height
+                return CGSize(width: width, height: height)
+            }
+            
         }
         
         // CollectionView Cell의 위아래 간격
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-            return 1.0
+            if collectionView == StoryCollectionView {
+                return 1.0
+            } else /*if collectionView == PostCollectionView*/ {
+                return 0.0
+            }
         }
         
         // CollectionView Cell의 옆 간격
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-            return 1.0
+            if collectionView == StoryCollectionView {
+                return 1.0
+            } else /*if collectionView == PostCollectionView*/ {
+                return 0.0
+            }
         }
+}
+*/
+
+extension HomeViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return indexPath.section == 0 ? 128 : 570
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension HomeViewController: UITableViewDataSource{
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+            return 1
+        }else {
+            return post_list.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.section{
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCell", for: indexPath) as? StoryTableViewCell else { return UITableViewCell() }
+            return cell
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell", for: indexPath) as? PostTableViewCell else { return UITableViewCell() }
+            cell.UserID.text = post_list[indexPath.row].UserID
+            cell.UserName.text = post_list[indexPath.row].UserID
+            cell.UserImage.image = UIImage(named: post_list[indexPath.row].UserImage) ?? UIImage()
+            cell.PostImage.image = UIImage(named: post_list[indexPath.row].PostImage) ?? UIImage()
+            cell.PostLike.text = "좋아요 \(post_list[indexPath.row].PostLike)개"
+            cell.User_Text.text = post_list[indexPath.row].UserText
+            cell.CommentCount.text = "댓글 \(post_list[indexPath.row].CommentCount)개 모두 보기"
+            cell.PostDate.text = post_list[indexPath.row].PostDate
+            return cell
+        default:
+            return UITableViewCell()
+        }
+    }
+    
 }
