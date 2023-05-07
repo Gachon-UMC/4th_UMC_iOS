@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="firstCollectionViewCell" id="gTV-IL-0wX" customClass="firstCollectionViewCell" customModule="Instagram" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="86" height="108"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="86" height="108"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvN-Lh-XD5">
+                        <rect key="frame" x="4" y="7" width="78" height="78"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="CvN-Lh-XD5" secondAttribute="height" multiplier="1:1" id="cz5-L8-246"/>
+                            <constraint firstAttribute="width" constant="78" id="nw2-Pj-ho0"/>
+                            <constraint firstAttribute="height" constant="78" id="ulb-f9-XAN"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lf8-eP-3bc">
+                        <rect key="frame" x="6" y="9" width="74" height="74"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="lf8-eP-3bc" secondAttribute="height" multiplier="1:1" id="4D2-by-Yd4"/>
+                            <constraint firstAttribute="height" constant="74" id="8MC-tb-sRF"/>
+                            <constraint firstAttribute="width" constant="74" id="W71-Yf-p2L"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqV-vo-1gX">
+                        <rect key="frame" x="8" y="11" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="MqV-vo-1gX" secondAttribute="height" multiplier="1:1" id="Ezs-4e-2hN"/>
+                            <constraint firstAttribute="height" constant="70" id="FGd-Me-8pl"/>
+                            <constraint firstAttribute="width" constant="70" id="Pyc-rM-T9h"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="Default_pfp (1)"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A62-sa-Lza">
+                        <rect key="frame" x="57" y="60" width="21" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="21" id="SOp-kN-kOc"/>
+                            <constraint firstAttribute="height" constant="23" id="u8P-UL-tW7"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="storyPlus"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DxK-Qn-gzd">
+                        <rect key="frame" x="28" y="89" width="31" height="9.3333333333333286"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="CvN-Lh-XD5" firstAttribute="centerX" secondItem="MqV-vo-1gX" secondAttribute="centerX" id="0CN-Po-PMe"/>
+                <constraint firstItem="CvN-Lh-XD5" firstAttribute="centerY" secondItem="lf8-eP-3bc" secondAttribute="centerY" id="21V-Uq-InX"/>
+                <constraint firstItem="A62-sa-Lza" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="57" id="9lI-VN-ix1"/>
+                <constraint firstItem="lf8-eP-3bc" firstAttribute="bottom" secondItem="A62-sa-Lza" secondAttribute="bottom" id="IYt-Zn-R99"/>
+                <constraint firstItem="A62-sa-Lza" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="60" id="ZkF-q5-iVx"/>
+                <constraint firstItem="CvN-Lh-XD5" firstAttribute="centerX" secondItem="lf8-eP-3bc" secondAttribute="centerX" id="aKh-Yi-S9O"/>
+                <constraint firstItem="CvN-Lh-XD5" firstAttribute="centerY" secondItem="MqV-vo-1gX" secondAttribute="centerY" id="lVs-EZ-gaX"/>
+                <constraint firstItem="CvN-Lh-XD5" firstAttribute="centerX" secondItem="DxK-Qn-gzd" secondAttribute="centerX" id="mWa-Lu-r1F"/>
+                <constraint firstItem="A62-sa-Lza" firstAttribute="trailing" secondItem="MqV-vo-1gX" secondAttribute="trailing" id="xCS-6P-sQt"/>
+                <constraint firstItem="DxK-Qn-gzd" firstAttribute="top" secondItem="CvN-Lh-XD5" secondAttribute="bottom" constant="4" id="xmP-Ri-8MN"/>
+            </constraints>
+            <size key="customSize" width="86" height="108"/>
+            <connections>
+                <outlet property="plusButton" destination="A62-sa-Lza" id="Pdd-d5-gRA"/>
+                <outlet property="profileImage" destination="MqV-vo-1gX" id="ulN-2d-F63"/>
+                <outlet property="tintedButton" destination="CvN-Lh-XD5" id="sUe-Q1-8wr"/>
+                <outlet property="titleLabel" destination="DxK-Qn-gzd" id="WEm-sE-aQe"/>
+                <outlet property="whiteButton" destination="lf8-eP-3bc" id="Hyt-CD-7Ab"/>
+            </connections>
+            <point key="canvasLocation" x="102.29007633587786" y="14.084507042253522"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Default_pfp (1)" width="340" height="340"/>
+        <image name="storyPlus" width="22" height="23"/>
+    </resources>
+</document>
