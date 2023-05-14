@@ -1,5 +1,6 @@
 import UIKit
 
+@available(iOS 16.0, *)
 class ProfileViewController: UIViewController,EditProfileDelegate {
     
     var data_inc: [String] = ["umc_ios","가천대학교 UMC iOS","umc ios 트랙 짱","www.makeus.in/umc"]
@@ -7,7 +8,7 @@ class ProfileViewController: UIViewController,EditProfileDelegate {
     var arrImageName: [String] = ["Image1","Image2","Image3","Image4","Image5","Image6"]
     
     @IBOutlet weak var subTab: SubTabBar!
-    
+
     @IBOutlet weak var umc_ios: UIBarButtonItem!
     @IBOutlet weak var name: UIBarButtonItem!
     @IBOutlet weak var user_name: UILabel!
@@ -22,42 +23,29 @@ class ProfileViewController: UIViewController,EditProfileDelegate {
         EProfileVC.delegate = self
         let navCon = UINavigationController(rootViewController: EProfileVC)
         self.present(navCon, animated: true, completion: nil)
-        
-        //self.navigationController?.pushViewController(EProfileVC, animated: true)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goto_edit" {
-            let EProfileVC = segue.destination as! EditProfileViewController
-            EProfileVC.data_loaded = ["umc_ios","가천대학교 UMC iOS","umc ios 트랙 짱","www.makeus.in/umc"]
-        }
+    @IBAction func tap_AddPost(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Sheet", bundle: nil)
+        let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "SheetViewController") as! SheetViewController
+        sheetPresentationController.Option = "AddPost"
+        self.present(sheetPresentationController, animated: true, completion: nil)
     }
+    
+    @IBAction func tap_AddOption(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Sheet", bundle: nil)
+        let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "SheetViewController") as! SheetViewController
+        sheetPresentationController.Option = "Option"
+        self.present(sheetPresentationController, animated: true, completion: nil)
+    }
+    
+    
     
     func didSaveProfile(data: [String]) {
         data_inc = data
         nameDist()
         
     }
-    /*
-    /// EditprofileView -> profileView로 넘어오는 NotificationData Observer
-    private func addNotiObserver() {
-            NotificationCenter.default.addObserver(self, selector: #selector(EditConfig), name: NSNotification.Name(rawValue: pushdata_noti), object: nil)
-            // self : 현재 자기자신 뷰컨에 옵저버를 달겠다.
-            // selector : 해당 신호를 받으면 실행하는 함수 부분
-            // name : 신호를 구분하기 위한 이름
-            // object : 해당 신호를 걸러주는 필터같은 역할, nil 사용시 해당 신호를 모두 받겠다는 의미
-        }
-    
-    /// addNotiObeserver()에 활용되는 data_inc 변경 함수
-    @objc func EditConfig(notification : NSNotification){
-            print("EditConfig called")
-            if let data = notification.object as? [String]{
-                //as? [String]는 optional한 값을 [String] 타입으로 캐스팅하는 것을 의미합니다.
-                data_inc = data
-                nameDist()
-            }
-        }
-     */
     
     /// data_inc의 요소값듫을 ui요소에 배정
     private func nameDist() {
@@ -73,23 +61,15 @@ class ProfileViewController: UIViewController,EditProfileDelegate {
         // Do any additional setup after loading the view.
         //SubTabBar = UITabBar()
         umc_ios.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22, weight: .bold)],for: .normal)
+        umc_ios.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22, weight: .bold)],for: .selected)
         nameDist()
+        
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
+@available(iOS 16.0, *)
 extension ProfileViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     // CollectionView item 개수
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -124,14 +104,4 @@ extension ProfileViewController: UICollectionViewDataSource, UICollectionViewDel
         }
 }
 
-/*
-extension SubTabBar: UITabBarDelegate {
-    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-            if item.tag == 0 {
-                // Do something for Item 1
-            } else if item.tag == 1 {
-                // Do something for Item 2
-            }
-        }
-}*/
 

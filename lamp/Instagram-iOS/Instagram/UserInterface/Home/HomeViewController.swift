@@ -15,22 +15,29 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var StoryTableView: UITableView!
     
-    
+    let refreshControl = UIRefreshControl()
+    let Device_width = UIScreen.main.bounds.width
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nav_bar.setBackgroundImage(UIImage(), for: .default)
+        nav_bar.shadowImage = UIImage()
         addDummyStories()
         addDummyPosts()
         
         self.StoryTableView.delegate = self
         self.StoryTableView.dataSource = self
         
+        StoryTableView.contentInsetAdjustmentBehavior = .always
+        
         let storyCell = UINib(nibName: "StoryTableViewCell", bundle: nil)
             StoryTableView.register(storyCell, forCellReuseIdentifier: "StoryTableViewCell")
         let postCell = UINib(nibName: "PostTableViewCell", bundle: nil)
             StoryTableView.register(postCell, forCellReuseIdentifier: "PostTableViewCell")
         
+        
+        StoryTableView.addSubview(refreshControl)
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
         
         /*
         
@@ -53,8 +60,12 @@ class HomeViewController: UIViewController {
         
     }
     
-    
-    
+    @objc func refresh(_ sender: UIRefreshControl) {
+        let item = DispatchWorkItem {
+            sender.endRefreshing()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: item)
+        }
 
 }
 
@@ -137,9 +148,10 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
 */
 
 extension HomeViewController: UITableViewDelegate{
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.section == 0 ? 128 : 570
+   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return indexPath.section == 0 ? 120 : 570
     }
+    
 }
 
 // MARK: - UITableViewDataSource
@@ -160,9 +172,41 @@ extension HomeViewController: UITableViewDataSource{
         switch indexPath.section{
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCell", for: indexPath) as? StoryTableViewCell else { return UITableViewCell() }
+            /*
+            // contentView의 왼쪽과 오른쪽을 TableView의 왼쪽과 오른쪽에 맞춤
+               cell.contentView.translatesAutoresizingMaskIntoConstraints = false
+               NSLayoutConstraint.activate([
+                   cell.contentView.leadingAnchor.constraint(equalTo: tableView.leadingAnchor),
+                   cell.contentView.trailingAnchor.constraint(equalTo: tableView.trailingAnchor)
+               ])
+               
+               // subviews의 너비를 contentView와 같게 설정
+               for subview in cell.contentView.subviews {
+                   subview.translatesAutoresizingMaskIntoConstraints = false
+                   NSLayoutConstraint.activate([
+                       subview.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor),
+                       subview.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor)
+                   ])
+               }*/
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell", for: indexPath) as? PostTableViewCell else { return UITableViewCell() }
+            /*
+            // contentView의 왼쪽과 오른쪽을 TableView의 왼쪽과 오른쪽에 맞춤
+               cell.contentView.translatesAutoresizingMaskIntoConstraints = false
+               NSLayoutConstraint.activate([
+                   cell.contentView.leadingAnchor.constraint(equalTo: tableView.leadingAnchor),
+                   cell.contentView.trailingAnchor.constraint(equalTo: tableView.trailingAnchor)
+               ])
+               
+               // subviews의 너비를 contentView와 같게 설정
+               for subview in cell.contentView.subviews {
+                   subview.translatesAutoresizingMaskIntoConstraints = false
+                   NSLayoutConstraint.activate([
+                       subview.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor),
+                       subview.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor)
+                   ])
+               }*/
             cell.UserID.text = post_list[indexPath.row].UserID
             cell.UserName.text = post_list[indexPath.row].UserID
             cell.UserImage.image = UIImage(named: post_list[indexPath.row].UserImage) ?? UIImage()
@@ -173,6 +217,7 @@ extension HomeViewController: UITableViewDataSource{
             cell.PostDate.text = post_list[indexPath.row].PostDate
             return cell
         default:
+            print("?")
             return UITableViewCell()
         }
     }

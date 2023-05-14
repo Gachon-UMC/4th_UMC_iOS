@@ -15,9 +15,11 @@ extension CALayer {
                             break
                         case UIRectEdge.bottom:
                             if set == "Normal" {
-                                    border.frame = CGRect.init(x: 0, y: frame.height - width, width: frame.width, height: width)
+                                    border.frame = CGRect.init(x: 0, y: frame.height - width, width: self.bounds.width, height: width)
                             } else if set == "textfield" {
                                 border.frame = CGRect.init(x: 0, y: frame.height - width + 10, width: self.bounds.width - 20, height: width)
+                            } else if set == "StoryCollection" {
+                                border.frame = CGRect.init(x: 0, y: frame.height - width - 10, width: self.bounds.width, height: width)
                             }
                             break
                         case UIRectEdge.left:
@@ -105,23 +107,6 @@ class EditProfileViewController: UIViewController {
                 
         
     }
-    
-    /*
-    /// profileView -> EditprofileView로 넘어오는 NotificationData Observer
-    private func addNotiObserver_Edit() {
-        print("addNotiObserver_Edit called")
-        NotificationCenter.default.addObserver(self, selector: #selector(loadData_FromProfile), name: NSNotification.Name(rawValue: pushdata_noti), object: nil)
-    }
-    
-    @objc func loadData_FromProfile(notification : NSNotification) {
-        print("loadData called")
-        if let data_inc = notification.object as? [String]{
-            data = data_inc
-            dataDist()
-            print(data)
-        }
-    }
-     */
     
     private func dataDist() {
         //print("dataDist Called")
