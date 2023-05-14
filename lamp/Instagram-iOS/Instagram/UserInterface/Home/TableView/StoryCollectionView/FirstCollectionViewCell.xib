@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="FirstCollectionViewCell" reuseIdentifier="FirstCollectionViewCell" id="gTV-IL-0wX" customClass="FirstCollectionViewCell" customModule="Instagram" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="82" height="118"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="82" height="118"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKd-Pn-THL">
+                        <rect key="frame" x="0.0" y="0.0" width="82" height="118"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" translatesAutoresizingMaskIntoConstraints="NO" id="agK-o6-AvK">
+                                <rect key="frame" x="0.0" y="9" width="82" height="82"/>
+                                <color key="tintColor" systemColor="systemGray5Color"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a5-YJ-t7Q">
+                                <rect key="frame" x="19.666666666666671" y="90" width="43" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEc-23-JZv" userLabel="White_View">
+                                <rect key="frame" x="52" y="61" width="30" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMi-Qz-hjD">
+                                        <rect key="frame" x="-8" y="-3.3333333333333357" width="46" height="37"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="storyPlus" title=""/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="CKG-WE-T9K"/>
+                                    <constraint firstItem="NMi-Qz-hjD" firstAttribute="centerX" secondItem="GEc-23-JZv" secondAttribute="centerX" id="QHB-A8-JzR"/>
+                                    <constraint firstAttribute="height" constant="30" id="VhR-tV-sjd"/>
+                                    <constraint firstItem="NMi-Qz-hjD" firstAttribute="centerY" secondItem="GEc-23-JZv" secondAttribute="centerY" id="yFc-ef-Toj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="agK-o6-AvK" firstAttribute="top" secondItem="nKd-Pn-THL" secondAttribute="top" constant="9" id="Ecf-V4-1eR"/>
+                            <constraint firstItem="3a5-YJ-t7Q" firstAttribute="top" secondItem="nKd-Pn-THL" secondAttribute="top" constant="90" id="GY1-5g-jfL"/>
+                            <constraint firstItem="GEc-23-JZv" firstAttribute="leading" secondItem="agK-o6-AvK" secondAttribute="trailing" constant="-30" id="I6a-RQ-eBA"/>
+                            <constraint firstAttribute="bottom" secondItem="agK-o6-AvK" secondAttribute="bottom" constant="27" id="ILy-5F-6kk"/>
+                            <constraint firstItem="agK-o6-AvK" firstAttribute="leading" secondItem="nKd-Pn-THL" secondAttribute="leading" id="PD1-06-FOQ"/>
+                            <constraint firstAttribute="trailing" secondItem="agK-o6-AvK" secondAttribute="trailing" id="Z0N-qb-9jl"/>
+                            <constraint firstItem="GEc-23-JZv" firstAttribute="top" secondItem="agK-o6-AvK" secondAttribute="bottom" constant="-30" id="lxH-Nd-zrt"/>
+                            <constraint firstItem="3a5-YJ-t7Q" firstAttribute="centerX" secondItem="nKd-Pn-THL" secondAttribute="centerX" id="u7t-0K-FOQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="nKd-Pn-THL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZbL-6t-IZf"/>
+                <constraint firstAttribute="bottom" secondItem="nKd-Pn-THL" secondAttribute="bottom" id="gTX-XA-8cd"/>
+                <constraint firstAttribute="trailing" secondItem="nKd-Pn-THL" secondAttribute="trailing" id="kDO-qj-NDf"/>
+                <constraint firstItem="nKd-Pn-THL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tUU-5O-oiX"/>
+            </constraints>
+            <size key="customSize" width="82" height="119"/>
+            <connections>
+                <outlet property="UserImage" destination="agK-o6-AvK" id="vfq-dd-ioF"/>
+                <outlet property="UserName" destination="3a5-YJ-t7Q" id="d5j-7x-2xd"/>
+                <outlet property="White_View" destination="GEc-23-JZv" id="fdf-zb-1Qu"/>
+                <outlet property="plusButton" destination="NMi-Qz-hjD" id="h5a-Le-3dp"/>
+            </connections>
+            <point key="canvasLocation" x="80.916030534351137" y="16.549295774647888"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="person.crop.circle.fill" width="128" height="128"/>
+        <image name="storyPlus" width="22" height="23"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

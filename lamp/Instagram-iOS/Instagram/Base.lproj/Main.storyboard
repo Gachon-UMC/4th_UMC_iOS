@@ -42,13 +42,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLC-FC-W9s">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLC-FC-W9s">
                                 <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ely-TO-DKt">
                                 <rect key="frame" x="0.0" y="48" width="414" height="44"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -142,19 +142,13 @@
                         <viewLayoutGuide key="safeArea" id="tAh-8x-Tst"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="8ha-d6-bKv" firstAttribute="centerX" secondItem="tAh-8x-Tst" secondAttribute="centerX" id="ANY-7m-DY2"/>
                             <constraint firstItem="Ely-TO-DKt" firstAttribute="centerX" secondItem="tAh-8x-Tst" secondAttribute="centerX" id="IiK-2c-fMa"/>
-                            <constraint firstItem="PhA-sb-FuD" firstAttribute="width" secondItem="tAh-8x-Tst" secondAttribute="width" id="JbP-mh-ntZ"/>
                             <constraint firstItem="tAh-8x-Tst" firstAttribute="trailing" secondItem="cLC-FC-W9s" secondAttribute="trailing" id="K2B-Cp-PJg"/>
-                            <constraint firstItem="PhA-sb-FuD" firstAttribute="top" secondItem="Ely-TO-DKt" secondAttribute="bottom" constant="136" id="NV9-yJ-y0w"/>
                             <constraint firstItem="Ely-TO-DKt" firstAttribute="width" secondItem="dLY-ba-hLE" secondAttribute="width" id="RjI-MS-iMS"/>
                             <constraint firstItem="tAh-8x-Tst" firstAttribute="bottom" secondItem="cLC-FC-W9s" secondAttribute="bottom" id="Y4C-Gx-f61"/>
-                            <constraint firstItem="8ha-d6-bKv" firstAttribute="width" secondItem="dLY-ba-hLE" secondAttribute="width" id="azv-wY-V5f"/>
                             <constraint firstItem="Ely-TO-DKt" firstAttribute="top" secondItem="tAh-8x-Tst" secondAttribute="top" id="cue-de-wxK"/>
-                            <constraint firstItem="PhA-sb-FuD" firstAttribute="centerX" secondItem="tAh-8x-Tst" secondAttribute="centerX" id="ek3-d7-Tqt"/>
                             <constraint firstItem="cLC-FC-W9s" firstAttribute="leading" secondItem="tAh-8x-Tst" secondAttribute="leading" id="erY-pe-FqB"/>
                             <constraint firstItem="cLC-FC-W9s" firstAttribute="top" secondItem="Ely-TO-DKt" secondAttribute="bottom" id="rDA-Gh-Hlt"/>
-                            <constraint firstItem="8ha-d6-bKv" firstAttribute="top" secondItem="Ely-TO-DKt" secondAttribute="bottom" id="rif-vg-b8H"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -507,9 +501,15 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Item" image="hamburger" id="HE9-h9-Ssi">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="tap_AddOption:" destination="jkO-H1-eXn" id="eFs-Vx-Ny6"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="plus" id="1oz-Ld-nQs">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="tap_AddPost:" destination="jkO-H1-eXn" id="3Ex-rv-rJC"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
