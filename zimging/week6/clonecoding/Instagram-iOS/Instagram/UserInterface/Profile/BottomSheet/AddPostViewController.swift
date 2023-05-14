@@ -9,8 +9,18 @@ import UIKit
 
 class AddPostViewController: UIViewController {
 
+    @IBOutlet weak var createStoryBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        //버튼 이미지 크기가 너무 커서 이미지와 버튼 사이 padding 적용해주는 과정
+//        var config = UIButton.Configuration.plain()
+//        config.contentInsets = NSDirectionalEdgeInsets.init(top: 3, leading: 3, bottom: 3, trailing: 3)
+//        createStoryBtn.configuration = config
+//
+        
+        
     }
 
     //릴스 누르면 릴스 출력

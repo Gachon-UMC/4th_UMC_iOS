@@ -55,20 +55,24 @@
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1T1-VP-UZd">
                             <rect key="frame" x="0.0" y="54.333333333333329" width="393" height="53"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KP5-Zr-5hn">
-                                    <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="53"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n43-JD-YNo">
+                                    <rect key="frame" x="0.0" y="0.0" width="8" height="53"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" secondItem="KP5-Zr-5hn" secondAttribute="height" multiplier="1:1" id="lCO-nZ-ckc"/>
+                                        <constraint firstAttribute="width" constant="8" id="AzG-uO-OKY"/>
                                     </constraints>
-                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="Reels"/>
-                                </button>
+                                </view>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Reels" translatesAutoresizingMaskIntoConstraints="NO" id="RXD-yL-8hr">
+                                    <rect key="frame" x="8" y="0.0" width="30" height="53"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="CBj-s4-sF1"/>
+                                    </constraints>
+                                </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="egF-Nq-RxC">
-                                    <rect key="frame" x="53.333333333333343" y="0.0" width="339.66666666666663" height="53"/>
+                                    <rect key="frame" x="38" y="0.0" width="355" height="53"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcH-nG-y2a">
-                                            <rect key="frame" x="0.0" y="0.0" width="339.66666666666669" height="52"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="52"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="릴스">
@@ -79,7 +83,7 @@
                                             </connections>
                                         </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6tj-rM-Mia">
-                                            <rect key="frame" x="0.0" y="52.000000000000014" width="339.66666666666669" height="1"/>
+                                            <rect key="frame" x="0.0" y="52.000000000000014" width="355" height="1"/>
                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="hoy-3z-wAl"/>
@@ -92,20 +96,24 @@
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="spH-XY-OTq">
                             <rect key="frame" x="0.0" y="107.33333333333333" width="393" height="53.333333333333329"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BN-78-ezE">
-                                    <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="53.333333333333336"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGb-hW-nrD">
+                                    <rect key="frame" x="0.0" y="0.0" width="13" height="53.333333333333336"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" secondItem="7BN-78-ezE" secondAttribute="height" multiplier="1:1" id="bdf-oc-iYg"/>
+                                        <constraint firstAttribute="width" constant="13" id="EKn-SN-pl2"/>
                                     </constraints>
-                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="postGrid"/>
-                                </button>
+                                </view>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="postGrid" translatesAutoresizingMaskIntoConstraints="NO" id="14I-iR-FbD">
+                                    <rect key="frame" x="13" y="0.0" width="20" height="53.333333333333336"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="20" id="pg9-bw-tQz"/>
+                                    </constraints>
+                                </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zgJ-YI-D7p">
-                                    <rect key="frame" x="53.333333333333343" y="0.0" width="339.66666666666663" height="53.333333333333336"/>
+                                    <rect key="frame" x="33" y="0.0" width="360" height="53.333333333333336"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZC-hk-pef">
-                                            <rect key="frame" x="0.0" y="0.0" width="339.66666666666669" height="52.333333333333336"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="52.333333333333336"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="게시물">
@@ -116,7 +124,7 @@
                                             </connections>
                                         </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYI-Ug-2h6">
-                                            <rect key="frame" x="0.0" y="52.333333333333314" width="339.66666666666669" height="1"/>
+                                            <rect key="frame" x="0.0" y="52.333333333333314" width="360" height="1"/>
                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="Stl-O6-GQ1"/>
@@ -129,22 +137,24 @@
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ruJ-nM-D0Y">
                             <rect key="frame" x="0.0" y="160.66666666666666" width="393" height="53"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srS-HU-cQJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="53"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1B-gJ-al2">
+                                    <rect key="frame" x="0.0" y="0.0" width="10" height="53"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" secondItem="srS-HU-cQJ" secondAttribute="height" multiplier="1:1" id="huV-IJ-ncr"/>
+                                        <constraint firstAttribute="width" constant="10" id="b4a-Bk-wwY"/>
                                     </constraints>
-                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" image="Story">
-                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                                    </state>
-                                </button>
+                                </view>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Story" translatesAutoresizingMaskIntoConstraints="NO" id="duY-wz-qnY">
+                                    <rect key="frame" x="10" y="0.0" width="25" height="53"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="25" id="X98-Ir-cCw"/>
+                                    </constraints>
+                                </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zaC-Ru-dOH">
-                                    <rect key="frame" x="53.333333333333343" y="0.0" width="339.66666666666663" height="53"/>
+                                    <rect key="frame" x="35" y="0.0" width="358" height="53"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuZ-SN-m4p">
-                                            <rect key="frame" x="0.0" y="0.0" width="339.66666666666669" height="52"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="358" height="52"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="스토리">
@@ -155,7 +165,7 @@
                                             </connections>
                                         </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ont-FC-xZJ">
-                                            <rect key="frame" x="0.0" y="52.000000000000028" width="339.66666666666669" height="1"/>
+                                            <rect key="frame" x="0.0" y="52.000000000000028" width="358" height="1"/>
                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="N8n-v1-4lT"/>
@@ -168,20 +178,24 @@
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3S-2w-Kss">
                             <rect key="frame" x="0.0" y="213.66666666666669" width="393" height="53.333333333333314"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxw-Tb-Wph">
-                                    <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="53.333333333333336"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYN-b8-XyW">
+                                    <rect key="frame" x="0.0" y="0.0" width="10" height="53.333333333333336"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" secondItem="Rxw-Tb-Wph" secondAttribute="height" multiplier="1:1" id="D2i-MF-4mc"/>
+                                        <constraint firstAttribute="width" constant="10" id="Bbl-ZX-x29"/>
                                     </constraints>
-                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="Highlight"/>
-                                </button>
+                                </view>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Highlight" translatesAutoresizingMaskIntoConstraints="NO" id="hWz-Nn-GOy">
+                                    <rect key="frame" x="10" y="0.0" width="25" height="53.333333333333336"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="25" id="Fu2-nw-XJH"/>
+                                    </constraints>
+                                </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2AN-gs-C7E">
-                                    <rect key="frame" x="53.333333333333343" y="0.0" width="339.66666666666663" height="53.333333333333336"/>
+                                    <rect key="frame" x="35" y="0.0" width="358" height="53.333333333333336"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qwn-Fx-Fyh">
-                                            <rect key="frame" x="0.0" y="0.0" width="339.66666666666669" height="52.333333333333336"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="358" height="52.333333333333336"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="스토리 하이라이트">
@@ -192,7 +206,7 @@
                                             </connections>
                                         </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aID-gf-3rw">
-                                            <rect key="frame" x="0.0" y="52.333333333333314" width="339.66666666666669" height="1"/>
+                                            <rect key="frame" x="0.0" y="52.333333333333314" width="358" height="1"/>
                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="7h6-Bn-UdL"/>
@@ -205,22 +219,24 @@
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHL-zZ-z9S">
                             <rect key="frame" x="0.0" y="267" width="393" height="53"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxU-gi-bXh">
-                                    <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="53"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UIP-MV-lZu">
+                                    <rect key="frame" x="0.0" y="0.0" width="10" height="53"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" secondItem="OxU-gi-bXh" secondAttribute="height" multiplier="1:1" id="ajG-eB-lhD"/>
+                                        <constraint firstAttribute="width" constant="10" id="3w2-Wy-uiU"/>
                                     </constraints>
-                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="Live">
-                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
-                                    </buttonConfiguration>
-                                </button>
+                                </view>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Live" translatesAutoresizingMaskIntoConstraints="NO" id="Xge-SU-5Zg">
+                                    <rect key="frame" x="10" y="0.0" width="25" height="53"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="ajq-IV-cU8"/>
+                                    </constraints>
+                                </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CRr-oZ-aQP">
-                                    <rect key="frame" x="53.333333333333343" y="0.0" width="339.66666666666663" height="53"/>
+                                    <rect key="frame" x="35" y="0.0" width="358" height="53"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOQ-Ta-E7a">
-                                            <rect key="frame" x="0.0" y="0.0" width="339.66666666666669" height="52"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="358" height="52"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="라이브 방송">
@@ -231,7 +247,7 @@
                                             </connections>
                                         </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kq5-wD-lPg">
-                                            <rect key="frame" x="0.0" y="52" width="339.66666666666669" height="1"/>
+                                            <rect key="frame" x="0.0" y="52" width="358" height="1"/>
                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="YFo-pl-tS4"/>
