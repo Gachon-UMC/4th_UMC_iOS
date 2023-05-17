@@ -22,6 +22,10 @@ class ViewController: UIViewController {
         
         recordTable.dataSource = self
         recordTable.delegate = self
+        
+        if let record = UserDefaults.standard.array(forKey: "buttonState") as? [String] {
+            records = record
+        }
     }
 
     @IBAction func wakeUpButton(_ sender: UIButton) {
