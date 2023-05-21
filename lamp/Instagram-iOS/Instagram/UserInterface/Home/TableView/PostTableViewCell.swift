@@ -11,7 +11,6 @@ class PostTableViewCell: UITableViewCell {
 
     @IBOutlet weak var UserName: UILabel!
     @IBOutlet weak var UserImage: UIImageView!
-    //@IBOutlet weak var UserName: UIBarButtonItem!
     @IBOutlet weak var PostImage: UIImageView!
     @IBOutlet weak var PostLike: UILabel!
     @IBOutlet weak var UserID: UILabel!
@@ -22,16 +21,23 @@ class PostTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         UserImage.layer.cornerRadius = 0.5 * UserImage.bounds.size.width
         UserImage.clipsToBounds = true
-        //PostImage.layer.cornerRadius = 0.5  * PostImage.bounds.size.width
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    func setData(_ post: post) {
+        self.UserID.text = post.UserID
+        self.UserName.text = post.UserID
+        self.UserImage.image = UIImage(named: post.UserImage) ?? UIImage()
+        self.PostImage.image = UIImage(named: post.PostImage) ?? UIImage()
+        self.PostLike.text = "좋아요 \(post.PostLike)개"
+        self.User_Text.text = post.UserText
+        self.CommentCount.text = "댓글 \(post.CommentCount)개 모두 보기"
+        self.PostDate.text = post.PostDate
     }
     
 }
