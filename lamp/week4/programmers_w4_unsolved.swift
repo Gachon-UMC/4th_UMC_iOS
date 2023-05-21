@@ -1,43 +1,31 @@
-// 이거 4주차 프로그래머스 문제입니ㅏㄷ.
-let babbling: [String] = ["ayaye", "uuu", "yeye", "yemawoo", "ayaayaa"]
+import Foundation
 
-enum pronun: String, CaseIterable {
-    case aya
-    case ye
-    case woo
-    case ma
+func solution(_ babbling:[String]) -> Int {
     
-    func return_index(_ startIndex: Int) -> Int {
-        switch self{
-        case .aya, .woo :
-            return startIndex+3
-        case .ye, .ma :
-            return startIndex+2
+    var babbling_copy:[String] = babbling.map{$0}
+    let bab_words:[String] = ["aya", "ye", "woo", "ma"]
+    
+    
+    for i in babbling_copy.indices {
+        for word in bab_words {
+            if let range = babbling_copy[i].range(of: word){
+                babbling_copy[i].removeSubrange(range)
+            }
         }
     }
+        
+    var result: Int = 0
+    for element in babbling_copy {
+        if element.isEmpty {
+            result += 1
+        }
+    }
+    return result
 }
 
-//클로저 필터로 안맞는 것만 거르자
-func detecting(_ str_in: String, _ i: Int = 0) {
-    var str_a = str_in
-    for i in pronun.allCases {
-        let proStr = String(describing: i)
-        var a_index = str_a.ranges(of: proStr)
-        for i in a_index {
-            print(str_in[i.lowerBound],str_in[i.upperBound])
-        }
-        //if let index = str_a.index(str_in.startIndex, offsetBy: 3, limitedBy: str_in.endIndex) {str_in.remove(at: index)}
-        
-        }
-        
-    
-}
+print(solution(["ayaye", "uuu", "yeye", "yemawoo", "ayaayaa"]))
 
 /*
-let str = "Hello, playground, playground, playground"
-str.index(of: "play")      // 7
-str.endIndex(of: "play")   // 11
-str.indices(of: "play")    // [7, 19, 31]
-str.ranges(of: "play")     // [{lowerBound 7, upperBound 11}, {lowerBound 19, upperBound 23}, {lowerBound 31, upperBound 35}]
-*/
-detecting("ayaayaayaaya")
+ 네 가지 발음과 네 가지 발음을 조합해서 만들 수 있는 발음밖에 하지 못하고 연속해서 같은 발음을 하는 것을 어려워합니다.
+ = 연속 안되면 가능 ex) yewooye
+ */

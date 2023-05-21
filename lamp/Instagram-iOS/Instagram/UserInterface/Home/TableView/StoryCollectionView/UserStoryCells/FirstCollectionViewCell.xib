@@ -20,8 +20,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKd-Pn-THL">
                         <rect key="frame" x="0.0" y="0.0" width="82" height="118"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" translatesAutoresizingMaskIntoConstraints="NO" id="agK-o6-AvK">
-                                <rect key="frame" x="0.0" y="9" width="82" height="82"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="agK-o6-AvK">
+                                <rect key="frame" x="0.0" y="10" width="82" height="80.666666666666671"/>
                                 <color key="tintColor" systemColor="systemGray5Color"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a5-YJ-t7Q">
@@ -79,7 +79,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="person.crop.circle.fill" width="128" height="128"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="storyPlus" width="22" height="23"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

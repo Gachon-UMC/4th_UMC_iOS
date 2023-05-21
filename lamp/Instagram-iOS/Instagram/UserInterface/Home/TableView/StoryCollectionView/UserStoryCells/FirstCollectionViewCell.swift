@@ -16,13 +16,8 @@ class FirstCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         White_View.layer.cornerRadius = 0.5 * White_View.bounds.size.width
         White_View.clipsToBounds = true
-        /*UserImage.layer.cornerRadius = 0.5 * UserImage.bounds.size.width
-        UserImage.clipsToBounds = true
-        plusButton.isHidden = true
-        */
     }
     
 }

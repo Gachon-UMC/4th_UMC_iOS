@@ -61,7 +61,7 @@ class ProfileViewController: UIViewController,EditProfileDelegate {
         // Do any additional setup after loading the view.
         //SubTabBar = UITabBar()
         umc_ios.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22, weight: .bold)],for: .normal)
-        umc_ios.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22, weight: .bold)],for: .selected)
+        umc_ios.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22, weight: .bold)],for: .highlighted)
         nameDist()
         
     }

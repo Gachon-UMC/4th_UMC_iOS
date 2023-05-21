@@ -1,15 +1,15 @@
 let N = Int(readLine()!)!
 
-func printing(n: Int) {
+var StarArr:[Any] = [ [],[],[], [],[],[], [],[],[] ] //9 3*3 cell
+
+//n = 3, 9, 27 ...
+func makeGrid(n: Int, Arr: [Any]) {
     if n == 3 {
-        print("*")
+        
+    }
+    for _ in 0..<n {
+        
     }
 }
 
-func printing_blank(n: Int) {
-    if n == 3 {
-        print(" ")
-    }
-}
 
-//이걸 array로 가져가야하나...
