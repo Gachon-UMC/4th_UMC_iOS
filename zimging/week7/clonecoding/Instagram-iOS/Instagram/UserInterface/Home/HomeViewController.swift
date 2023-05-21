@@ -10,6 +10,8 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var postView: UITableView!
+    let encoder = JSONEncoder()
+    let decoder = JSONDecoder()
     
     var models = [Model]()
     var posts = [Post]()
@@ -19,9 +21,14 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpPostView()
+        //setUpPostView()
         //refreshControl 추가
         initRefresh()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setUpPostView()
     }
     
     // 처음 생성된 refreshControl에 addTarget 매칭
@@ -41,15 +48,27 @@ class HomeViewController: UIViewController {
     }
     
     func setUpPostView() {
-        models.append(Model(imagename: UIImage(named: "jokebear1")!, id: "내 스토리", isWatch: false, isNotMine: false))
-        models.append(Model(imagename: UIImage(named: "jokebear1")!, id: "name2", isWatch: false, isNotMine: true))
-        models.append(Model(imagename: UIImage(named: "jokebear1")!, id: "name3", isWatch: false, isNotMine: true))
-        models.append(Model(imagename: UIImage(named: "jokebear1")!, id: "name4", isWatch: false, isNotMine: true))
-        models.append(Model(imagename: UIImage(named: "jokebear1")!, id: "name5", isWatch: false, isNotMine: true))
-        models.append(Model(imagename: UIImage(named: "jokebear1")!, id: "name6", isWatch: false, isNotMine: true))
-        posts.append(Post(info: Model(imagename: UIImage(named: "jokebear1")!, id: "youz2me", isWatch: true, isNotMine: false), imageName: UIImage(named: "jokebear1")!, imageComment: "집에갈래", numOfLike: 2, numOfComment: 3, month: 5, day: 1))
-        posts.append(Post(info: Model(imagename: UIImage(named: "jokebear2")!, id: "bearjoke", isWatch: true, isNotMine: true), imageName: UIImage(named: "jokebear2")!, imageComment: "농담곰", numOfLike: 10, numOfComment: 5, month: 5, day: 2))
-        posts.append(Post(info: Model(imagename: UIImage(named: "jokebear3")!, id: "jokebear", isWatch: true, isNotMine: true), imageName: UIImage(named: "jokebear3")!, imageComment: "귀엽죠?", numOfLike: 1100, numOfComment: 5, month: 5, day: 3))
+        // 저장된 스토리 배열 decode해서 불러오기
+        if let model = UserDefaults.standard.object(forKey: "storyLists") as? Data {
+            if let savedObject = try? decoder.decode([Model].self, from: model) {
+                models = savedObject
+                print("print models: \(models)")
+            }
+        }
+        
+        if models.count == 0 {
+            models.append(Model(imagename: "storyImage6", id: "내 스토리", isWatch: false, isNotMine: false, hasActiveStory: true, storyName: "storyImage1", isHeartFilled: false))
+            models.append(Model(imagename: "storyImage3", id: "jokebear", isWatch: false, isNotMine: true, hasActiveStory: true, storyName: "storyImage6", isHeartFilled: false))
+            models.append(Model(imagename: "storyImage1", id: "youz2me", isWatch: false, isNotMine: true, hasActiveStory: true, storyName: "storyImage2", isHeartFilled: false))
+            models.append(Model(imagename: "storyImage4", id: "ddong2", isWatch: false, isNotMine: true, hasActiveStory: true, storyName: "storyImage3", isHeartFilled: false))
+            models.append(Model(imagename: "storyImage5", id: "gachon_umc", isWatch: false, isNotMine: true, hasActiveStory: true, storyName: "storyImage4", isHeartFilled: false))
+            models.append(Model(imagename: "storyImage6", id: "zimging", isWatch: false, isNotMine: true, hasActiveStory: true, storyName: "storyImage5", isHeartFilled: false))
+        }
+        if posts.count == 0 {
+            posts.append(Post(info: Model(imagename: "storyImage1", id: "youz2me", isWatch: true, isNotMine: false, hasActiveStory: false, storyName: "", isHeartFilled: false), imageName: UIImage(named: "storyImage6")!, imageComment: "집에갈래", numOfLike: 2, numOfComment: 3, month: 5, day: 1))
+            posts.append(Post(info: Model(imagename: "jokebear2", id: "bearjoke", isWatch: true, isNotMine: true, hasActiveStory: false, storyName: "", isHeartFilled: false), imageName: UIImage(named: "jokebear2")!, imageComment: "농담곰", numOfLike: 10, numOfComment: 5, month: 5, day: 2))
+            posts.append(Post(info: Model(imagename: "jokebear3", id: "jokebear", isWatch: true, isNotMine: true, hasActiveStory: false, storyName: "", isHeartFilled: false), imageName: UIImage(named: "jokebear3")!, imageComment: "귀엽죠?", numOfLike: 1100, numOfComment: 5, month: 5, day: 3))
+        }
         
         postView.delegate = self
         postView.dataSource = self

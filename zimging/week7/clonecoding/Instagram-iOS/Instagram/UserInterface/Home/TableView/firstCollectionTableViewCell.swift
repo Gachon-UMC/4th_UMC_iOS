@@ -18,6 +18,9 @@ class firstCollectionTableViewCell: UITableViewCell {
     
     var models = [Model]()
     
+    // UserDefault를 위한 encoder 변수 선언
+    let encoder = JSONEncoder()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpCollectionView()
@@ -32,7 +35,6 @@ class firstCollectionTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
 }
 
 extension firstCollectionTableViewCell: UICollectionViewDelegateFlowLayout {
@@ -48,8 +50,45 @@ extension firstCollectionTableViewCell: UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // 내 스토리면 + 버튼 뜨게
+        if indexPath.row == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "firstCollectionViewCell", for: indexPath) as! firstCollectionViewCell
+            models[indexPath.row].hasActiveStory = false
+            cell.configure(with: models[indexPath.row])
+            cell.delegate = self
+            return cell
+        }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "firstCollectionViewCell", for: indexPath) as! firstCollectionViewCell
         cell.configure(with: models[indexPath.row])
+        cell.delegate = self
         return cell
     }
+    
+    
 }
+
+extension firstCollectionTableViewCell: StoryCellDelegate {
+    func didTapButton(at model: Model) {
+        // 순서 변경 작업 수행
+        var story = model
+        
+        // 읽은 적이 없으면 가장 뒤로 보냄
+        if story.isWatch == false {
+            models.remove(at: models.firstIndex(of: story)!)
+            story.isWatch = true
+            models.append(story)
+        }
+        
+        // 테이블 뷰 또는 컬렉션 뷰를 업데이트하는 작업
+        collectionView.reloadData()
+        
+        // 데이터 encode해서 UserDefault로 저장
+        if let encoded = try? encoder.encode(models) {
+            UserDefaults.standard.set(encoded, forKey: "storyLists")
+        }
+        print("didTapButton: \(models)")
+    }
+    
+    
+}
+

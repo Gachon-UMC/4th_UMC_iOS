@@ -7,17 +7,24 @@
 
 import UIKit
 
-struct Model {
-    let imagename: UIImage
+struct Model: Codable, Equatable {
+    // let 
+    let imagename: String
     let id: String
     var isWatch: Bool
+    var hasActiveStory: Bool
+    var storyName: String
     var isNotMine: Bool
+    var isHeartFilled: Bool
     
-    init(imagename: UIImage, id: String, isWatch: Bool, isNotMine: Bool) {
+    init(imagename: String, id: String, isWatch: Bool, isNotMine: Bool, hasActiveStory: Bool, storyName: String, isHeartFilled: Bool) {
         self.imagename = imagename
         self.id = id
         self.isWatch = isWatch
+        self.hasActiveStory = hasActiveStory
+        self.storyName = storyName
         self.isNotMine = isNotMine
+        self.isHeartFilled = isHeartFilled
     }
 }
 

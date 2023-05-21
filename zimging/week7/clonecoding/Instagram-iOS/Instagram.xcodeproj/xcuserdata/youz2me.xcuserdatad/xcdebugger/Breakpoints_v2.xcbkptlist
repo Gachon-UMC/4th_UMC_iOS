@@ -39,22 +39,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "95780CE1-42C6-4D2A-A14F-D55BFDE55666"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Instagram/UserInterface/Home/TableView/firstCollectionTableViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "firstCollectionTableViewCell"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "1DBA9532-B629-4D5D-88FC-21F8B40C6D00"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -170,8 +154,8 @@
             filePath = "Instagram/UserInterface/Home/CollectionView/firstCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "firstCollectionViewCell"
             landmarkType = "3">
          </BreakpointContent>
@@ -179,65 +163,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "106B18A2-223D-4677-A01D-6E27D63340E5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Instagram/UserInterface/Home/CollectionView/firstCollectionViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "buttonTapped(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3F6CB9BF-FE0F-4E55-9C7E-99A104F307D3"
+            uuid = "CCE59AA2-DD05-4C14-8A03-66490D352E08"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram/UserInterface/Home/CollectionView/firstCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "buttonTapped(_:)"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "awakeFromNib()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3F6CB9BF-FE0F-4E55-9C7E-99A104F307D3 - 2fa1435d0742b3f3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Instagram.firstCollectionViewCell.buttonTapped(Any) -&gt; ()"
-                  moduleName = "Instagram"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/youz2me/Xcode/4th_UMC_iOS/zimging/week7/clonecoding/Instagram-iOS/Instagram/UserInterface/Home/CollectionView/firstCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "544">
-               </Location>
-               <Location
-                  uuid = "3F6CB9BF-FE0F-4E55-9C7E-99A104F307D3 - 15aece3fd22dfe2a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in Instagram.firstCollectionViewCell.buttonTapped(Any) -&gt; ()"
-                  moduleName = "Instagram"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/youz2me/Xcode/4th_UMC_iOS/zimging/week7/clonecoding/Instagram-iOS/Instagram/UserInterface/Home/CollectionView/firstCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

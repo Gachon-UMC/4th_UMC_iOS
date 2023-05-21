@@ -215,17 +215,27 @@
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="14.666666666666666"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAQ-P0-KGY">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zwz-EE-c03">
                                         <rect key="frame" x="0.0" y="14.666666666666664" width="314" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="31" id="cR6-JW-w84"/>
-                                        </constraints>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
-                                        </buttonConfiguration>
-                                    </button>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPW-j1-39j">
+                                                <rect key="frame" x="0.0" y="0.0" width="10" height="31"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="10" id="R19-qg-r8b"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cm8-db-J0r">
+                                                <rect key="frame" x="10" y="0.0" width="304" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="J2p-8r-aYt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JNh-7P-BgV">
                                         <rect key="frame" x="0.0" y="45.666666666666664" width="314" height="14.333333333333336"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -300,7 +310,7 @@
                 <outlet property="postIdBtn" destination="71o-8W-Ew5" id="7Vz-Nf-s85"/>
                 <outlet property="postImage" destination="Ubr-t8-abc" id="22F-N7-kji"/>
                 <outlet property="profileBtn" destination="wFp-kf-aGn" id="cp1-d7-B33"/>
-                <outlet property="profileId" destination="GAQ-P0-KGY" id="kUv-ct-hlY"/>
+                <outlet property="profileId" destination="cm8-db-J0r" id="B6c-fG-qQx"/>
             </connections>
             <point key="canvasLocation" x="42.748091603053432" y="154.92957746478874"/>
         </tableViewCell>

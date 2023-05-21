@@ -27,14 +27,10 @@
 		DD05CD4329FCAADA004B394D /* firstCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD05CD4129FCAADA004B394D /* firstCollectionTableViewCell.xib */; };
 		DD05CD4629FCAB31004B394D /* firstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD05CD4429FCAB31004B394D /* firstCollectionViewCell.swift */; };
 		DD05CD4729FCAB31004B394D /* firstCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD05CD4529FCAB31004B394D /* firstCollectionViewCell.xib */; };
-		DD1D7C3B2A15571C002CC3D2 /* storyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1D7C3A2A15571C002CC3D2 /* storyViewController.storyboard */; };
-		DD1D7C3D2A15599E002CC3D2 /* storyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1D7C3C2A15599E002CC3D2 /* storyViewController.swift */; };
 		DD3330FC29EB371600D00923 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3330FB29EB371600D00923 /* EditViewController.swift */; };
 		DD3F431F2A1568CE00FC5BE8 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3F431D2A1568CE00FC5BE8 /* ViewController1.swift */; };
 		DD3F43202A1568CE00FC5BE8 /* ViewController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3F431E2A1568CE00FC5BE8 /* ViewController1.xib */; };
 		DD4CB48F29FE9BB700E850AB /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4CB48E29FE9BB700E850AB /* TabBar.swift */; };
-		DD61A65C2A03A74500971CD5 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61A65A2A03A74500971CD5 /* PostCollectionViewCell.swift */; };
-		DD61A65D2A03A74500971CD5 /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD61A65B2A03A74500971CD5 /* PostCollectionViewCell.xib */; };
 		DD61A6602A03A75A00971CD5 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61A65E2A03A75A00971CD5 /* PostTableViewCell.swift */; };
 		DD61A6612A03A75A00971CD5 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD61A65F2A03A75A00971CD5 /* PostTableViewCell.xib */; };
 		DDD6D8792A0C10D800E720E9 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD6D8772A0C10D800E720E9 /* AddPostViewController.swift */; };
@@ -81,14 +77,10 @@
 		DD05CD4129FCAADA004B394D /* firstCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = firstCollectionTableViewCell.xib; sourceTree = "<group>"; };
 		DD05CD4429FCAB31004B394D /* firstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstCollectionViewCell.swift; sourceTree = "<group>"; };
 		DD05CD4529FCAB31004B394D /* firstCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = firstCollectionViewCell.xib; sourceTree = "<group>"; };
-		DD1D7C3A2A15571C002CC3D2 /* storyViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = storyViewController.storyboard; sourceTree = "<group>"; };
-		DD1D7C3C2A15599E002CC3D2 /* storyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyViewController.swift; sourceTree = "<group>"; };
 		DD3330FB29EB371600D00923 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		DD3F431D2A1568CE00FC5BE8 /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 		DD3F431E2A1568CE00FC5BE8 /* ViewController1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController1.xib; sourceTree = "<group>"; };
 		DD4CB48E29FE9BB700E850AB /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
-		DD61A65A2A03A74500971CD5 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
-		DD61A65B2A03A74500971CD5 /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
 		DD61A65E2A03A75A00971CD5 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		DD61A65F2A03A75A00971CD5 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		DDD6D8772A0C10D800E720E9 /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
@@ -246,8 +238,6 @@
 			children = (
 				DD05CD4429FCAB31004B394D /* firstCollectionViewCell.swift */,
 				DD05CD4529FCAB31004B394D /* firstCollectionViewCell.xib */,
-				DD61A65A2A03A74500971CD5 /* PostCollectionViewCell.swift */,
-				DD61A65B2A03A74500971CD5 /* PostCollectionViewCell.xib */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -255,8 +245,6 @@
 		DD1D7C392A1556ED002CC3D2 /* Story */ = {
 			isa = PBXGroup;
 			children = (
-				DD1D7C3A2A15571C002CC3D2 /* storyViewController.storyboard */,
-				DD1D7C3C2A15599E002CC3D2 /* storyViewController.swift */,
 				DD3F431D2A1568CE00FC5BE8 /* ViewController1.swift */,
 				DD3F431E2A1568CE00FC5BE8 /* ViewController1.xib */,
 			);
@@ -382,13 +370,11 @@
 				DDD6D87E2A0C1CBA00E720E9 /* SettingViewController.xib in Resources */,
 				DD05CD4329FCAADA004B394D /* firstCollectionTableViewCell.xib in Resources */,
 				A242B67328CCB029006939D6 /* LaunchScreen.storyboard in Resources */,
-				DD61A65D2A03A74500971CD5 /* PostCollectionViewCell.xib in Resources */,
 				A242B67028CCB029006939D6 /* Assets.xcassets in Resources */,
 				DD61A6612A03A75A00971CD5 /* PostTableViewCell.xib in Resources */,
 				DD3F43202A1568CE00FC5BE8 /* ViewController1.xib in Resources */,
 				DD05CD4729FCAB31004B394D /* firstCollectionViewCell.xib in Resources */,
 				A242B66E28CCB027006939D6 /* Main.storyboard in Resources */,
-				DD1D7C3B2A15571C002CC3D2 /* storyViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,8 +410,6 @@
 				A242B66728CCB027006939D6 /* AppDelegate.swift in Sources */,
 				DD05CD4229FCAADA004B394D /* firstCollectionTableViewCell.swift in Sources */,
 				A2554A6228D7896300047C50 /* ProfileViewController.swift in Sources */,
-				DD61A65C2A03A74500971CD5 /* PostCollectionViewCell.swift in Sources */,
-				DD1D7C3D2A15599E002CC3D2 /* storyViewController.swift in Sources */,
 				A242B66928CCB027006939D6 /* SceneDelegate.swift in Sources */,
 				DD3330FC29EB371600D00923 /* EditViewController.swift in Sources */,
 				DD61A6602A03A75A00971CD5 /* PostTableViewCell.swift in Sources */,

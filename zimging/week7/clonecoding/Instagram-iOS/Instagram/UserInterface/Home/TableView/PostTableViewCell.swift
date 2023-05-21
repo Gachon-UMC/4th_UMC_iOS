@@ -12,7 +12,7 @@ class PostTableViewCell: UITableViewCell {
     var posts = [Post]()
     
     @IBOutlet weak var profileBtn: UIButton!
-    @IBOutlet weak var profileId: UIButton!
+    @IBOutlet weak var profileId: UILabel!
     @IBOutlet weak var ellipsis: UIButton!
     @IBOutlet weak var postImage: UIButton!
     
@@ -34,14 +34,12 @@ class PostTableViewCell: UITableViewCell {
         profileBtn.layer.cornerRadius = 0.5 * profileBtn.bounds.size.width
         profileBtn.clipsToBounds = true
         postIdBtn.invalidateIntrinsicContentSize()
-        
-        // Initialization code
     }
     
     public func configure(with post: Post){
         
-        self.profileBtn.setImage(post.info.imagename, for: .normal)
-        self.profileId.titleLabel?.text = post.info.id
+        self.profileBtn.setImage(UIImage(named: post.info.imagename), for: .normal)
+        self.profileId.text = post.info.id
         self.postImage.setImage(post.imageName, for: .normal)
         self.postContent.text = post.imageComment
         self.postIdBtn.titleLabel?.text = post.info.id
