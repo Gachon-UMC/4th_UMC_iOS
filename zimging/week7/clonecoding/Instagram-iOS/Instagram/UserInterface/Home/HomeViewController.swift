@@ -21,7 +21,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setUpPostView()
         //refreshControl 추가
         initRefresh()
     }
@@ -29,6 +28,7 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setUpPostView()
+        postView.reloadData()
     }
     
     // 처음 생성된 refreshControl에 addTarget 매칭
