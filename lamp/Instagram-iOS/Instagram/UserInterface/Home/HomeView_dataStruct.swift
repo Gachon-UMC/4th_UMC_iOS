@@ -28,14 +28,15 @@ struct story: Codable { // de/encoding을 위해 Codable protocol
 }
 
 //Post Cell에 저장될 데이터의 구조체
-struct post {
+struct post: Codable {
     let UserImage: String   //user의 이미지
     let PostImage: String   //user의 포스트 이미지
-    let PostLike: Int   //user의 포스팅에 좋아요 개수
+    var PostLike: Int   //user의 포스팅에 좋아요 개수
     let UserID: String  //User의 ID
     let UserText: String    //user의 포스트본문
     let CommentCount : Int  //user 포스팅의 댓글 개수
     let PostDate: String    //user 포스팅의 업로드된 시간
+    var GotHeart: Bool  //user 포스팅의 하트 유무
     
     init(_ UserID: String, _ UserImage: String,_ PostImage: String, _ PostLike: Int, _ UserText: String, _ CommentCount: Int, _ PostDate: String) {
         self.UserID = UserID
@@ -45,8 +46,10 @@ struct post {
         self.UserText = UserText
         self.CommentCount = CommentCount
         self.PostDate = PostDate
+        self.GotHeart = false // 디폴트값
 
     }
+    
 }
 
 //story, post 객체들이 저장되는 리스트

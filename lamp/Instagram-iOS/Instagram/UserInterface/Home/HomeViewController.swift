@@ -28,16 +28,8 @@ class HomeViewController: UIViewController {
         addDummyPosts()
         
         //HomeView에서 사용하는 UserDefaults에 대한 초기설정
-        if let _ = UserDefaults.standard.data(forKey: "Story_List") { //Story_List 데이터가 이미 존재할때 pass
-            //print("Story_List Exist")
-        }else {     //Story_List라는 데이터가 존재하지 않을때 -> 새로운 데이터 생성
-            if let encodedData = try? JSONEncoder().encode(story_list) { //data로 저장하기위해 encoding
-                // 이때 story_list는 story객체의 리스트임 -> HomeView_dataStruct 참고
-                UserDefaults.standard.set(encodedData, forKey: "Story_List") // "Story_List" key로 저장
-                UserDefaults.standard.synchronize() //"Story_List" 데이터 즉시 동기화 -> UI 표시에 필요한 부분은 바로바로 동기화 되어야함
-                //print("story_list 디폴트값 세팅 완료")
-            }
-        }
+        getUserDefaults(forkey: "Story_List")
+        getUserDefaults(forkey: "Post_List")
         
         //StoryTableCell,PostTableCell를 담는 StoryTableView의 delegate,dataSource를 갖고옴
         self.StoryTableView.delegate = self
@@ -63,6 +55,43 @@ class HomeViewController: UIViewController {
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: item) // 1초뒤에 비동기적으로 item을 실행하기 = endRefreshing()
         }
+    
+    ///UserDefaults의 값들을 불러오거나, 세팅하는 함수입니다.
+    func getUserDefaults(forkey: String) {
+        if let _ = UserDefaults.standard.data(forKey: forkey) { //forkey의 데이터가 이미 존재할때
+            if forkey == "Post_List"{   //forkey가 Post_List, 이미 존재할 때
+                if let storedData = UserDefaults.standard.data(forKey: "Post_List"), let PostList = try? JSONDecoder().decode([post].self, from: storedData) {
+                    post_list = PostList    //데이터를 불러와서 post_list에 저장.
+                }
+            }
+        } else {     //forkey의 데이터가 존재하지 않을때 -> 새로운 데이터 생성
+            if forkey == "Story_List"{
+                if let encodedData = try? JSONEncoder().encode(story_list) { //data로 저장하기위해 encoding
+                    // 이때 story_list는 story객체의 리스트임 -> HomeView_dataStruct 참고
+                    UserDefaults.standard.set(encodedData, forKey: forkey) // "Story_List" key로 저장
+                    UserDefaults.standard.synchronize() //"Story_List" 데이터 즉시 동기화 -> UI 표시에 필요한 부분은 바로바로 동기화 되어야함
+                }
+            } else if forkey == "Post_List"{
+                if let encodedData = try? JSONEncoder().encode(post_list) { //data로 저장하기위해 encoding
+                    // 이때 post_list는 post객체의 리스트임 -> HomeView_dataStruct 참고
+                    UserDefaults.standard.set(encodedData, forKey: forkey) // "Post_List" key로 저장
+                    UserDefaults.standard.synchronize() //"Post_List" 데이터 즉시 동기화 -> UI 표시에 필요한 부분은 바로바로 동기화 되어야함
+                }
+            }
+        }
+        
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        if let encodedData = try? JSONEncoder().encode(post_list) { //data로 저장하기위해 encoding
+            // 이때 story_list는 story객체의 리스트임 -> HomeView_dataStruct 참고
+            //print(post_list)
+            UserDefaults.standard.set(encodedData, forKey: "Post_List") // "Story_List" key로 저장
+            UserDefaults.standard.synchronize() //"Story_List" 데이터 즉시 동기화 -> UI 표시에 필요한 부분은 바로바로 동기화 되어야함
+            //print("종료전 Post_List 세팅 완료")
+        }
+    }
 
 }
 
