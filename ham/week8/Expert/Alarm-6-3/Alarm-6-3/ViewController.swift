@@ -21,10 +21,16 @@ class ViewController: UIViewController {
     
     @IBAction func pressStartBtn(_ sender: Any) {
         var countDown = Int(datePicker.countDownDuration)
+        
+        UIView.animate(withDuration: 0.3) {
+            self.startButton.backgroundColor = .purple
+            self.quitButton.backgroundColor = .purple
+        }
+        
         isFirstRunning = true
         DispatchQueue.global().async {
             let runLoop = RunLoop.current
-            self.firstTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] timer in
+            self.firstTimer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true, block: { [weak self] timer in
                 countDown -= 1
                 DispatchQueue.main.async {
                     let hour = countDown / 3600
@@ -37,6 +43,22 @@ class ViewController: UIViewController {
                     timer.invalidate()
                     DispatchQueue.main.async {
                         self?.firstLabel.text = "🚨🚨🚨"
+                        // start background color animation
+                        var colorChangeCount = 0
+                        let colorChangeMaxCount = 5
+                        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
+                            if colorChangeCount >= colorChangeMaxCount * 2 {
+                                UIView.animate(withDuration: 0.5) {
+                                    self?.view.backgroundColor = .systemBackground // reset to default color
+                                }
+                                timer.invalidate()
+                            } else {
+                                UIView.animate(withDuration: 0.5) {
+                                    self?.view.backgroundColor = (colorChangeCount % 2 == 0) ? .red : .blue
+                                }
+                                colorChangeCount += 1
+                            }
+                        }
                     }
                     return
                 }
@@ -59,6 +81,10 @@ class ViewController: UIViewController {
         isFirstRunning = false
         firstTimer.invalidate()
         firstLabel.text = "알람 설정"
+        UIView.animate(withDuration: 0.3) {
+            self.startButton.backgroundColor = .systemBackground
+            self.quitButton.backgroundColor = .systemBackground
+        }
     }
     
     
@@ -90,5 +116,22 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                 return cell
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        
+        UIView.animate(withDuration: 0.3) {
+            cell?.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        }
+    }
+
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        
+        UIView.animate(withDuration: 0.3) {
+            cell?.transform = CGAffineTransform.identity
+        }
+    }
+
     
 }

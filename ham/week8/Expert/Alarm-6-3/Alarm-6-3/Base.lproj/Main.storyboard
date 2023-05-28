@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Alarm_6_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYl-p9-Val">
+                                <rect key="frame" x="0.0" y="244" width="393" height="216"/>
+                                <locale key="locale" localeIdentifier="ko"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알람 설정" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ar-TQ-eiS">
+                                <rect key="frame" x="164" y="577" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQz-Vd-Y1Z">
+                                <rect key="frame" x="61" y="503" width="76" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="START"/>
+                                <connections>
+                                    <action selector="pressStartBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WyJ-Ei-UWu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GB0-WO-RJU">
+                                <rect key="frame" x="250" y="503" width="64" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="QUIT"/>
+                                <connections>
+                                    <action selector="pressQuitBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HPP-GI-9Im"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pMa-eX-PLG">
+                                <rect key="frame" x="57" y="643" width="279" height="121"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="recordCell" rowHeight="48" id="kwo-Ag-ZxZ">
+                                        <rect key="frame" x="0.0" y="50" width="279" height="48"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kwo-Ag-ZxZ" id="5OT-f6-Af3">
+                                            <rect key="frame" x="0.0" y="0.0" width="279" height="48"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="04i-b9-PM1"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="lYF-YW-8bV"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pMa-eX-PLG" firstAttribute="top" secondItem="1ar-TQ-eiS" secondAttribute="bottom" constant="45" id="2yQ-sf-7lr"/>
+                            <constraint firstItem="GB0-WO-RJU" firstAttribute="leading" secondItem="ZQz-Vd-Y1Z" secondAttribute="trailing" constant="113" id="CM4-Mi-TnG"/>
+                            <constraint firstItem="VYl-p9-Val" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="185" id="HAM-nM-eFD"/>
+                            <constraint firstItem="ZQz-Vd-Y1Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="61" id="KAA-Tb-TqJ"/>
+                            <constraint firstItem="VYl-p9-Val" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lfl-za-FBC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pMa-eX-PLG" secondAttribute="bottom" constant="54" id="R3X-js-lcu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1ar-TQ-eiS" secondAttribute="trailing" constant="79" id="agv-Wy-6X7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pMa-eX-PLG" secondAttribute="trailing" constant="57" id="aio-4j-iFd"/>
+                            <constraint firstItem="pMa-eX-PLG" firstAttribute="top" secondItem="ZQz-Vd-Y1Z" secondAttribute="bottom" constant="105" id="d2J-cq-e7G"/>
+                            <constraint firstItem="pMa-eX-PLG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="dLw-ND-xmQ"/>
+                            <constraint firstItem="1ar-TQ-eiS" firstAttribute="top" secondItem="GB0-WO-RJU" secondAttribute="bottom" constant="39" id="iSf-h0-0SH"/>
+                            <constraint firstItem="ZQz-Vd-Y1Z" firstAttribute="top" secondItem="VYl-p9-Val" secondAttribute="bottom" constant="43" id="kSE-4c-Izd"/>
+                            <constraint firstItem="pMa-eX-PLG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kVm-WS-vyY"/>
+                            <constraint firstItem="VYl-p9-Val" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="njL-u3-3jS"/>
+                            <constraint firstItem="1ar-TQ-eiS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="oWz-4l-cXp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="VYl-p9-Val" id="S6i-jd-Ae5"/>
+                        <outlet property="firstLabel" destination="1ar-TQ-eiS" id="Ljz-ZS-dGV"/>
+                        <outlet property="quitButton" destination="GB0-WO-RJU" id="nAW-rN-SId"/>
+                        <outlet property="startButton" destination="ZQz-Vd-Y1Z" id="aW0-ER-8Uv"/>
+                        <outlet property="tableView" destination="pMa-eX-PLG" id="gTK-mY-GhJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17.557251908396946" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
