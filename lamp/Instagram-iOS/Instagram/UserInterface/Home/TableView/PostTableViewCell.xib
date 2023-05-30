@@ -29,10 +29,10 @@
                                 <rect key="frame" x="4" y="438" width="131" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Py7-oH-pxk">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Py7-oH-pxk" userLabel="Heart Button">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="Heart"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Heart" imagePadding="2"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="YvX-1l-D5w">
                                         <rect key="frame" x="40" y="0.0" width="44" height="40"/>
@@ -47,6 +47,10 @@
                                     </button>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="vRs-VN-zkh"/>
+                                <constraints>
+                                    <constraint firstItem="Py7-oH-pxk" firstAttribute="width" secondItem="ldS-77-evH" secondAttribute="width" multiplier="0.305344" id="P3j-N8-wyk"/>
+                                    <constraint firstItem="Py7-oH-pxk" firstAttribute="height" secondItem="ldS-77-evH" secondAttribute="height" id="bqE-j9-319"/>
+                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="좋아요 1,000개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAI-QD-pGm">
                                 <rect key="frame" x="14" y="477" width="96" height="18"/>
@@ -145,6 +149,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="CommentCount" destination="3A5-eX-CGN" id="iOK-vf-1SK"/>
+                <outlet property="Like_Button" destination="Py7-oH-pxk" id="BmI-jf-yre"/>
                 <outlet property="PostDate" destination="WLn-W6-81u" id="Ugd-mu-B0z"/>
                 <outlet property="PostImage" destination="FwG-aK-E4c" id="qiS-lt-plF"/>
                 <outlet property="PostLike" destination="EAI-QD-pGm" id="vIE-Ph-N3c"/>

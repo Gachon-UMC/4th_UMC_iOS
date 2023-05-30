@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C90A17EE-273A-43A9-BB7B-960A16358953"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BF159581-01FC-4CA8-950A-31682EB7FEBA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dispatch_Practice/AlarmViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "updateTimer()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BF159581-01FC-4CA8-950A-31682EB7FEBA - f911feedf8b773e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in Dispatch_Practice.AlarmViewController.updateTimer() -&gt; ()"
+                  moduleName = "Dispatch_Practice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/parkminseo/Swift_Programming/Dispatch_Practice/Dispatch_Practice/AlarmViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "1412">
+               </Location>
+               <Location
+                  uuid = "BF159581-01FC-4CA8-950A-31682EB7FEBA - f911feedf8b77008"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in Dispatch_Practice.AlarmViewController.updateTimer() -&gt; ()"
+                  moduleName = "Dispatch_Practice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/parkminseo/Swift_Programming/Dispatch_Practice/Dispatch_Practice/AlarmViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "1348">
+               </Location>
+               <Location
+                  uuid = "BF159581-01FC-4CA8-950A-31682EB7FEBA - f911feedf8b7729d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in Dispatch_Practice.AlarmViewController.updateTimer() -&gt; ()"
+                  moduleName = "Dispatch_Practice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/parkminseo/Swift_Programming/Dispatch_Practice/Dispatch_Practice/AlarmViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "1424">
+               </Location>
+               <Location
+                  uuid = "BF159581-01FC-4CA8-950A-31682EB7FEBA - f911feedf8b77d95"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in Dispatch_Practice.AlarmViewController.updateTimer() -&gt; ()"
+                  moduleName = "Dispatch_Practice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/parkminseo/Swift_Programming/Dispatch_Practice/Dispatch_Practice/AlarmViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "1272">
+               </Location>
+               <Location
+                  uuid = "BF159581-01FC-4CA8-950A-31682EB7FEBA - f911feedf8b7725b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in Dispatch_Practice.AlarmViewController.updateTimer() -&gt; ()"
+                  moduleName = "Dispatch_Practice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/parkminseo/Swift_Programming/Dispatch_Practice/Dispatch_Practice/AlarmViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "1272">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E97FD099-15A6-4BAC-8108-E1586E271414"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dispatch_Practice/AlarmViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "updateTimer()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D137A036-6946-44B6-8699-AE7B15B475B8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dispatch_Practice/AlarmViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "setAlarm(time:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3448609A-422C-4250-A00C-E8BA3C5027C2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dispatch_Practice/AlarmViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "setAlarm(time:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3448609A-422C-4250-A00C-E8BA3C5027C2 - 6dc882d77c582ad7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dispatch_Practice.AlarmViewController.setAlarm(time: Swift.Double) -&gt; ()"
+                  moduleName = "Dispatch_Practice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/parkminseo/Swift_Programming/Dispatch_Practice/Dispatch_Practice/AlarmViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "412">
+               </Location>
+               <Location
+                  uuid = "3448609A-422C-4250-A00C-E8BA3C5027C2 - 6dc882d77c582b4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dispatch_Practice.AlarmViewController.setAlarm(time: Swift.Double) -&gt; ()"
+                  moduleName = "Dispatch_Practice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/parkminseo/Swift_Programming/Dispatch_Practice/Dispatch_Practice/AlarmViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "428">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A13357E4-908D-4632-821B-1E670461B5AF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dispatch_Practice/AlarmViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "AlarmViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "A13357E4-908D-4632-821B-1E670461B5AF - 25a42d6c46e6e8b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dispatch_Practice.AlarmViewController.Alarm_list.getter : Swift.Array&lt;Foundation.Date&gt;"
+                  moduleName = "Dispatch_Practice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/parkminseo/Swift_Programming/Dispatch_Practice/Dispatch_Practice/AlarmViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "A13357E4-908D-4632-821B-1E670461B5AF - e23e82d3966cb8a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dispatch_Practice.AlarmViewController.Alarm_list.setter : Swift.Array&lt;Foundation.Date&gt;"
+                  moduleName = "Dispatch_Practice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/parkminseo/Swift_Programming/Dispatch_Practice/Dispatch_Practice/AlarmViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "A13357E4-908D-4632-821B-1E670461B5AF - ae65345493cf4cb4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dispatch_Practice.AlarmViewController.Alarm_list.modify : Swift.Array&lt;Foundation.Date&gt;"
+                  moduleName = "Dispatch_Practice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/parkminseo/Swift_Programming/Dispatch_Practice/Dispatch_Practice/AlarmViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "A13357E4-908D-4632-821B-1E670461B5AF - 197f7f8143cc7d70"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dispatch_Practice.AlarmViewController.Alarm_list.modify : Swift.Array&lt;Foundation.Date&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Dispatch_Practice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/parkminseo/Swift_Programming/Dispatch_Practice/Dispatch_Practice/AlarmViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "A13357E4-908D-4632-821B-1E670461B5AF - a16d7ba935856d69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dispatch_Practice.AlarmViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Dispatch_Practice.AlarmViewController"
+                  moduleName = "Dispatch_Practice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/parkminseo/Swift_Programming/Dispatch_Practice/Dispatch_Practice/AlarmViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "A13357E4-908D-4632-821B-1E670461B5AF - a6998bd6da8495b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dispatch_Practice.AlarmViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Dispatch_Practice.AlarmViewController&gt;"
+                  moduleName = "Dispatch_Practice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/parkminseo/Swift_Programming/Dispatch_Practice/Dispatch_Practice/AlarmViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "236">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DECFD587-A1A5-416B-BBC8-D969FC2B0612"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dispatch_Practice/AlarmHistoryViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "523B779E-D5C2-49F1-81BC-BE2AA146CA97"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dispatch_Practice/AlarmHistoryViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "AlarmHistoryViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
