@@ -11,7 +11,7 @@ extension CALayer {
             border.name = name ?? edge.rawValue.description
             switch edge {
                         case UIRectEdge.top:
-                            border.frame = CGRect.init(x: 0, y: 0, width: frame.width, height: width)
+                            border.frame = CGRect.init(x: 0, y: 0, width: self.bounds.width, height: width)
                             break
                         case UIRectEdge.bottom:
                             if set == "Normal" {

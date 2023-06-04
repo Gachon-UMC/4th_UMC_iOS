@@ -31,6 +31,13 @@
 		88EB3C142A072A7600C9F2CC /* StoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88EB3C122A072A7600C9F2CC /* StoryTableViewCell.xib */; };
 		88F594472A154CD80000142C /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F594452A154CD80000142C /* StoryViewController.swift */; };
 		88F594482A154CD80000142C /* StoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F594462A154CD80000142C /* StoryViewController.xib */; };
+		88FEC0182A2224C6001B1CE5 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FEC0162A2224C6001B1CE5 /* SignInViewController.swift */; };
+		88FEC01B2A22365B001B1CE5 /* SignIN_storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88FEC01A2A22365B001B1CE5 /* SignIN_storyboard.storyboard */; };
+		88FEC01D2A23C66B001B1CE5 /* SignInAddEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FEC01C2A23C66B001B1CE5 /* SignInAddEmailViewController.swift */; };
+		88FEC01F2A23C685001B1CE5 /* SignInAddNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FEC01E2A23C685001B1CE5 /* SignInAddNameViewController.swift */; };
+		88FEC0212A23C6A1001B1CE5 /* SignInAddPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FEC0202A23C6A1001B1CE5 /* SignInAddPasswordViewController.swift */; };
+		88FEC0232A23C6B5001B1CE5 /* SignInAddUserIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FEC0222A23C6B5001B1CE5 /* SignInAddUserIDViewController.swift */; };
+		88FEC0252A23C767001B1CE5 /* SignInFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FEC0242A23C767001B1CE5 /* SignInFinalViewController.swift */; };
 		A23BDE2A28CFBC3A00A30F40 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23BDE2928CFBC3A00A30F40 /* TabBarController.swift */; };
 		A23BDE2B28CFBC3A00A30F40 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23BDE2928CFBC3A00A30F40 /* TabBarController.swift */; };
 		A23BDE2C28CFBC3A00A30F40 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23BDE2928CFBC3A00A30F40 /* TabBarController.swift */; };
@@ -90,6 +97,13 @@
 		88EB3C122A072A7600C9F2CC /* StoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryTableViewCell.xib; sourceTree = "<group>"; };
 		88F594452A154CD80000142C /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		88F594462A154CD80000142C /* StoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryViewController.xib; sourceTree = "<group>"; };
+		88FEC0162A2224C6001B1CE5 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		88FEC01A2A22365B001B1CE5 /* SignIN_storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIN_storyboard.storyboard; sourceTree = "<group>"; };
+		88FEC01C2A23C66B001B1CE5 /* SignInAddEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAddEmailViewController.swift; sourceTree = "<group>"; };
+		88FEC01E2A23C685001B1CE5 /* SignInAddNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAddNameViewController.swift; sourceTree = "<group>"; };
+		88FEC0202A23C6A1001B1CE5 /* SignInAddPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAddPasswordViewController.swift; sourceTree = "<group>"; };
+		88FEC0222A23C6B5001B1CE5 /* SignInAddUserIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAddUserIDViewController.swift; sourceTree = "<group>"; };
+		88FEC0242A23C767001B1CE5 /* SignInFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFinalViewController.swift; sourceTree = "<group>"; };
 		A23BDE2928CFBC3A00A30F40 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A242B66328CCB027006939D6 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A242B66628CCB027006939D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -194,6 +208,20 @@
 				88F594462A154CD80000142C /* StoryViewController.xib */,
 			);
 			path = UserStory;
+			sourceTree = "<group>";
+		};
+		88FEC0152A222491001B1CE5 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				88FEC01A2A22365B001B1CE5 /* SignIN_storyboard.storyboard */,
+				88FEC0162A2224C6001B1CE5 /* SignInViewController.swift */,
+				88FEC01C2A23C66B001B1CE5 /* SignInAddEmailViewController.swift */,
+				88FEC01E2A23C685001B1CE5 /* SignInAddNameViewController.swift */,
+				88FEC0202A23C6A1001B1CE5 /* SignInAddPasswordViewController.swift */,
+				88FEC0222A23C6B5001B1CE5 /* SignInAddUserIDViewController.swift */,
+				88FEC0242A23C767001B1CE5 /* SignInFinalViewController.swift */,
+			);
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		A242B65A28CCB027006939D6 = {
@@ -308,6 +336,7 @@
 				A2554A5928D788E100047C50 /* Reels */,
 				A2554A5A28D788E800047C50 /* Shopping */,
 				A2554A5B28D788EE00047C50 /* Profile */,
+				88FEC0152A222491001B1CE5 /* SignIn */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -417,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88D349D62A0D1076001AC953 /* MAKETableViewCell.xib in Resources */,
+				88FEC01B2A22365B001B1CE5 /* SignIN_storyboard.storyboard in Resources */,
 				88D349C72A0CFAB5001AC953 /* Sheet.storyboard in Resources */,
 				881BFCD529FE61C4002B6248 /* StoryCollectionViewCell.xib in Resources */,
 				88EB3C142A072A7600C9F2CC /* StoryTableViewCell.xib in Resources */,
@@ -452,6 +482,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				881BFCD429FE61C4002B6248 /* StoryCollectionViewCell.swift in Sources */,
+				88FEC0212A23C6A1001B1CE5 /* SignInAddPasswordViewController.swift in Sources */,
+				88FEC01D2A23C66B001B1CE5 /* SignInAddEmailViewController.swift in Sources */,
+				88FEC0252A23C767001B1CE5 /* SignInFinalViewController.swift in Sources */,
 				88073B412A0766AF002EC8B1 /* PostTableViewCell.swift in Sources */,
 				882AD9C529FCD4C70035626F /* GridCollectionViewCell.swift in Sources */,
 				88D349D52A0D1076001AC953 /* MAKETableViewCell.swift in Sources */,
@@ -460,13 +493,16 @@
 				881BFCD129FD154B002B6248 /* SubTabBar.swift in Sources */,
 				88D349CD2A0D041F001AC953 /* ProfileView_Data.swift in Sources */,
 				A23BDE2A28CFBC3A00A30F40 /* TabBarController.swift in Sources */,
+				88FEC0182A2224C6001B1CE5 /* SignInViewController.swift in Sources */,
 				882AD9CD29FCDCFA0035626F /* HomeView_dataStruct.swift in Sources */,
+				88FEC0232A23C6B5001B1CE5 /* SignInAddUserIDViewController.swift in Sources */,
 				88D349CA2A0CFF5F001AC953 /* BottomSheetTableViewCell.swift in Sources */,
 				A242B66728CCB027006939D6 /* AppDelegate.swift in Sources */,
 				88F594472A154CD80000142C /* StoryViewController.swift in Sources */,
 				A2554A6228D7896300047C50 /* ProfileViewController.swift in Sources */,
 				888A348E29EB1C4800E66A74 /* EditProfileViewController.swift in Sources */,
 				882AD9C729FCD8BF0035626F /* HomeViewController.swift in Sources */,
+				88FEC01F2A23C685001B1CE5 /* SignInAddNameViewController.swift in Sources */,
 				A242B66928CCB027006939D6 /* SceneDelegate.swift in Sources */,
 				88EB3C132A072A7600C9F2CC /* StoryTableViewCell.swift in Sources */,
 			);
