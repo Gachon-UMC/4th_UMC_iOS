@@ -27,10 +27,17 @@
 		DD05CD4329FCAADA004B394D /* firstCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD05CD4129FCAADA004B394D /* firstCollectionTableViewCell.xib */; };
 		DD05CD4629FCAB31004B394D /* firstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD05CD4429FCAB31004B394D /* firstCollectionViewCell.swift */; };
 		DD05CD4729FCAB31004B394D /* firstCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD05CD4529FCAB31004B394D /* firstCollectionViewCell.xib */; };
+		DD252CAC2A2C5BAB0065D081 /* AddNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD252CAB2A2C5BAB0065D081 /* AddNameViewController.swift */; };
+		DD252CAE2A2C60340065D081 /* MakePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD252CAD2A2C60340065D081 /* MakePasswordViewController.swift */; };
+		DD252CB02A2C604E0065D081 /* MakeNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD252CAF2A2C604E0065D081 /* MakeNameViewController.swift */; };
+		DD252CB22A2C606B0065D081 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD252CB12A2C606B0065D081 /* ConfirmViewController.swift */; };
+		DD252CB42A2C97830065D081 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD252CB32A2C97830065D081 /* UserInfo.swift */; };
 		DD3330FC29EB371600D00923 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3330FB29EB371600D00923 /* EditViewController.swift */; };
 		DD3F431F2A1568CE00FC5BE8 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3F431D2A1568CE00FC5BE8 /* StoryViewController.swift */; };
 		DD3F43202A1568CE00FC5BE8 /* StoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3F431E2A1568CE00FC5BE8 /* StoryViewController.xib */; };
 		DD4CB48F29FE9BB700E850AB /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4CB48E29FE9BB700E850AB /* TabBar.swift */; };
+		DD4E77092A2B7C4000333BB5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4E77082A2B7C3F00333BB5 /* LoginViewController.swift */; };
+		DD4E770B2A2B910C00333BB5 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4E770A2A2B910C00333BB5 /* EmailViewController.swift */; };
 		DD61A6602A03A75A00971CD5 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61A65E2A03A75A00971CD5 /* PostTableViewCell.swift */; };
 		DD61A6612A03A75A00971CD5 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD61A65F2A03A75A00971CD5 /* PostTableViewCell.xib */; };
 		DDD6D8792A0C10D800E720E9 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD6D8772A0C10D800E720E9 /* AddPostViewController.swift */; };
@@ -77,10 +84,17 @@
 		DD05CD4129FCAADA004B394D /* firstCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = firstCollectionTableViewCell.xib; sourceTree = "<group>"; };
 		DD05CD4429FCAB31004B394D /* firstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstCollectionViewCell.swift; sourceTree = "<group>"; };
 		DD05CD4529FCAB31004B394D /* firstCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = firstCollectionViewCell.xib; sourceTree = "<group>"; };
+		DD252CAB2A2C5BAB0065D081 /* AddNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNameViewController.swift; sourceTree = "<group>"; };
+		DD252CAD2A2C60340065D081 /* MakePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePasswordViewController.swift; sourceTree = "<group>"; };
+		DD252CAF2A2C604E0065D081 /* MakeNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNameViewController.swift; sourceTree = "<group>"; };
+		DD252CB12A2C606B0065D081 /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
+		DD252CB32A2C97830065D081 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		DD3330FB29EB371600D00923 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		DD3F431D2A1568CE00FC5BE8 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		DD3F431E2A1568CE00FC5BE8 /* StoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryViewController.xib; sourceTree = "<group>"; };
 		DD4CB48E29FE9BB700E850AB /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		DD4E77082A2B7C3F00333BB5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DD4E770A2A2B910C00333BB5 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		DD61A65E2A03A75A00971CD5 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		DD61A65F2A03A75A00971CD5 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		DDD6D8772A0C10D800E720E9 /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +232,13 @@
 				A2554A5928D788E100047C50 /* Reels */,
 				A2554A5A28D788E800047C50 /* Shopping */,
 				A2554A5B28D788EE00047C50 /* Profile */,
+				DD4E77082A2B7C3F00333BB5 /* LoginViewController.swift */,
+				DD4E770A2A2B910C00333BB5 /* EmailViewController.swift */,
+				DD252CAB2A2C5BAB0065D081 /* AddNameViewController.swift */,
+				DD252CAD2A2C60340065D081 /* MakePasswordViewController.swift */,
+				DD252CAF2A2C604E0065D081 /* MakeNameViewController.swift */,
+				DD252CB12A2C606B0065D081 /* ConfirmViewController.swift */,
+				DD252CB32A2C97830065D081 /* UserInfo.swift */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -399,19 +420,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD252CB02A2C604E0065D081 /* MakeNameViewController.swift in Sources */,
+				DD252CAC2A2C5BAB0065D081 /* AddNameViewController.swift in Sources */,
 				DD3F431F2A1568CE00FC5BE8 /* StoryViewController.swift in Sources */,
 				DD05CD3629FC5A39004B394D /* Model.swift in Sources */,
 				A23BDE2A28CFBC3A00A30F40 /* TabBarController.swift in Sources */,
 				DD05CD4629FCAB31004B394D /* firstCollectionViewCell.swift in Sources */,
+				DD4E770B2A2B910C00333BB5 /* EmailViewController.swift in Sources */,
 				DD4CB48F29FE9BB700E850AB /* TabBar.swift in Sources */,
 				DDD6D8792A0C10D800E720E9 /* AddPostViewController.swift in Sources */,
 				DDD6D87D2A0C1CBA00E720E9 /* SettingViewController.swift in Sources */,
 				DD05CD3829FC5AF8004B394D /* HomeViewController.swift in Sources */,
+				DD252CAE2A2C60340065D081 /* MakePasswordViewController.swift in Sources */,
 				A242B66728CCB027006939D6 /* AppDelegate.swift in Sources */,
 				DD05CD4229FCAADA004B394D /* firstCollectionTableViewCell.swift in Sources */,
 				A2554A6228D7896300047C50 /* ProfileViewController.swift in Sources */,
+				DD252CB22A2C606B0065D081 /* ConfirmViewController.swift in Sources */,
+				DD4E77092A2B7C4000333BB5 /* LoginViewController.swift in Sources */,
 				A242B66928CCB027006939D6 /* SceneDelegate.swift in Sources */,
 				DD3330FC29EB371600D00923 /* EditViewController.swift in Sources */,
+				DD252CB42A2C97830065D081 /* UserInfo.swift in Sources */,
 				DD61A6602A03A75A00971CD5 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

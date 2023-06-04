@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "52B214B2-B56C-42CE-9E87-A9B42E3A7604"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E4C0E5DC-9274-484F-A248-CFCDA9F93CD2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Practice_1/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "fetchDataAndDecode()"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "E4C0E5DC-9274-484F-A248-CFCDA9F93CD2 - 6a4ea64a48b06aaf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Practice_1.fetchDataAndDecode() -&gt; ()"
+                  moduleName = "Practice_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youz2me/Xcode/4th_UMC_iOS/zimging/week9/expert/Practice_1/Practice_1/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  uuid = "E4C0E5DC-9274-484F-A248-CFCDA9F93CD2 - 6a4ea64a48b06aaf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Practice_1.fetchDataAndDecode() -&gt; ()"
+                  moduleName = "Practice_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youz2me/Xcode/4th_UMC_iOS/zimging/week9/expert/Practice_1/Practice_1/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "344">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD4B465F-E51E-4E55-8208-4730C888FD65"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Practice_1/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "fetchDataAndDecode()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7659A6E-E7BA-4816-A9DE-740EC0B2763C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Practice_1/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "fetchDataAndDecode()"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "A7659A6E-E7BA-4816-A9DE-740EC0B2763C - 6a4ea64a48b06b72"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Practice_1.fetchDataAndDecode() -&gt; ()"
+                  moduleName = "Practice_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youz2me/Xcode/4th_UMC_iOS/zimging/week9/expert/Practice_1/Practice_1/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "356">
+               </Location>
+               <Location
+                  uuid = "A7659A6E-E7BA-4816-A9DE-740EC0B2763C - c1ef140f92af6610"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Practice_1.fetchDataAndDecode() -&gt; ()"
+                  moduleName = "Practice_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youz2me/Xcode/4th_UMC_iOS/zimging/week9/expert/Practice_1/Practice_1/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AF1C3640-DE49-4EBF-A15A-AD5C617695FD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Practice_1/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "fetchDataAndDecode()"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "AF1C3640-DE49-4EBF-A15A-AD5C617695FD - c1ef140f92af6575"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Practice_1.fetchDataAndDecode() -&gt; ()"
+                  moduleName = "Practice_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youz2me/Xcode/4th_UMC_iOS/zimging/week9/expert/Practice_1/Practice_1/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "236">
+               </Location>
+               <Location
+                  uuid = "AF1C3640-DE49-4EBF-A15A-AD5C617695FD - c1ef140f92af653b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Practice_1.fetchDataAndDecode() -&gt; ()"
+                  moduleName = "Practice_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youz2me/Xcode/4th_UMC_iOS/zimging/week9/expert/Practice_1/Practice_1/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "404">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ACD89CE3-3A40-4E50-8839-03E6362955AD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Practice_1/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "fetchDataAndDecode()"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "ACD89CE3-3A40-4E50-8839-03E6362955AD - c1ef140f92af65bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Practice_1.fetchDataAndDecode() -&gt; ()"
+                  moduleName = "Practice_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youz2me/Xcode/4th_UMC_iOS/zimging/week9/expert/Practice_1/Practice_1/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "868">
+               </Location>
+               <Location
+                  uuid = "ACD89CE3-3A40-4E50-8839-03E6362955AD - c1ef140f92af6423"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Practice_1.fetchDataAndDecode() -&gt; ()"
+                  moduleName = "Practice_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youz2me/Xcode/4th_UMC_iOS/zimging/week9/expert/Practice_1/Practice_1/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "1204">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC21DA50-6BDF-4D3E-AA9B-34FD30FC618C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Practice_1/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "fetchDataAndDecode()"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "DC21DA50-6BDF-4D3E-AA9B-34FD30FC618C - c1ef140f92af6442"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Practice_1.fetchDataAndDecode() -&gt; ()"
+                  moduleName = "Practice_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youz2me/Xcode/4th_UMC_iOS/zimging/week9/expert/Practice_1/Practice_1/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "1236">
+               </Location>
+               <Location
+                  uuid = "DC21DA50-6BDF-4D3E-AA9B-34FD30FC618C - c1ef140f92af6442"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Practice_1.fetchDataAndDecode() -&gt; ()"
+                  moduleName = "Practice_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youz2me/Xcode/4th_UMC_iOS/zimging/week9/expert/Practice_1/Practice_1/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "1688">
+               </Location>
+               <Location
+                  uuid = "DC21DA50-6BDF-4D3E-AA9B-34FD30FC618C - c1ef140f92af64c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Practice_1.fetchDataAndDecode() -&gt; ()"
+                  moduleName = "Practice_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youz2me/Xcode/4th_UMC_iOS/zimging/week9/expert/Practice_1/Practice_1/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "1572">
+               </Location>
+               <Location
+                  uuid = "DC21DA50-6BDF-4D3E-AA9B-34FD30FC618C - c1ef140f92af64c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Practice_1.fetchDataAndDecode() -&gt; ()"
+                  moduleName = "Practice_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youz2me/Xcode/4th_UMC_iOS/zimging/week9/expert/Practice_1/Practice_1/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "2024">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD2D0500-D5BE-4C4C-BC4B-890CF9E4D519"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Practice_1/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59BF2843-DCAF-4157-940C-D403BBE8AED8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Practice_1/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "Post"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
