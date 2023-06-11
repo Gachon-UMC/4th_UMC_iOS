@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct UserInfo {
+struct UserInfo: Codable {
     var name: String
     var username: String
     var email: String

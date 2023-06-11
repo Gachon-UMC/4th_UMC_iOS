@@ -14,6 +14,9 @@ class MakePasswordViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var goToMakeNamePageBtn: UIButton!
     @IBOutlet weak var goToLoginBtn: UIButton!
     
+    var emailToSend : String?
+    var nameToSend : String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,19 +47,19 @@ class MakePasswordViewController: UIViewController, UITextFieldDelegate {
     @IBAction func goToMakeNamePageBtnClicked(_ sender: Any) {
         // MARK: 화면 전환
         guard let makeNameViewController = self.storyboard?.instantiateViewController(withIdentifier: "MakeNameViewController") as? MakeNameViewController else { return }
-                // 화면 전환 애니메이션 설정
-                makeNameViewController.modalTransitionStyle = .coverVertical
-                // 전환된 화면이 보여지는 방법 설정 (fullScreen)
-                makeNameViewController.modalPresentationStyle = .fullScreen
-                self.present(makeNameViewController, animated: true, completion: nil)
+        // 화면 전환 애니메이션 설정
+        makeNameViewController.modalTransitionStyle = .coverVertical
+        // 전환된 화면이 보여지는 방법 설정 (fullScreen)
+        makeNameViewController.modalPresentationStyle = .fullScreen
         
-        // NotificationCenter로 비밀번호 필드에 있는 값 전달
-        let confirmVC = ConfirmViewController()
-            NotificationCenter.default.addObserver(confirmVC, selector: #selector(confirmVC.receivePassword(_:)), name: Notification.Name("password"), object: nil)
-        
+        // 값 넘겨줌
         if let password = passwordField.text {
-            NotificationCenter.default.post(name: Notification.Name("password"), object: password)
+            makeNameViewController.emailToSend = emailToSend
+            makeNameViewController.nameToSend = nameToSend
+            makeNameViewController.passwordToSend = password
         }
+        
+        self.present(makeNameViewController, animated: true, completion: nil)
     }
 
     // 로그인 버튼 누르면 정보 저장 없이 로그인 화면으로 돌아가는 이벤트

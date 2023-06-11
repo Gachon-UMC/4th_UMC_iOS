@@ -35,23 +35,19 @@ class EmailViewController: UIViewController, UITextFieldDelegate {
     // 다음 버튼 눌렀을 때 화면 전환 이벤트
     @IBAction func NamePageBtnClicked(_ sender: Any) {
         
+        guard let nameVC = self.storyboard?.instantiateViewController(withIdentifier: "AddNameViewController") as? AddNameViewController else { return }
+        
         // 화면 전환 애니메이션 설정
-        // addNameViewController.modalTransitionStyle = .coverVertical
+        nameVC.modalTransitionStyle = .coverVertical
         // 전환된 화면이 보여지는 방법 설정 (fullScreen)
-        // addNameViewController.modalPresentationStyle = .fullScreen
+        nameVC.modalPresentationStyle = .fullScreen
         
-        guard let confirmVC = self.storyboard?.instantiateViewController(withIdentifier: "ConfirmViewController") as? ConfirmViewController else { return }
-        // NotificationCenter로 이메일 필드에 있는 값 전달
-        //if let confirmVC = presentingViewController as? ConfirmViewController {
-            NotificationCenter.default.addObserver(confirmVC, selector: #selector(confirmVC.receiveEmail(_:)), name: Notification.Name("email"), object: nil)
-            // NotificationCenter로 이메일 필드에 있는 값 전달
-            if let email = emailField.text {
-                NotificationCenter.default.post(name: Notification.Name("email"), object: email)
-            }
-            self.present(confirmVC, animated: true, completion: nil)
-        //}
+        // AddNameViewController로 emailField의 값 넘겨줌
+        if let email = emailField.text {
+            nameVC.emailToSend = email
+        }
         
-        
+        self.present(nameVC, animated: true, completion: nil)
     }
     
     // 이메일 주소 입력 위 버튼 눌렀을 때 다시 돌아감

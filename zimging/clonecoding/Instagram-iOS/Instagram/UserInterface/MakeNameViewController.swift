@@ -13,6 +13,10 @@ class MakeNameViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var goToConfirmPageBtn: UIButton!
     @IBOutlet weak var goToLoginBtn: UIButton!
     
+    var emailToSend : String?
+    var nameToSend : String?
+    var passwordToSend: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,16 +39,16 @@ class MakeNameViewController: UIViewController, UITextFieldDelegate {
         confirmViewController.modalTransitionStyle = .coverVertical
         // 전환된 화면이 보여지는 방법 설정 (fullScreen)
         confirmViewController.modalPresentationStyle = .fullScreen
-        self.present(confirmViewController, animated: true, completion: nil)
         
-        // NotificationCenter로 이메일 필드에 있는 값 전달
-        let confirmVC = ConfirmViewController()
-        NotificationCenter.default.addObserver(confirmVC, selector: #selector(confirmVC.receiveUserName(_:)), name: Notification.Name("username"), object: nil)
         
         if let username = userNameField.text {
-            NotificationCenter.default.post(name: Notification.Name("username"), object: username)
+            confirmViewController.emailToSend = emailToSend
+            confirmViewController.nameToSend = nameToSend
+            confirmViewController.passwordToSend = passwordToSend
+            confirmViewController.userNameToSend = username
         }
         
+        self.present(confirmViewController, animated: true, completion: nil)
     }
 
     
