@@ -911,8 +911,11 @@
                                 <rect key="frame" x="0.0" y="332" width="414" height="481"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8GW-9O-KUU">
-                                        <rect key="frame" x="0.0" y="49" width="414" height="432"/>
+                                        <rect key="frame" x="0.0" y="49" width="414" height="300"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="gb6-4u-s04"/>
+                                        </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VQs-a7-fFr">
                                             <size key="itemSize" width="128" height="128"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -993,7 +996,6 @@
                                     <constraint firstItem="TdC-qY-gi5" firstAttribute="top" secondItem="Mep-fh-ai3" secondAttribute="top" id="Z0M-8K-byu"/>
                                     <constraint firstAttribute="trailing" secondItem="8GW-9O-KUU" secondAttribute="trailing" id="bMS-bJ-96h"/>
                                     <constraint firstAttribute="trailing" secondItem="8GW-9O-KUU" secondAttribute="trailing" id="vH4-dz-7Ez"/>
-                                    <constraint firstAttribute="bottom" secondItem="8GW-9O-KUU" secondAttribute="bottom" id="yQs-8V-IJd"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibo-4T-g89">
@@ -1032,12 +1034,16 @@
                     <tabBarItem key="tabBarItem" title="" image="DefaultProfile" selectedImage="FilledDefaultProfile" id="89E-jR-31B"/>
                     <navigationItem key="navigationItem" id="EoS-af-Dcc"/>
                     <connections>
+                        <outlet property="followerNum" destination="s01-Tg-JGA" id="rva-47-5RP"/>
+                        <outlet property="followingNum" destination="6vc-Lp-9w5" id="sUd-av-bCz"/>
                         <outlet property="grid" destination="Ier-j7-cfO" id="ce4-nd-y4A"/>
                         <outlet property="gridView" destination="Ivy-Tw-Nr3" id="2yb-hD-zdr"/>
                         <outlet property="id" destination="BOF-ye-Bax" id="b9V-5C-CYA"/>
                         <outlet property="intro" destination="gmP-1I-fDB" id="lMw-cf-Tcq"/>
                         <outlet property="link" destination="05z-Ok-eBA" id="l63-WB-cgD"/>
                         <outlet property="name" destination="UeI-rs-GXu" id="M34-OR-0o3"/>
+                        <outlet property="postNum" destination="HFL-15-gYu" id="Whv-R7-5jw"/>
+                        <outlet property="profileImg" destination="Mrl-Fx-576" id="HKn-uJ-IWA"/>
                         <outlet property="tag" destination="Orq-J1-s02" id="dwz-Im-xjQ"/>
                         <outlet property="tagView" destination="cZE-We-dOT" id="FCI-2s-PJc"/>
                     </connections>

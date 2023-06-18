@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class PostTableViewCell: UITableViewCell {
     
@@ -67,9 +69,35 @@ class PostTableViewCell: UITableViewCell {
         // 하트 크기 맞춰주기 위한 padding 변수 선언
         let padding = UIEdgeInsets(top: 11, left: 11, bottom: 11, right: 11)
         
-        self.profileBtn.setImage(UIImage(named: postDataInCell.info.imagename), for: .normal)
+        // 프로필 사진 불러오기
+        AF.request(postDataInCell.info.imagename).responseImage { response in
+            switch response.result {
+            case .success(let image):
+                // 이미지 다운로드 성공 시 profileBtn으로 설정
+                self.profileBtn.setImage(image, for: .normal)
+            case .failure(let error):
+                // 이미지 다운로드 실패 시 에러 처리
+                print("이미지 다운로드 실패: \(error)")
+            }
+        }
+        
+        // 게시물 사진 불러오기
+        AF.request(postDataInCell.imageName).responseImage { response in
+            switch response.result {
+            case .success(let image):
+                // 이미지 다운로드 성공 시 postImage로 설정
+                print("----게시물: \(image)-----")
+                self.postImage.setImage(image, for: .normal)
+            case .failure(let error):
+                // 이미지 다운로드 실패 시 에러 처리
+                print("이미지 다운로드 실패: \(error)")
+            }
+        }
+        
+        
+        
         self.profileId.text = postDataInCell.info.id
-        self.postImage.setImage(UIImage(named: postDataInCell.imageName), for: .normal)
+        
         self.postContent.text = postDataInCell.imageComment
         self.postIdBtn.titleLabel?.text = postDataInCell.info.id
         

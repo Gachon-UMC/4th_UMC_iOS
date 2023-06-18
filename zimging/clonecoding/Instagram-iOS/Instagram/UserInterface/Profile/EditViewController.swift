@@ -6,6 +6,14 @@
 //
 
 import UIKit
+import Alamofire
+
+struct ModifyResponse: Codable {
+    let isSuccess: Bool
+    let returnCode: Int
+    let returnMsg: String
+    let result: String
+}
 
 protocol SendDataToProfile {
     func sendDataToP (myName: String, myID: String, myIntro: String, myLink: String)
@@ -41,6 +49,7 @@ class EditViewController: UIViewController, SendDataToEdit {
     var id = ""
     var intro = ""
     var link = ""
+    var jwt = ""
     
     func setup() {
         nameText.text = name
@@ -56,5 +65,36 @@ class EditViewController: UIViewController, SendDataToEdit {
         guard let tempLink = linkText.text else {return}
         
         delegate?.sendDataToP(myName: tempName, myID: tempId, myIntro: tempIntro, myLink: tempLink)
+
+        modifyUser(userName: tempName, userId: tempId, userIntro: tempIntro, userWebsite: tempLink, jwt: jwt) { result in
+            switch result {
+            case .success(let modifyResponse):
+                print("사용자 정보 수정 성공: \(modifyResponse.result)")
+            case .failure(let error):
+                print("사용자 정보 수정 실패: \(error)")
+            }
+        }
+        
     }
+}
+
+func modifyUser(userName: String, userId: String, userIntro: String, userWebsite: String, jwt: String, completion: @escaping (Result<ModifyResponse, Error>) -> Void) {
+    let parameters: [String: Any] = [
+        "userName" : userName,
+        "userId" : userId,
+        "userIntro" : userIntro,
+        "userWebsite" : userWebsite
+    ]
+    
+    let headers: HTTPHeaders = ["X-ACCESS-TOKEN": jwt]
+    
+    AF.request(APIConstants.modifyURL, method: .patch, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
+        .responseDecodable(of: ModifyResponse.self) { response in
+            switch response.result {
+            case .success(let modifyResponse):
+                completion(.success(modifyResponse))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
 }
