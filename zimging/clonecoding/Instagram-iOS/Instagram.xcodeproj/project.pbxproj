@@ -40,6 +40,9 @@
 		DD4E770B2A2B910C00333BB5 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4E770A2A2B910C00333BB5 /* EmailViewController.swift */; };
 		DD61A6602A03A75A00971CD5 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61A65E2A03A75A00971CD5 /* PostTableViewCell.swift */; };
 		DD61A6612A03A75A00971CD5 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD61A65F2A03A75A00971CD5 /* PostTableViewCell.xib */; };
+		DD9E1F5C2A3DDD8400DE6FD6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DD9E1F5B2A3DDD8400DE6FD6 /* Alamofire */; };
+		DD9E1F5E2A3DFAF000DE6FD6 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9E1F5D2A3DFAEF00DE6FD6 /* APIConstants.swift */; };
+		DD9E1F612A3E21D800DE6FD6 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = DD9E1F602A3E21D800DE6FD6 /* AlamofireImage */; };
 		DDD6D8792A0C10D800E720E9 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD6D8772A0C10D800E720E9 /* AddPostViewController.swift */; };
 		DDD6D87A2A0C10D800E720E9 /* AddPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDD6D8782A0C10D800E720E9 /* AddPostViewController.xib */; };
 		DDD6D87D2A0C1CBA00E720E9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD6D87B2A0C1CBA00E720E9 /* SettingViewController.swift */; };
@@ -97,6 +100,7 @@
 		DD4E770A2A2B910C00333BB5 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		DD61A65E2A03A75A00971CD5 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		DD61A65F2A03A75A00971CD5 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		DD9E1F5D2A3DFAEF00DE6FD6 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		DDD6D8772A0C10D800E720E9 /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		DDD6D8782A0C10D800E720E9 /* AddPostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPostViewController.xib; sourceTree = "<group>"; };
 		DDD6D87B2A0C1CBA00E720E9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD9E1F5C2A3DDD8400DE6FD6 /* Alamofire in Frameworks */,
+				DD9E1F612A3E21D800DE6FD6 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +159,7 @@
 			children = (
 				A280F1E528D5023900017BE0 /* App */,
 				A280F1E628D5024600017BE0 /* UserInterface */,
+				DD9E1F5D2A3DFAEF00DE6FD6 /* APIConstants.swift */,
 				A242B66C28CCB027006939D6 /* Main.storyboard */,
 				A242B67128CCB029006939D6 /* LaunchScreen.storyboard */,
 				A242B66F28CCB029006939D6 /* Assets.xcassets */,
@@ -299,6 +306,10 @@
 			dependencies = (
 			);
 			name = Instagram;
+			packageProductDependencies = (
+				DD9E1F5B2A3DDD8400DE6FD6 /* Alamofire */,
+				DD9E1F602A3E21D800DE6FD6 /* AlamofireImage */,
+			);
 			productName = Instagram;
 			productReference = A242B66328CCB027006939D6 /* Instagram.app */;
 			productType = "com.apple.product-type.application";
@@ -371,6 +382,10 @@
 				Base,
 			);
 			mainGroup = A242B65A28CCB027006939D6;
+			packageReferences = (
+				DD9E1F5A2A3DDD8400DE6FD6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DD9E1F5F2A3E21D800DE6FD6 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = A242B66428CCB027006939D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -432,6 +447,7 @@
 				DDD6D87D2A0C1CBA00E720E9 /* SettingViewController.swift in Sources */,
 				DD05CD3829FC5AF8004B394D /* HomeViewController.swift in Sources */,
 				DD252CAE2A2C60340065D081 /* MakePasswordViewController.swift in Sources */,
+				DD9E1F5E2A3DFAF000DE6FD6 /* APIConstants.swift in Sources */,
 				A242B66728CCB027006939D6 /* AppDelegate.swift in Sources */,
 				DD05CD4229FCAADA004B394D /* firstCollectionTableViewCell.swift in Sources */,
 				A2554A6228D7896300047C50 /* ProfileViewController.swift in Sources */,
@@ -786,6 +802,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DD9E1F5A2A3DDD8400DE6FD6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		DD9E1F5F2A3E21D800DE6FD6 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DD9E1F5B2A3DDD8400DE6FD6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD9E1F5A2A3DDD8400DE6FD6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		DD9E1F602A3E21D800DE6FD6 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD9E1F5F2A3E21D800DE6FD6 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A242B65B28CCB027006939D6 /* Project object */;
 }

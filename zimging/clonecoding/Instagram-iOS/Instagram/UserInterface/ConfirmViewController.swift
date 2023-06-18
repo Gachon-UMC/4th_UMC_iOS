@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ConfirmViewController: UIViewController {
 
@@ -38,12 +39,21 @@ class ConfirmViewController: UIViewController {
    
     @IBAction func signUpBtnClicked(_ sender: Any) {
         // MARK: userdefault 사용해서 사용자 이름과 비밀번호 로컬에 저장
-        if let encoded = try? encoder.encode(userInfo) {
-            UserDefaults.standard.set(encoded, forKey: "userInfo")
-        }
+//        if let encoded = try? encoder.encode(userInfo) {
+//            UserDefaults.standard.set(encoded, forKey: "userInfo")
+//        }
         
-        // Print문으로 이메일, 이름, 비밀번호, 사용자 이름 출력
-        print("\(userInfo.email) \(userInfo.name) \(userInfo.password) \(userInfo.username)")
+        // [week10] 회원가입 api 연결
+        registerUser(userInfo: userInfo) { result in
+            switch result {
+            case .success(let response):
+                // Print문으로 이메일, 이름, 비밀번호, 사용자 이름 출력
+                print("\(self.userInfo.email) \(self.userInfo.name) \(self.userInfo.password) \(self.userInfo.username)")
+                print("회원가입 성공: \(response)")
+            case .failure(let error):
+                print("회원가입 실패: \(error)")
+            }
+        }
         
         // 화면 전환
         guard let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
@@ -66,4 +76,29 @@ class ConfirmViewController: UIViewController {
         }
     }
 
+}
+
+func registerUser(userInfo: UserInfo, completion: @escaping (Result<String, Error>) -> Void) {
+    let parameters: [String: Any] = [
+        "userName" : userInfo.name,
+        "userId" : userInfo.username,
+        "userEmail" : userInfo.email,
+        "userPwd" : userInfo.password
+    ]
+    
+    // 서버에 request 보냄
+    AF.request(APIConstants.signUpURL, method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        .response { response in
+            switch response.result {
+            case .success:
+                if let responseData = response.data,
+                   let responseString = String(data: responseData, encoding: .utf8) {
+                    completion(.success(responseString))
+                } else {
+                    completion(.failure(response.error ?? NSError(domain: "", code: 0, userInfo: nil)))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
 }

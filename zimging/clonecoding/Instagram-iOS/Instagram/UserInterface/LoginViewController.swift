@@ -6,6 +6,21 @@
 //
 
 import UIKit
+import Alamofire
+
+// MARK: - LoginResponse
+struct LoginResponse: Codable {
+    let isSuccess: Bool
+    let returnCode: Int
+    let returnMsg: String
+    let result: ResultValue
+}
+
+// MARK: - Result
+struct ResultValue: Codable {
+    let userIdx: Int
+    let jwt: String
+}
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -21,6 +36,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     let visibleBtn = UIButton()
     
     let decoder = JSONDecoder()
+    
+    // 로그인 성공했는지 여부를 담을 객체와 마이페이지에 넘길 jwt 선언
+    var returnCode = -1
+    var jwt = ""
     
     // 유저 정보 담을 객체 선언
     var userInfo = UserInfo(name: "", username: "", email: "", password: "")
@@ -46,7 +65,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         // 눈 버튼 이벤트 추가
         visibleBtn.addTarget(self, action: #selector(eyeClick), for: .touchUpInside)
-
         
         // idField의 x 버튼은 텍스트가 있을 때 & 사용자가 수정중일 때만 보이도록
         idField.clearButtonMode = .whileEditing
@@ -77,34 +95,48 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let id = idField.text ?? ""
         let password = passwordField.text ?? ""
         
-        if id == userInfo.username {
-            // 아이디와 비밀번호가 둘다 일치할 경우
-            if password == userInfo.password {
-                // 마이페이지로 이동
-                guard let profileVC = self.storyboard?.instantiateViewController(withIdentifier: "ProfileVC") as? ProfileViewController else { return }
-                
-                // 화면 전환 애니메이션 설정
-                profileVC.modalTransitionStyle = .coverVertical
-                // 전환된 화면이 보여지는 방법 설정 (fullScreen)
-                profileVC.modalPresentationStyle = .fullScreen
-                
-                self.present(profileVC, animated: true, completion: nil)
+        loginUser(userInfo: id, userPwd: password) {result in
+            switch result {
+            case .success(let loginResponse):
+                // 로그인 성공할 경우 성공 print해주고 response 값 변수에 저장
+                print("로그인 성공: \(loginResponse)")
+                self.returnCode = loginResponse.returnCode
+                print("User Index: \(loginResponse.result.userIdx)")
+                print("JWT: \(loginResponse.result.jwt)")
+                self.jwt = loginResponse.result.jwt
+                // 아이디와 비밀번호가 둘다 일치할 경우
+                if self.returnCode == 1000 {
+                    // 마이페이지로 이동
+                    guard let tabVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+                    
+                    // 화면 전환 애니메이션 설정
+                    tabVC.modalTransitionStyle = .coverVertical
+                    // 전환된 화면이 보여지는 방법 설정 (fullScreen)
+                    tabVC.modalPresentationStyle = .fullScreen
+                    
+                    // jwt 값 userDefault에 넣어서 저장
+                    UserDefaults.standard.set(self.jwt, forKey: "jwt")
+                    
+                    
+                    self.present(tabVC, animated: true, completion: nil)
+                }
+                // 아이디가 다를 경우
+                else if self.returnCode == 2013 {
+                    self.idField.layer.borderWidth = 1.0
+                    self.idField.layer.borderColor = UIColor.red.cgColor
+                    self.errorLabel.textColor = UIColor.red
+                    self.errorLabel.text = "사용자 이름 오류."
+                }
+                // 아이디는 같은데 비밀번호가 다를 경우
+                else if self.returnCode == 3014 {
+                    self.passwordField.layer.borderWidth = 1.0
+                    self.passwordField.layer.borderColor = UIColor.red.cgColor
+                    self.errorLabel.textColor = UIColor.red
+                    self.errorLabel.text = "비밀번호 오류."
+                }
+            case .failure(let error):
+                print("로그인 실패: \(error)")
             }
-            // 아이디는 같은데 비밀번호가 다를 경우
-            else {
-                
-                passwordField.layer.borderWidth = 1.0
-                passwordField.layer.borderColor = UIColor.red.cgColor
-                errorLabel.textColor = UIColor.red
-                errorLabel.text = "비밀번호 오류."
-            }
-        }
-        // 아이디가 다를 경우
-        else {
-            idField.layer.borderWidth = 1.0
-            idField.layer.borderColor = UIColor.red.cgColor
-            errorLabel.textColor = UIColor.red
-            errorLabel.text = "사용자 이름 오류."
         }
     }
     
@@ -131,3 +163,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
 }
+
+func loginUser(userInfo: String, userPwd: String, completion: @escaping (Result<LoginResponse, Error>) -> Void) {
+    let parameters: [String: Any] = [
+        "userInfo" : userInfo,
+        "userPwd" : userPwd
+    ]
+    
+    AF.request(APIConstants.loginURL, method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        .responseDecodable(of: LoginResponse.self) { response in
+            switch response.result {
+            case .success(let loginResponse):
+                completion(.success(loginResponse))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+}
+
+

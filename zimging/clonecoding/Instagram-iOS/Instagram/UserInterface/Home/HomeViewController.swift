@@ -6,8 +6,45 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
+
+// MARK: 응답을 받을 구조체 생성
+// TODO: AF.request로 받아서 Post 구조체에 연결하기
+struct PostResponse: Codable {
+    let isSuccess: Bool
+    let returnCode: Int
+    let returnMsg: String
+    let result: [PostInfo]
+}
+
+struct PostInfo: Codable {
+    let postIdx: Int
+    let userProfileImg: String
+    let postContent: String
+    let commentNum: Int
+    let uploadTime: String
+    let imgList: [PostImage]
+    let commentList: [Comment]
+    let userID: String
+}
+
+struct PostImage: Codable {
+    let postImgIdx: Int
+    let postImgUrl: String
+}
+
+struct Comment: Codable {
+    let commentIdx: Int
+    let commentContents: String
+    let userID: String
+}
+
 
 class HomeViewController: UIViewController {
+    
+    // 로그인 페이지에서 받아올 jwt를 담을 객체
+    var jwt = ""
     
     @IBOutlet weak var postView: UITableView!
     let encoder = JSONEncoder()
@@ -33,6 +70,9 @@ class HomeViewController: UIViewController {
     
     // 처음 생성된 refreshControl에 addTarget 매칭
     func initRefresh() {
+        // 로그인에서 userDefault로 세팅한 jwt값 가져오기
+        jwt = UserDefaults.standard.string(forKey: "jwt") ?? "불러오기 실패"
+        
         refreshControl.addTarget(self, action: #selector(refreshTable(refresh: )), for: .valueChanged)
         postView.refreshControl = refreshControl
     }
@@ -71,9 +111,43 @@ class HomeViewController: UIViewController {
             models.append(Model(imagename: "storyImage6", id: "zimging", isWatch: false, isNotMine: true, hasActiveStory: true, storyName: "storyImage5", isHeartFilled: false))
         }
         if posts.count == 0 {
-            posts.append(Post(info: Model(imagename: "storyImage1", id: "youz2me", isWatch: true, isNotMine: false, hasActiveStory: false, storyName: "", isHeartFilled: false), imageName: "storyImage6", imageComment: "집에갈래", numOfLike: 2, numOfComment: 3, month: 5, day: 1, isHeartFilled: false))
-            posts.append(Post(info: Model(imagename: "jokebear2", id: "bearjoke", isWatch: true, isNotMine: true, hasActiveStory: false, storyName: "", isHeartFilled: false), imageName: "jokebear2", imageComment: "농담곰", numOfLike: 10, numOfComment: 5, month: 5, day: 2, isHeartFilled: false))
-            posts.append(Post(info: Model(imagename: "jokebear3", id: "jokebear", isWatch: true, isNotMine: true, hasActiveStory: false, storyName: "", isHeartFilled: false), imageName: "jokebear3", imageComment: "귀엽죠?", numOfLike: 1100, numOfComment: 5, month: 5, day: 3, isHeartFilled: false))
+            getPostList(jwt: jwt) { result in
+                switch result {
+                case .success(let postResponse):
+                    print("게시물 정보 조회 성공")
+                    // 게시물 수만큼 posts 배열에 추가
+                    for post in postResponse.result {
+                        if let dayString = post.uploadTime.components(separatedBy: CharacterSet.decimalDigits.inverted).first,
+                           let daysAgo = Int(dayString) {
+                            // 추출한 n을 Int 형식으로 저장
+                            print("n: \(daysAgo)")
+
+                            // 현재 날짜 가져오기
+                            let currentDate = Date()
+                            let calendar = Calendar.current
+                            var components = calendar.dateComponents([.month, .day], from: currentDate)
+
+                            if let month = components.month, var day = components.day {
+                                // 월과 일을 Int 형식으로 저장하고 날짜 계산
+                                day -= daysAgo
+                                // 게시물에 추가
+                                self.posts.append(Post(info: Model(imagename: post.userProfileImg, id: post.userID, isWatch: true, isNotMine: true, hasActiveStory: false, storyName: "", isHeartFilled: false), imageName: post.imgList[0].postImgUrl, imageComment: post.postContent, numOfLike: 43, numOfComment: post.commentNum, month: month, day: day, isHeartFilled: false))
+                            } else {
+                                // 날짜 구성 요소를 가져오지 못한 경우
+                                print("날짜를 불러올 수 없음.")
+                            }
+                        } else {
+                            // 추출에 실패한 경우
+                            print("n을 추출할 수 없음")
+                        }
+                    }
+                case .failure(let error):
+                    print("게시물 정보 조회 실패: \(error)")
+                }
+            }
+//            posts.append(Post(info: Model(imagename: "storyImage1", id: "youz2me", isWatch: true, isNotMine: false, hasActiveStory: false, storyName: "", isHeartFilled: false), imageName: "storyImage6", imageComment: "집에갈래", numOfLike: 2, numOfComment: 3, month: 5, day: 1, isHeartFilled: false))
+//            posts.append(Post(info: Model(imagename: "jokebear2", id: "bearjoke", isWatch: true, isNotMine: true, hasActiveStory: false, storyName: "", isHeartFilled: false), imageName: "jokebear2", imageComment: "농담곰", numOfLike: 10, numOfComment: 5, month: 5, day: 2, isHeartFilled: false))
+//            posts.append(Post(info: Model(imagename: "jokebear3", id: "jokebear", isWatch: true, isNotMine: true, hasActiveStory: false, storyName: "", isHeartFilled: false), imageName: "jokebear3", imageComment: "귀엽죠?", numOfLike: 1100, numOfComment: 5, month: 5, day: 3, isHeartFilled: false))
         }
         
         postView.delegate = self
@@ -104,3 +178,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+// 게시물 정보 request
+func getPostList(jwt: String, completion: @escaping (Result<PostResponse, Error>) -> Void) {
+    let headers: HTTPHeaders = ["X-ACCESS-TOKEN": jwt]
+    
+    AF.request(APIConstants.homeListURL, method: .get, headers: headers)
+        .validate()
+        .responseDecodable(of: PostResponse.self) { response in
+            switch response.result {
+            case .success(let postResponse):
+                completion(.success(postResponse))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+}

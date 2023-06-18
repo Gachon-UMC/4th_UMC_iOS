@@ -6,6 +6,30 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
+
+// jwt를 보내 받아올 정보를 저장할 구조체 선언
+// MARK: - UserResponse
+struct UserResponse: Codable {
+    let isSuccess: Bool
+    let returnCode: Int
+    let returnMsg: String
+    let result: Info
+}
+
+// MARK: - UserInfo
+struct Info: Codable {
+    let userIdx: Int
+    let userName: String
+    let userIntro: String?
+    let userWebsite: String?
+    let userProfileImg: String?
+    let postNum: Int?
+    let followerNum: Int?
+    let followingNum: Int?
+    let userID: String
+}
 
 protocol SendDataToEdit {
     func SendDataToE (myName: String, myID: String, myIntro: String, myLink: String)
@@ -20,6 +44,9 @@ class ProfileViewController: UIViewController, SendDataToProfile {
     }
     
     var delegate: SendDataToEdit?
+    
+    // 로그인 페이지에서 받아올 jwt를 담을 객체
+    var jwt = ""
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) { }
     
@@ -51,6 +78,10 @@ class ProfileViewController: UIViewController, SendDataToProfile {
     @IBOutlet weak var intro: UILabel!
     @IBOutlet weak var id: UILabel!
     @IBOutlet weak var link: UILabel!
+    @IBOutlet weak var followingNum: UILabel!
+    @IBOutlet weak var followerNum: UILabel!
+    @IBOutlet weak var postNum: UILabel!
+    @IBOutlet weak var profileImg: UIButton!
     
     @IBAction func backToPage(_ sender: UIStoryboardSegue) {
     }
@@ -91,10 +122,52 @@ class ProfileViewController: UIViewController, SendDataToProfile {
         present(addPostVC, animated: true)
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 로그인에서 userDefault로 세팅한 jwt값 가져오기
+        jwt = UserDefaults.standard.string(forKey: "jwt") ?? "불러오기 실패"
+        
+        getUserInfo(jwt: jwt) { result in
+            switch result {
+            case .success(let userResponse):
+                print("유저 정보 조회 성공")
+                let userInfo = userResponse.result
+                print("User Index: \(userInfo.userIdx)")
+                print("User Name: \(userInfo.userName)")
+                print("User Intro: \(userInfo.userIntro)")
+                print("User Website: \(userInfo.userWebsite)")
+                print("User Profile Image: \(userInfo.userProfileImg)")
+                print("Post Number: \(userInfo.postNum)")
+                print("Follower Number: \(userInfo.followerNum)")
+                print("Following Number: \(userInfo.followingNum)")
+                print("User ID: \(userInfo.userID)")
+                
+                // 유저 정보 화면에 뿌려줌
+                self.name.text = userInfo.userName
+                self.id.text = userInfo.userID
+                self.intro.text = userInfo.userIntro
+                self.link.text = userInfo.userWebsite
+                self.followerNum.text = String(userInfo.followerNum!)
+                self.followingNum.text = String(userInfo.followingNum!)
+                self.postNum.text = String(userInfo.postNum!)
+                
+                // 이미지를 다운로드하여 버튼에 설정
+                AF.request(userInfo.userProfileImg ?? "").responseImage { response in
+                    switch response.result {
+                    case .success(let image):
+                        // 이미지 다운로드 성공 시 버튼에 이미지 설정
+                        self.profileImg.setImage(image, for: .normal)
+                    case .failure(let error):
+                        // 이미지 다운로드 실패 시 에러 처리
+                        print("프로필 이미지 없음: \(error)")
+                    }
+                }
+                
+            case .failure(let error):
+                print("유저 정보 조회 실패: \(error)")
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -102,8 +175,9 @@ class ProfileViewController: UIViewController, SendDataToProfile {
             let vc = segue.destination as! EditViewController
             vc.name = name.text!
             vc.id = id.text!
-            vc.intro = intro.text!
-            vc.link = link.text!
+            vc.intro = intro.text ?? ""
+            vc.link = link.text ?? ""
+            vc.jwt = jwt
             vc.delegate = self //이건 왜 해주는거지? 중간끝나고 봐야지 -> 위임자를 선택해주는 거라고 함
         }
     }
@@ -138,5 +212,21 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout {
         }
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
             return 2
+        }
+}
+
+// 유저 정보 request
+func getUserInfo(jwt: String, completion: @escaping (Result<UserResponse, Error>) -> Void) {
+    let headers: HTTPHeaders = ["X-ACCESS-TOKEN": jwt]
+    
+    AF.request(APIConstants.profileURL, headers: headers)
+        .validate()
+        .responseDecodable(of: UserResponse.self) { response in
+            switch response.result {
+            case .success(let userResponse):
+                completion(.success(userResponse))
+            case .failure(let error):
+                completion(.failure(error))
+            }
         }
 }
