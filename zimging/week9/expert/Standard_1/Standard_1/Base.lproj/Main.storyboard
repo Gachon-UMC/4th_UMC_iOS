@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Standard_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPT에게 무엇이든 물어보세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5Z-rn-Lhg">
+                                <rect key="frame" x="36" y="142" width="322" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nHa-pT-oqd">
+                                <rect key="frame" x="20" y="204" width="353" height="34"/>
+                                <color key="backgroundColor" red="0.9425808296" green="0.9425808296" blue="0.9425808296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Yt-WU-ktf">
+                                <rect key="frame" x="169.66666666666666" y="262" width="54" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="제출"/>
+                                <connections>
+                                    <action selector="requestAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yuq-cA-3tu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0P-5Q-ybe">
+                                <rect key="frame" x="20" y="419" width="353" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="s7K-kl-FUe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPT가 대답합니다:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="An0-0w-dUp">
+                                <rect key="frame" x="46.666666666666657" y="357" width="300" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="5Oa-0H-ZpD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d0P-5Q-ybe" firstAttribute="top" secondItem="An0-0w-dUp" secondAttribute="bottom" constant="30" id="9p9-BU-deD"/>
+                            <constraint firstItem="An0-0w-dUp" firstAttribute="top" secondItem="0Yt-WU-ktf" secondAttribute="bottom" constant="60" id="FBa-Fe-Bc3"/>
+                            <constraint firstItem="h5Z-rn-Lhg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="83" id="GCr-em-GRd"/>
+                            <constraint firstItem="An0-0w-dUp" firstAttribute="centerX" secondItem="0Yt-WU-ktf" secondAttribute="centerX" id="Kzn-7Z-Zd7"/>
+                            <constraint firstItem="nHa-pT-oqd" firstAttribute="top" secondItem="h5Z-rn-Lhg" secondAttribute="bottom" constant="30" id="LSi-Xe-dk5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d0P-5Q-ybe" secondAttribute="trailing" constant="20" id="Ob4-7J-Lzf"/>
+                            <constraint firstItem="An0-0w-dUp" firstAttribute="centerX" secondItem="d0P-5Q-ybe" secondAttribute="centerX" id="PVi-eJ-lEO"/>
+                            <constraint firstItem="An0-0w-dUp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="357" id="R7b-bp-PON"/>
+                            <constraint firstItem="h5Z-rn-Lhg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="Wf0-LB-kZT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nHa-pT-oqd" secondAttribute="trailing" constant="20" id="Yu7-hY-7hE"/>
+                            <constraint firstItem="d0P-5Q-ybe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j3G-Hz-vOD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h5Z-rn-Lhg" secondAttribute="trailing" constant="35" id="qUn-4c-42B"/>
+                            <constraint firstItem="nHa-pT-oqd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tCq-fC-Byu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="questionField" destination="nHa-pT-oqd" id="sbQ-7j-TKv"/>
+                        <outlet property="requestBtn" destination="0Yt-WU-ktf" id="x4g-HP-Zdz"/>
+                        <outlet property="responseLabel" destination="d0P-5Q-ybe" id="7sR-uf-wCd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
