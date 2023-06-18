@@ -30,13 +30,17 @@ class SignInFinalViewController: UIViewController {
         print("비밀번호 : \(UserPassword)")
         print("사용자 이름 : \(UserID)")
         
-        let IDPW: [String] = [UserID,UserPassword]
-        UserDefaults.standard.set(IDPW, forKey: "IDPW")
+        /// 회원가입 정보를 POST하는 함수입니다.
+        /// 성공했을 시 메인화면으로 돌아갑니다.
+        APIManger.shared.POST_SignIn(userName: UserName, userId: UserID, userEmail: UserEmail, userPwd: UserPassword) { isSuccess in
+            if isSuccess {
+                //메인화면으로 돌아갑니다.
+                guard let HomeVC = self.storyboard?.instantiateViewController(identifier: "SignIn_main") else {return}
+                HomeVC.modalPresentationStyle = .fullScreen
+                self.present(HomeVC, animated: true)
+            }
+        }
         
-        //메인화면으로 돌아갑니다.
-        guard let HomeVC = self.storyboard?.instantiateViewController(identifier: "SignIn_main") else {return}
-        HomeVC.modalPresentationStyle = .fullScreen
-        present(HomeVC, animated: true)
     }
     
     

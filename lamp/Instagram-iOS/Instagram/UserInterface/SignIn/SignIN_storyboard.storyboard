@@ -64,7 +64,7 @@
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fail!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gX1-kP-JUf">
                                         <rect key="frame" x="0.0" y="247.00000000000003" width="120" height="14.333333333333343"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="qWi-g0-eT5"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="qWi-g0-eT5"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                         <color key="textColor" systemColor="systemRedColor"/>

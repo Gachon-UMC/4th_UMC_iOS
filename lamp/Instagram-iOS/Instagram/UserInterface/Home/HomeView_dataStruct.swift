@@ -73,3 +73,17 @@ func addDummyPosts() {
     post_list.append(post("Name2", "Image2", "Image5", 2, "하늘이 빨갛네요", 2, "5월 2일"))
     post_list.append(post("Name3", "Image3", "Image6", 3, "하늘이 노랗네요", 3, "5월 1일"))
 }
+
+/// Server에서 Posts 데이터 받아오고, struct post로 만들어 배열로 저장하기
+func fetchPostData(_ completion: @escaping () -> Void) {
+    APIManger.shared.GET_Post{ result in
+        if let posts = result?.result { //result에서 post들을 갖고와서 앱에서 쓰는 post구조체 인스턴스로 만들어주기
+            for item in posts {
+                let newPost = post(item.userID, item.userProfileImg, (item.imgList?.first!.postImgUrl)!, 1, item.postContent, item.commentNum, item.uploadTime)
+                print("\(item.postIdx) : 포스트 삽입")
+                post_list.append(newPost)   // post_list에 서버의 post 저장됨
+            }
+            completion()
+        }
+    }
+}

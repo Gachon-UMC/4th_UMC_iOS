@@ -9,17 +9,20 @@ class ProfileViewController: UIViewController,EditProfileDelegate {
     
     @IBOutlet weak var subTab: SubTabBar!
 
-    @IBOutlet weak var umc_ios: UIBarButtonItem!
     @IBOutlet weak var name: UIBarButtonItem!
     @IBOutlet weak var user_name: UILabel!
     @IBOutlet weak var intro: UILabel!
     @IBOutlet weak var link: UIButton!
     @IBOutlet weak var myCollectionView: UICollectionView!
     
+    @IBOutlet weak var postNum: UILabel!
+    @IBOutlet weak var followerNum: UILabel!
+    @IBOutlet weak var followingNum: UILabel!
+    
     @IBAction func tap_EP(_ sender: Any) {
         
         guard let EProfileVC = self.storyboard?.instantiateViewController(withIdentifier: "EditProfileVC") as? EditProfileViewController else { return }
-        EProfileVC.data_loaded = data_inc
+        EProfileVC.data_loaded = data_inc   // 본 VC의 프로필데이터를 EProfileVC의 데이터로 넘겨줍니다.
         EProfileVC.delegate = self
         let navCon = UINavigationController(rootViewController: EProfileVC)
         self.present(navCon, animated: true, completion: nil)
@@ -39,14 +42,6 @@ class ProfileViewController: UIViewController,EditProfileDelegate {
         self.present(sheetPresentationController, animated: true, completion: nil)
     }
     
-    
-    
-    func didSaveProfile(data: [String]) {
-        data_inc = data
-        nameDist()
-        
-    }
-    
     /// data_inc의 요소값듫을 ui요소에 배정
     private func nameDist() {
         name.title = data_inc[0]
@@ -60,10 +55,29 @@ class ProfileViewController: UIViewController,EditProfileDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //SubTabBar = UITabBar()
-        umc_ios.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22, weight: .bold)],for: .normal)
-        umc_ios.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22, weight: .bold)],for: .highlighted)
-        nameDist()
+        name.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22, weight: .bold)],for: .normal)
+        name.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22, weight: .bold)],for: .highlighted)
+        //프로필 데이터 불러오기
+        LoadDataFromServer() {}
         
+    }
+    
+    /// 유저의 프로필 데이터를 불러오는 함수입니다.
+    func LoadDataFromServer(_ completion: @escaping () -> Void) {
+        APIManger.shared.GET_Profile{ result in
+            self.data_inc[0] = result?.userID ?? ""
+            self.data_inc[1] = result?.userName ?? ""
+            self.data_inc[2] = result?.userIntro ?? ""
+            self.data_inc[3] = result?.userWebsite ?? ""
+            self.postNum.text = String(result?.postNum ?? 0)
+            self.followerNum.text = String(result?.followerNum ?? 0)
+            self.followingNum.text = String(result?.followingNum ?? 0)
+            self.user_name.font = UIFont.systemFont(ofSize: 16)
+            self.intro.font = UIFont.systemFont(ofSize: 15)
+            self.link.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+            self.nameDist() //self.data_inc의 배열값을 토대로 UI요소에 값을 저장해줍니다.
+            completion()
+        }
     }
     
 

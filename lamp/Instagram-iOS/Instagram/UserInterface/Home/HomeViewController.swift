@@ -17,19 +17,26 @@ class HomeViewController: UIViewController {
     let refreshControl = UIRefreshControl() //새로고침 객체입니다
     let Device_width = UIScreen.main.bounds.width // 기체 별 width 조절을 위한 변수 설정입니다.
     
+    override func viewWillAppear(_ animated: Bool) {
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //네비게이션바 UI설정
         nav_bar.setBackgroundImage(UIImage(), for: .default)
         nav_bar.shadowImage = UIImage()
         
-        //더미데이터 설정
-        addDummyStories()
-        addDummyPosts()
+        
+        addDummyStories() // Story 더미데이터 설정
+        fetchPostData{  //서버에서 Post데이터 받아오고, completion 실행
+            self.StoryTableView.reloadData() //화면 reload
+        }
+                
         
         //HomeView에서 사용하는 UserDefaults에 대한 초기설정
         getUserDefaults(forkey: "Story_List")
-        getUserDefaults(forkey: "Post_List")
+        //getUserDefaults(forkey: "Post_List")
         
         //StoryTableCell,PostTableCell를 담는 StoryTableView의 delegate,dataSource를 갖고옴
         self.StoryTableView.delegate = self
@@ -51,6 +58,7 @@ class HomeViewController: UIViewController {
     /// StoryTableView의 refreshControl이 실행되었을 때 호출되는 함수 입니다.
     @objc func refresh(_ sender: UIRefreshControl) {
         let item = DispatchWorkItem {   //DispatchQueue.main.asyncAfter의 execute에 들어갈 item을 설정.
+            self.StoryTableView.reloadData() //화면 reload
             sender.endRefreshing()  //sender인 UIRefreshControl의 refreshing 끝내기
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: item) // 1초뒤에 비동기적으로 item을 실행하기 = endRefreshing()
@@ -80,17 +88,6 @@ class HomeViewController: UIViewController {
             }
         }
         
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        if let encodedData = try? JSONEncoder().encode(post_list) { //data로 저장하기위해 encoding
-            // 이때 story_list는 story객체의 리스트임 -> HomeView_dataStruct 참고
-            //print(post_list)
-            UserDefaults.standard.set(encodedData, forKey: "Post_List") // "Story_List" key로 저장
-            UserDefaults.standard.synchronize() //"Story_List" 데이터 즉시 동기화 -> UI 표시에 필요한 부분은 바로바로 동기화 되어야함
-            //print("종료전 Post_List 세팅 완료")
-        }
     }
 
 }
