@@ -261,12 +261,6 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRq-Rp-wlm">
-                                <rect key="frame" x="249.5" y="110.5" width="9.5" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="xQf-VV-RvA" userLabel="profile stack view">
                                 <rect key="frame" x="20" y="276" width="373" height="31"/>
                                 <subviews>
@@ -376,6 +370,12 @@
                                     <outlet property="delegate" destination="jkO-H1-eXn" id="fx1-Rm-iSV"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRq-Rp-wlm">
+                                <rect key="frame" x="250" y="112" width="9.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wtJ-Dr-2lo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -449,12 +449,14 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="followerNum" destination="YRq-Rp-wlm" id="1Cq-uz-r7O"/>
+                        <outlet property="followingNum" destination="CcE-ll-eAH" id="8P7-6Q-1mD"/>
                         <outlet property="intro" destination="hYI-TF-uyZ" id="KYl-5w-Llp"/>
                         <outlet property="link" destination="XGv-ov-Kvv" id="XWQ-fk-kCI"/>
                         <outlet property="myCollectionView" destination="uEV-cX-xiM" id="v55-NR-Q9k"/>
                         <outlet property="name" destination="ERS-ra-kBf" id="1Ag-Wf-F0u"/>
+                        <outlet property="postNum" destination="5jq-8Z-WIa" id="NAB-Lo-JI8"/>
                         <outlet property="subTab" destination="url-hb-5Of" id="ciU-js-fGS"/>
-                        <outlet property="umc_ios" destination="ERS-ra-kBf" id="sqd-s4-rtX"/>
                         <outlet property="user_name" destination="Wwj-lp-7Sg" id="9iV-kr-Iwm"/>
                         <segue destination="yUZ-gc-jy7" kind="show" identifier="goto_edit" id="HdX-hJ-SGh"/>
                     </connections>

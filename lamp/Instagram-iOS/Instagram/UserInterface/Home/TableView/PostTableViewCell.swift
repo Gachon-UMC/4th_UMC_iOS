@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PostTableViewCell: UITableViewCell {
 
@@ -125,8 +126,9 @@ class PostTableViewCell: UITableViewCell {
     func setData(_ post: post) {
         self.UserID.text = post.UserID
         self.UserName.text = post.UserID
-        self.UserImage.image = UIImage(named: post.UserImage) ?? UIImage()
-        self.PostImage.image = UIImage(named: post.PostImage) ?? UIImage()
+        //URL로 받아온 이미지 소스는 KingFisher로 소스 불러옵니다.
+        self.UserImage.kf.setImage(with: URL(string: post.UserImage))
+        self.PostImage.kf.setImage(with: URL(string: post.PostImage))
         self.PostLike.text = "좋아요 \(post.PostLike)개"
         self.User_Text.text = post.UserText
         self.CommentCount.text = "댓글 \(post.CommentCount)개 모두 보기"

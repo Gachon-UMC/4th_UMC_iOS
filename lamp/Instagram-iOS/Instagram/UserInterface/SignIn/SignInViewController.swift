@@ -32,44 +32,49 @@ class SignInViewController: UIViewController {
     
     ///로그인 버튼 tapAction
     @IBAction func tap_LogInButton(_ sender: Any) {
-        //ID와 PW가 담긴 Stringarray 데이터를 UserDefaults에서 갖고옵니다. 이때 [Sting]으로 타입캐스팅해주어 StringArray임을 명시했습니다.
-        if let IDPW_Arr = UserDefaults.standard.array(forKey: "IDPW") as? [String] {
-            //EmailTextField의 값과 UserDefaults의 ID값과 비교합니다.
-            guard let InputID = EmailTextField.text, InputID == IDPW_Arr[0] else{
-                //비교에서 false가 반환되었을 때 실행 구문입니다.
-                self.EmailTextField.layer.borderColor = UIColor.red.cgColor // EmailTextField 테두리 빨간색으로 변경
-                self.FailureLabel.text = "사용자 이름 오류" // PasswordTextField 아래의 오류 표시 Label의 텍스트를 변경
-                self.FailureLabel.isHidden = false // FailureLabel 보이게
-                return
-            }
-            //EmailTextField == ID의 결과가 true일 때, 원래 테두리 색으로 돌아옵니다.
-            self.EmailTextField.layer.borderColor = UIColor.systemGray5.cgColor
-            
-            ////PasswordTextField의 값과 UserDefaults의 PW값과 비교합니다.
-            guard let InputPW = PasswordTextField.text, InputPW == IDPW_Arr[1] else{
-                //비교에서 false가 반환되었을 때 실행 구문입니다.
-                self.PasswordTextField.layer.borderColor = UIColor.red.cgColor // EmailTextField 테두리 빨간색으로 변경
-                self.FailureLabel.text = "비밀번호 오류" // PasswordTextField 아래의 오류 표시 Label의 텍스트를 변경
-                self.FailureLabel.isHidden = false // FailureLabel 보이게
-                return
-            }
-            //PasswordTextField == PW의 결과가 true일 때, 원래 테두리 색으로 돌아옵니다.
-            self.PasswordTextField.layer.borderColor = UIColor.systemGray5.cgColor
-            
-            //EmailTextField == ID, PasswordTextField == PW의 결과가 모두 true입니다. 오류 메시지를 감춥니다.
-            self.FailureLabel.isHidden = true
-            
-            //"main"스토리보드에 있는 TabBarController를 가져옵니다. 이때 identifier를 명시하고, TabBarController로 타입캐스팅 해줍니다.
-            let myTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: TabBarController.identifier) as? TabBarController
-            myTabBarController!.modalPresentationStyle = .fullScreen //출력형태는 .fullscreen으로 바꿔줍니다.
-            
-            self.present(myTabBarController!, animated: true)
-            myTabBarController!.selectedIndex = 4   //기존의 myTabBarController의 Index = 4 는 마이 프로필 탭입니다.
-            
+        
+        //server 연결 전 자체적으로 EmailTextField를 검수
+        guard let InputID = EmailTextField.text else {
+            self.EmailTextField.layer.borderColor = UIColor.red.cgColor // EmailTextField 테두리 빨간색으로 변경
+            self.FailureLabel.text = "사용자 이름 오류" // PasswordTextField 아래의 오류 표시 Label의 텍스트를 변경
+            self.FailureLabel.isHidden = false // FailureLabel 보이게
+            return
         }
-        // 회원가입이 되어있지 않아 UserDefaults에 IDPW값이 없는 상태입니다.
-        else{
-            print("가입 먼저 하세요")
+        
+        //EmailTextField == ID의 결과가 true일 때, 원래 테두리 색으로 돌아옵니다.
+        self.EmailTextField.layer.borderColor = UIColor.systemGray5.cgColor
+        
+        //server 연결 전 자체적으로 PasswordTextField를 검수
+        guard let InputPW = PasswordTextField.text else {
+            self.PasswordTextField.layer.borderColor = UIColor.red.cgColor // EmailTextField 테두리 빨간색으로 변경
+            self.FailureLabel.text = "비밀번호 오류" // PasswordTextField 아래의 오류 표시 Label의 텍스트를 변경
+            self.FailureLabel.isHidden = false // FailureLabel 보이게
+            return
+        }
+        
+        //PasswordTextField == PW의 결과가 true일 때, 원래 테두리 색으로 돌아옵니다.
+        self.PasswordTextField.layer.borderColor = UIColor.systemGray5.cgColor
+        
+        /// 로그인 시도 정보를 POST하는 함수를 호출합니다.
+        ///  문제가 없을 시 유저 프로필화면으로 이동합니다.
+        ///  문제가 있는 경우는 default case로, PasswordTextField 아래에 오류 메시지를 출력합니다.
+        APIManger.shared.POST_LogIn(userInfo: InputID, userPwd: InputPW) { result in
+            switch result?.returnCode {
+            case 1000 :
+                //EmailTextField == ID, PasswordTextField == PW의 결과가 모두 true입니다. 오류 메시지를 감춥니다.
+                self.FailureLabel.isHidden = true
+                
+                //"main"스토리보드에 있는 TabBarController를 가져옵니다. 이때 identifier를 명시하고, TabBarController로 타입캐스팅 해줍니다.
+                let myTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: TabBarController.identifier) as? TabBarController
+                myTabBarController!.modalPresentationStyle = .fullScreen //출력형태는 .fullscreen으로 바꿔줍니다.
+                
+                self.present(myTabBarController!, animated: true)
+                myTabBarController!.selectedIndex = 4   //기존의 myTabBarController의 Index = 4 는 마이 프로필 탭입니다.
+                
+            default :
+                self.FailureLabel.text = result?.returnMsg // PasswordTextField 아래의 오류 표시 Label의 텍스트를 변경
+                self.FailureLabel.isHidden = false // FailureLabel 보이게
+            }
         }
     }
     
@@ -79,7 +84,6 @@ class SignInViewController: UIViewController {
         
         BottomBorderView.layer.addBorder([.bottom], color: UIColor.systemGray5, width: 1.0) // 화면의 "또는" 라벨에 위치한 테두리 추가 (.addBorder는 CALayer 내장함수가 아닌 추가작성 함수임. definition 참조)
         
-
         ///화면 상의 각 TextField들의 작성 여부를 확인하는 NotificationObserver 생성
         ///해당 Notification들은 defaultTexrField Class의  .addTarget selector -> @objc func textFieldDidChange 에서 호출함.
         NotificationCenter.default.addObserver(forName: Notification.Name("CheckFields"), object: nil, queue: .main, using: {notification in
